@@ -1,3 +1,3 @@
-#Project Propsal Outline
+Project Propsal Outline
 ================================
 
