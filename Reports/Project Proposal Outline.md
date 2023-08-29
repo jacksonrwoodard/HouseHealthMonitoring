@@ -1,3 +1,7 @@
-Project Propsal Outline
+Project Proposal Outline
 ================================
 
+- Abstract
+- Keywords
+
+## Introduction
