@@ -12,11 +12,11 @@ Project Proposal Outline
 ## Formulating the Problem
 - Background Information
   - Includes head unit & all 5 types of sensors we plan to use
-    - Flood Sensor
-    - Mold/Moisture Sensor
-    - Heat/Fire Sensor
-    - Gas/Smoke Sensor
-    - Electrical Sensor
+    - Flood Sensor (Nate)
+    - Mold/Moisture Sensor (Dylan)
+    - Heat/Fire Sensor (Jackson)
+    - Gas/Smoke Sensor (Luke)
+    - Electrical Sensor (Cole)
     - Termite Sensor?
 - Constrants & Specifications
   - Standards
