@@ -12,4 +12,4 @@ Listen below are all of the completed documents for the House Health Monitering 
 3. Experimentation
 4. Poster
 5. Final Report
-6. Lessons Learned
+6. Lessons Learned & Acquired Skills
