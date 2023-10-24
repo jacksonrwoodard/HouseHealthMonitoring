@@ -6,7 +6,7 @@ The function of the fire module subsystem is to detect if a fire has ever occure
 | No. | Constraints | Origin |
 | --- | ----------- | ------ |
 |  1  | Shall be able to detect the temperature of the senosr and send the data to the head unit. | Project Team |
-|  2  | Sensor shall not be a distraction to the homeowner | All External Stakeholders & Team Supervisor |
+|  2  | Sensor shall not be a distraction to the homeowner | All External Stakeholders, Ethics, & Team Supervisor |
 
 ## Buildable Schematic
 
