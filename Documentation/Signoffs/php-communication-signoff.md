@@ -33,7 +33,10 @@ The picture shown above is the XB24CAWIT-001, the schematic shows an in-depth de
 The picture shown above is the ESP32-H2, the schematic shows an in-depth design of the trasmitter.
  
 ## Analysis
-#### Mesh Network
+#### Connectivity
+The ESP32-H2 is able to communicate via ZigBee protocals [1]. ZigBee protocals allow for the formation of a mesh network, allowing the system the work for any size house [2]. The ESP32-H2 has a built in 2.4 GHz reciver and transmitter that will form a mesh network to ensure that all sensors will be able to communciate with the head unit [1].
+
+The XB24 is also able to communicate via ZigBee protocals [3]. This ZigBee modules allows direct connectivity to a RaspberryPi or related board. It will also allow the system to extend its range up to 200ft indoors, giving it the ability to reach the sensors in a house [3].
 
 
 ## Bill of Materials (BOM)
@@ -43,4 +46,8 @@ The picture shown above is the ESP32-H2, the schematic shows an in-depth design 
 | XB24CAWIT-001 | 1 | $29.33 | $29.33 |
 
 ## References
+[1] Espressif Systems, “ESP32-H2 - Espressif Systems,” Adafruit, https://www.espressif.com/sites/default/files/documentation/esp32-h2_datasheet_en.pdf (accessed Oct. 24, 2023). 
 
+[2] “Discover ZigBee protocol 3.0,” Discover Zigbee Protocol 3.0 | Digi International, https://www.digi.com/solutions/by-technology/zigbee-wireless-standard (accessed Oct. 24, 2023). 
+
+[3] “Digi xbee S2C 802.15.4 RF modules Datasheet,” IIoT Devices and Services for M2M Networking, https://www.digi.com/resources/library/data-sheets/ds_xbee-s2c-802-15-4?view=fullscreen (accessed Oct. 24, 2023). 
