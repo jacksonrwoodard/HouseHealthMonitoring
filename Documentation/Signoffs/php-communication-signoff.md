@@ -15,7 +15,7 @@ The function of the communcation subsystem is to act as a transmitter for each o
 |  3  | Sensor communication shall send the sensor name, number, data type, and raw data to the head unit. | Project Team |
 
 ## Buildable Schematic
-
+<img src=" /Documentation/Images/Communication/Reciever.png">
 
 ## Analysis
 
