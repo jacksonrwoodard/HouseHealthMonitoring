@@ -1,7 +1,7 @@
 # Communication Module Signoff
 
 ## Subsytem Function
-The function of the communcation subsystem is to act as a transmitter for each of the sensor modules and a reciever for the headunit. The function of the transmitter is to send the sensor name, data type, sensor number, and sensor data. The function of the reciever is to recieve all of the data from the sensor modules and make the recieved information avaliable for the processor. 
+The function of the communcation subsystem is to act as a transmitter for each of the sensor modules and a reciever for the head unit. The function of the transmitter is to send the sensor name, data type, sensor number, and sensor data. The function of the reciever is to recieve all of the data from the sensor modules and make the recieved information avaliable for the processor. 
 
 ![TransmitterCommunication](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/cfb66cac-4edb-49bc-8843-ddd06d3072f7)
 
