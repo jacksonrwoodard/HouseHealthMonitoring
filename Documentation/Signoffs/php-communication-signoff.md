@@ -11,8 +11,8 @@ The function of the communcation subsystem is to act as a transmitter for each o
 ## Constraints
 | No. | Constraints                                                                                    | Origin                              |
 | --- | ---------------------------------------------------------------------------------------------- | ----------------------------------- |
-|  1  | Sensors shall not be placed in a way where they cannot wirelessly communicate with the system. | Project Team & Broader Implications |
-|  2  | System shall not require an internet connection to work and communicaton with the head unit and sensors | Home Owners, Insurance Agencies, & Team Supervisor |
+|  1  | Sensors shall not be placed more than 200 feet away from the receiver where they cannot wirelessly communicate with the system. | Project Team & Broader Implications |
+|  2  | System shall not require an internet connection to work and communicate with the head unit and sensors | Home Owners, Insurance Agencies, & Team Supervisor |
 |  3  | Sensor communication shall send the sensor name, number, data type, and raw data to the head unit. | Project Team |
 
 <sup>1</sup> In order for the system to work properly all of the sensors have to be able to communicate with the head unit. If a sensor is not able to communicate with the head unit, then the recorded data is unobtainable by the homeowner. This can be accomplished with a mesh network.
