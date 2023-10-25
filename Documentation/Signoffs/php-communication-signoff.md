@@ -23,11 +23,11 @@ The function of the communication subsystem is to act as a transmitter for each 
 
 
 ## Buildable Schematic
-#### Head Unit Reciever
+#### Head Unit Reciever from Manufacturer
 ![Reciever](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/86660aec-523b-4ed7-8e32-47fd15c300dd)
 
 The picture shown above is the XB24CAWIT-001, the schematic shows an in-depth design of the receiver.
-#### Sensor Module Transmitters
+#### Sensor Module Transmitters from Manufacturer
  ![Transmitter](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/7f7b898d-26be-4da4-8958-8dd662d6b1b3)
  
 The picture shown above is the ESP32-H2, the schematic shows an in-depth design of the transmitter.
