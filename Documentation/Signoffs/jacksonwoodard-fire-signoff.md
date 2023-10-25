@@ -1,7 +1,7 @@
 # Fire Module Signoff
 
 ## Subsystem Function
-The function of the fire module subsystem is to detect if a fire has ever occured in a specific room in a house. The system will work by using a IR Temperature Sensor that is installed on the ceiling of a room with a piece of copper that will be the source for the temperature sensor to aim at to recieve the temperature.
+The function of the fire module subsystem is to detect if a fire has ever occurred in a specific room in a house. The system will work by using an IR Temperature Sensor that is installed on the ceiling of a room that will be pointed toward the ground to detect room temperature to determine if a minimum of 176&deg; Fahrenheit has occurred. If the temperature has reached the minimum temperature requirement, a signal will be sent to the head unit warning the homeowner of a potential fire.
 
 ![firemodule](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/e768ff15-9812-4a0a-b979-6f65d493c14f)
 
