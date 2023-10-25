@@ -14,12 +14,15 @@ The function of the communication subsystem is to act as a transmitter for each 
 |  1  | Sensors shall not be placed in a way where they cannot wirelessly communicate with the system. | Project Team & Broader Implications |
 |  2  | System shall not require an internet connection to work and communicate with the head unit and sensors | Home Owners, Insurance Agencies, & Team Supervisor |
 |  3  | Sensor communication shall send the sensor name, number, data type, and raw data to the head unit. | Project Team |
+|  4  | Sensor modules shall not send more than 64 bits of data when transmitting information to the head unit. | Project Team & Standards|
 
 <sup>1</sup> In order for the system to work properly all of the sensors have to be able to communicate with the head unit. If a sensor is not able to communicate with the head unit, then the recorded data is unobtainable by the homeowner. 
 
 <sup>2</sup> In order for the system to not require an internet connection, the system will be designed to work on a Personal Area Network (PAN). In order to achieve this, the Zigbee communication protocol will be used.
 
-<sup>3</sup> This is needed because the head unit needs to know the sensor information to be able to organize the data of each sensor. 
+<sup>3</sup> The head unit needs to know the sensor information to be able to organize the data of each sensor. Knowing this allows the information to be more easily displayed to the user.
+
+<sup>4</sup> This is the maximum amount of data that Zigbee can send at once. If more than 64 bits of data were trying to be sent, information would be lost.
 
 
 ## Buildable Schematic
@@ -40,14 +43,10 @@ The picture shown above is the ESP32-H2, the schematic shows an in-depth design 
 #### Connectivity
 The ESP32-H2 is able to communicate via Zigbee protocols [1]. Zigbee protocols allow for the formation of a mesh network, allowing the system the work for any size house [2]. The ESP32-H2 has a built-in 2.4 GHz receiver and transmitter that will form a mesh network to ensure that all sensors will be able to communicate with the head unit [1].
 
-The XB24 is also able to communicate via Zigbee protocols [3]. This Zigbee module allows direct connectivity to a Raspberry Pi or related board. It will also allow the system to extend its range up to 200ft indoors, giving it the ability to reach the sensors in a house [3]. If a sensor is placed outside of the 200ft range, then a mesh network would be incorporated into that system. The ESP32-H2 has the capability to transmit data at a minimum of 32ft. As long as each sensor module is placed within 32ft of one another, then the mesh network can be created.
+The XB24 is also able to communicate via Zigbee protocols [3]. This Zigbee module allows direct connectivity to a Raspberry Pi or related board. It will also allow the system to extend its range up to 200ft indoors, giving it the ability to reach the sensors in a house [3]. If a sensor is placed outside of the 200ft range, then a mesh network would be incorporated into that system. The ESP32-H2 has the capability to transmit data at a minimum of 32ft [4]. As long as each sensor module is placed within 32ft of one another, then the mesh network can be created [4]. 
 
 #### Personal Area Network
-Zigbee is designed to create a personal area network (PAN), which would not require the system to have to connect to an internet connection [4]. Zigbee devices are either preconfigured with a PAN ID to join, or they can discover nearby networks and select a PAN ID network to join [4]. This allows any Zigbee device to connect to each other as long as the PAN ID is in a discoverable range.
-
-
-#### Communication
-
+Zigbee is designed to create a personal area network (PAN), which would not require the system to have to connect to an internet connection [5]. Zigbee devices are either preconfigured with a PAN ID to join, or they can discover nearby networks and select a PAN ID network to join [5]. This allows any Zigbee device to connect to each other as long as the PAN ID is in a discoverable range. Each sensor module will have a unique PAN ID allowing the information to be differentiated from one another. 
 
 
 ## Bill of Materials (BOM)
@@ -64,4 +63,6 @@ Zigbee is designed to create a personal area network (PAN), which would not requ
 
 [3] “Digi xbee S2C 802.15.4 RF modules Datasheet,” IIoT Devices and Services for M2M Networking, https://www.digi.com/resources/library/data-sheets/ds_xbee-s2c-802-15-4?view=fullscreen (accessed Oct. 24, 2023). 
 
-[4] “PAN ID,” Pan Id, https://www.digi.com/resources/documentation/Digidocs/90002002/Concepts/c_zb_pan_id.htm?tocpath=Zigbee+networks%7CZigbee+networking+concepts%7CPAN+ID%7C_____0#:~:text=Zigbee%20networks%20are%20called%20personal,devices%20of%20the%20same%20network. (accessed Oct. 25, 2023). 
+[4] Reolink, “Zigbee range: You must know the truth,” Reolink, https://reolink.com/blog/zigbee-range/ (accessed Oct. 25, 2023). 
+
+[5] “PAN ID,” Pan Id, https://www.digi.com/resources/documentation/Digidocs/90002002/Concepts/c_zb_pan_id.htm?tocpath=Zigbee+networks%7CZigbee+networking+concepts%7CPAN+ID%7C_____0#:~:text=Zigbee%20networks%20are%20called%20personal,devices%20of%20the%20same%20network. (accessed Oct. 25, 2023). 
