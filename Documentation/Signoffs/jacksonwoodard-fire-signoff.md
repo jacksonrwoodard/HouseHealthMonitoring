@@ -8,7 +8,7 @@ The function of the fire module subsystem is to detect if a fire has ever occurr
 ## Constraints
 | No. | Constraints | Origin |
 | --- | ----------- | ------ |
-|  1  | Shall be able to detect the temperature of the senosr and send the data to the head unit. | Project Team |
+|  1  | Shall be able to detect the temperature of the sensor and send the data to the head unit. | Project Team |
 |  2  | Sensor shall not be a distraction to the homeowner | All External Stakeholders, Ethics, & Team Supervisor |
 
 ## Buildable Schematic
@@ -16,6 +16,10 @@ The function of the fire module subsystem is to detect if a fire has ever occurr
 ![BlockDiagram](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/af28eb34-ada7-40e6-9d11-8862e578e8f3)
 
 The picture shown above is the detailed block diagram of the MLX90614 IR Temperature Sensor. The MLX90614 is controlled by an internal state machine that controls the measurements and calculations of the object and ambient temperatures and does the post-processing to output the data [1].
+
+![FireModule](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/f76f58e1-2390-423b-80ed-a624107a2050)
+
+
 ## Analysis
 
 ## Bill of Materials (BOM)
