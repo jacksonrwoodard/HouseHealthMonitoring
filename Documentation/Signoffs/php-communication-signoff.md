@@ -11,18 +11,20 @@ The function of the communication subsystem is to act as a transmitter for each 
 ## Constraints
 | No. | Constraints                                                                                    | Origin                              |
 | --- | ---------------------------------------------------------------------------------------------- | ----------------------------------- |
-|  1  | Sensors shall not be placed in a way where they cannot wirelessly communicate with the system. | Project Team & Broader Implications |
-|  2  | System shall not require an internet connection to work and communicate with the head unit and sensors | Home Owners, Insurance Agencies, & Team Supervisor |
-|  3  | Sensor communication shall send the sensor name, number, data type, and raw data to the head unit. | Project Team |
-|  4  | Sensor modules shall not send more than 64 bits of data when transmitting information to the head unit. | Project Team & Standards|
+|  1  | At least one sensor shall be placed within 200ft of the head unit. | Project Team & Broader Implications & Standards |
+|  2  | Sensors shall be within 32ft from each other for every sensor outside of 200ft of the head unit. | Project Team & Broader Implications & Standards |
+|  3  | System shall not require an internet connection to work and communicate with the head unit and sensors | Home Owners, Insurance Agencies, & Team Supervisor |
+|  4  | Sensor communication shall send the sensor name, number, data type, and raw data to the head unit. | Project Team |
+|  5  | Sensor modules shall not send more than 64 bits of data when transmitting information to the head unit. | Project Team & Standards|
+|  6  | 
 
 <sup>1</sup> In order for the system to work properly all of the sensors have to be able to communicate with the head unit. If a sensor is not able to communicate with the head unit, then the recorded data is unobtainable by the homeowner. 
 
-<sup>2</sup> In order for the system to not require an internet connection, the system will be designed to work on a Personal Area Network (PAN). In order to achieve this, the Zigbee communication protocol will be used.
+<sup>3</sup> In order for the system to not require an internet connection, the system will be designed to work on a Personal Area Network (PAN). In order to achieve this, the Zigbee communication protocol will be used.
 
-<sup>3</sup> The head unit needs to know the sensor information to be able to organize the data of each sensor. Knowing this allows the information to be more easily displayed to the user.
+<sup>4</sup> The head unit needs to know the sensor information to be able to organize the data of each sensor. Knowing this allows the information to be more easily displayed to the user.
 
-<sup>4</sup> This is the maximum amount of data that Zigbee can send at once. If more than 64 bits of data were trying to be sent, information would be lost.
+<sup>5</sup> This is the maximum amount of data that Zigbee can send at once. If more than 64 bits of data were trying to be sent, information would be lost.
 
 
 ## Buildable Schematic
