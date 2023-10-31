@@ -15,7 +15,7 @@ The function of the mold module subsystem is to detect if mold is likely to grow
 ## Bill of Materials (BOM)
 | Device | Quantity | Price Per Unit | Total Price |
 | ------ | -------- | -------------- | ----------- |
-| 
+| SHT30 Temperature and Humidity Sensor | 1 | $13.41 | $13.41 |
 
 ## References
 
