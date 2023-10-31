@@ -15,17 +15,20 @@ The function of the communication subsystem is to act as a transmitter for each 
 |  2  | Sensors shall be within 32ft from each other for every sensor outside of 200ft of the head unit. | Project Team & Broader Implications & Standards |
 |  3  | System shall not require an internet connection to work and communicate with the head unit and sensors | Home Owners, Insurance Agencies, & Team Supervisor |
 |  4  | Sensor communication shall send the sensor name, number, data type, and raw data to the head unit. | Project Team |
-|  5  | Sensor modules shall not send more than 64 bits of data when transmitting information to the head unit. | Project Team & Standards|
-|  6  | 
+|  5  | Sensor modules shall not send more than 64 bits (1 packet) of data per data request when transmitting information to the head unit. | Project Team & Standards|
+|  6  | Sensors communication shall 
 
-<sup>1</sup> In order for the system to work properly all of the sensors have to be able to communicate with the head unit. If a sensor is not able to communicate with the head unit, then the recorded data is unobtainable by the homeowner. 
+<sup>1</sup> In order for the system to work properly all of the sensors have to be able to communicate with the head unit. At least one sensor has to be within 200ft of the head unit because the XB24's maximum range allows for 200ft of indoor communication. Indoor means through the interior walls of a house.
+
+<sup>2</sup> The sensors have to be placed within 32ft of each other for the minimum transmission and reception range of the Zigbee-compliant devices.
 
 <sup>3</sup> In order for the system to not require an internet connection, the system will be designed to work on a Personal Area Network (PAN). In order to achieve this, the Zigbee communication protocol will be used.
 
 <sup>4</sup> The head unit needs to know the sensor information to be able to organize the data of each sensor. Knowing this allows the information to be more easily displayed to the user.
 
-<sup>5</sup> This is the maximum amount of data that Zigbee can send at once. If more than 64 bits of data were trying to be sent, information would be lost.
+<sup>5</sup> This is the maximum amount of data that Zigbee can send per data request from the head unit. This is also necessary to preserve storage and power consumption. It will also prevent overflow and loss of information.
 
+<sup>6</sup> 
 
 ## Buildable Schematic
 #### Head Unit Reciever from Manufacturer
@@ -39,7 +42,8 @@ The picture shown above is the ESP32-H2, the schematic shows an in-depth design 
 
 #### Third-Party Buildable Schematic
 
- ![CommunicationSchematic](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/209c1588-a54b-4fe9-bb34-3c8f18ce0dce)
+![CommunicationSchematic](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/3508a842-c48e-4885-95f8-2e3187f5ce60)
+
 
 ## Analysis
 #### Connectivity
@@ -49,6 +53,8 @@ The XB24 is also able to communicate via Zigbee protocols [3]. This Zigbee modul
 
 #### Personal Area Network
 Zigbee is designed to create a personal area network (PAN), which would not require the system to have to connect to an internet connection [5]. Zigbee devices are either preconfigured with a PAN ID to join, or they can discover nearby networks and select a PAN ID network to join [5]. This allows any Zigbee device to connect to each other as long as the PAN ID is in a discoverable range. Each sensor module will have a unique PAN ID allowing the information to be differentiated from one another. Each sensor will data type and read frequency will be coded to comply with Zigbee's 64 bit limit.
+
+<sup>1</sup> 
 
 
 ## Bill of Materials (BOM)
