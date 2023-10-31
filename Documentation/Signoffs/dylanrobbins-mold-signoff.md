@@ -12,6 +12,8 @@ The function of the mold module subsystem is to detect if mold is likely to grow
 |  2  | 
 
 ## Buildable Schematic
+![SHT30 functional block diagram](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/104484972/f956cbd5-82c0-45e2-a615-ddc1c76373ab)
+
 
 ## Analysis
 
@@ -21,4 +23,6 @@ The function of the mold module subsystem is to detect if mold is likely to grow
 | SHT30 Temperature and Humidity Sensor | 1 | $13.41 | $13.41 |
 
 ## References
+[1] Sensirion, “NRESET - Adafruit Industries,” Datasheet SHT3x-DIS Humidity and Temperature Sensor, https://cdn-shop.adafruit.com/product-files/5064/5064_Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital.pdf (accessed Oct. 31, 2023).
 
+[2] A. Industries, “SHT30 temperature and humidity sensor - wired enclosed shell,” adafruit industries blog RSS, https://www.adafruit.com/product/5064?gad_source=1&amp;gclid=Cj0KCQjwqP2pBhDMARIsAJQ0CzqlgH_Vrp7xm4fY1QcRbdX0pUI5kT-38Ae2RRNolKE7GWGYOe8_RYYaAsEoEALw_wcB (accessed Oct. 31, 2023). 
