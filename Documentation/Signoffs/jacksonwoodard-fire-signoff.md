@@ -1,4 +1,4 @@
-# Fire Module Signoff
+![TemperatureSensor](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/d828739c-6f49-4bb3-a188-3ce1dc08b542)# Fire Module Signoff
 
 ## Subsystem Function
 The function of the fire module subsystem is to detect if a fire has ever occurred in a specific room in a house. The system will work by using an IR Temperature Sensor that is installed on the ceiling of a room that will be pointed toward the ground to detect room temperature to determine if a minimum of 176&deg; Fahrenheit has occurred. If the temperature has reached the minimum temperature requirement, a signal will be sent to the head unit warning the homeowner of a potential fire.
@@ -17,7 +17,9 @@ The function of the fire module subsystem is to detect if a fire has ever occurr
 
 The picture shown above is the detailed block diagram of the MLX90614 IR Temperature Sensor. The MLX90614 is controlled by an internal state machine that controls the measurements and calculations of the object and ambient temperatures and does the post-processing to output the data [1].
 
-![FireModule](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/f76f58e1-2390-423b-80ed-a624107a2050)
+![FireModule](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/8a65f109-aadd-43b8-a366-9c797aae8d26)
+
+
 
 
 ## Analysis
@@ -25,7 +27,7 @@ The picture shown above is the detailed block diagram of the MLX90614 IR Tempera
 ## Bill of Materials (BOM)
 | DEVICE | Quantity | Price Per Unit | Total Price |
 | ------ | -------- | -------------- | ----------- |
-|
+|  MLX90614ESF-BAA-000-TU | 1 | $18.53 | $18.53 |
 
 ## References
 
