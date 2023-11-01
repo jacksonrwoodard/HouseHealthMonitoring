@@ -2,6 +2,7 @@
 
 ## Subsystem Function
 The function of the mold module subsystem is to detect if mold is likely to grow within the surrounding environment of the sensor. The SHT30 Temperature and Humidity Sensor will gather temperature and humdity levels and send its respective data to an ESP32-H2 micro-controller. The mold module will send data to the ESP32-H2 every hour to allow for computations of the peak and average values.
+
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/104484972/3401a3b6-74a1-49af-a090-dfe94abc742c)
 
 
@@ -19,7 +20,7 @@ The function of the mold module subsystem is to detect if mold is likely to grow
 
 <sup>3</sup> The sensors are expected to have a long life-time because they will not be easily accessable for repair inside of a wall. To ensure that they will have a longer life-time, the sensor will be protected in a way that harsh environmental conditions will not cause damage.
 
-<sup>4</sup> In order for the sensor module to 
+<sup>4</sup> In order for the sensor module to accurately determine if mold like conditions are present, the sensor must record precise measurements. The percent error of the readings must be very low so that the data is as accurate as possible. A slight error in the readings could possibly cause the system to display no active mold conditions when there actually is.
 
 ## Buildable Schematic
 ![SHT30 functional block diagram](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/104484972/f956cbd5-82c0-45e2-a615-ddc1c76373ab)
@@ -31,7 +32,19 @@ The picture above is a functional block diagram of the SHT30-DIS humidity and te
 The picture above is the typical application circuit for the SHT30-DIS humidity and temperature sensor [1]. The buildable schematic of the SHT30 hooked up to the ESP32-H2 will be shown below. The only pins required to be hooked up to the ESP32-H2 are the VDD (power), VSS (ground), SDA (Serial data), and SCL (Serial clock) pins. The remaining pins will be floating, with the necessary pins being configured in the code of the ESP32-H2 to allow for appropriate communication.
 
 ## Analysis
+<sup>1</sup> According to the SHT30-DIS datasheet, the sensor can detect relative humidity levels from 0% - 100% RH and can detect temperature values between -40&deg; C - 125&deg; C [1]. Given these ranges, the SHT30-DIS will have no problem detecting the ranges of values that are probable to cause mold like conditions.
 
+<sup>2</sup> The SHT30-DIS requires an I2C, 2 wire connection, communication protocol to communicate with any micro-controller [1]. The ESP32-H2 follows the IEEE 802.15.4 standard for all of its wireless radio frequency (RF) communications [4]. Therefore, the ESP32-H2 can support I2C communication protocols and communicate with the SHT30 if the SDA (Serial data) and SCL (Serial Clock) pins are properly connected to the ESP32-H2. Since the SHT30 and ESP32-H2 are compatible with each other, the sensor can send its data to the microcontroller for computation and storage. The SHT30 is reliably capable of sending data across the SDA line at 400 kHz, but the I2C fast mode standards must be met. In I2C communication, one bit is transmitted each clock cycle and there are 400,000 clock cycles per second, so the SHT30 can transmit 400,000 bps to the ESP32-H2. Therefore, if 32 bits of data are being transmitted to the ESP32-H2 every hour, 16 bits for the temperature value and 16 bits for the humidity level, the SHT30 can transmit this data in 0.08 ms, and the ESP32-H2 can go into sleep mode until it is woken up in another hour. This will help with lower power consumption and preserve storage space.
+
+Transmission Time = Number of Bits / Transmission Rate
+
+Transmission Time = (32 bits) / (400,000 bps)
+
+Transmissino Time = 0.08 ms
+
+<sup>3</sup> According to all external stakeholders and team supervisor, the system shall not be of visual hindrance to the home owner and require little to no maintenance during its lifespan. The design team is proposing to design the system to last up to 30 years. Therefore, the sensor shall not be exposed to any harsh environmental conditions that might damage it. The SHT30-DIS is designed and produced inside of an enclosed case much like weather-proof mesh sensor [2]. This will ensure that nothing, such as rodents or debris, will damage the sensor while still maintaining a stable, accurate reading of temperature and humidity levels. All of the external connections to the ESP32-H2 will also be within an enclosed case.
+
+<sup>4</sup> To ensure that the mold module is reading and computing accurate numbers to determine if mold like conditions are met, the SHT30 must have low accuracy tolerances. According to the datasheet, the humidity sensor has a typical tolerance of +/- 2% RH and the temperature sensor has a typical tolerance of +/- 0.2&deg; C when levels are between 0&deg; C to 65&deg; C [1]. This sensor is more precise, more accurate, works in a bigger range of temperature/humidity, and is less expensive compared to other humdity and temperature senors, such as the DHT22/AM2302 [4]. With more accurate readings, the ESP32-H2 will be able to compute more accurate peak and average values to better trace mold conditions.
 
 ## Bill of Materials (BOM)
 | Device | Quantity | Price Per Unit | Total Price |
@@ -44,3 +57,5 @@ The picture above is the typical application circuit for the SHT30-DIS humidity 
 [2] A. Industries, “SHT30 temperature and humidity sensor - wired enclosed shell,” adafruit industries blog RSS, https://www.adafruit.com/product/5064?gad_source=1&amp;gclid=Cj0KCQjwqP2pBhDMARIsAJQ0CzqlgH_Vrp7xm4fY1QcRbdX0pUI5kT-38Ae2RRNolKE7GWGYOe8_RYYaAsEoEALw_wcB (accessed Oct. 31, 2023).
 
 [3] Adam, “Mold Chart for Temperature and Humidity Monitors,” Stetten home services, https://energyhandyman.com/knowledge-library/mold-chart-for-temperature-and-humidity-monitors/ (accessed Sep. 28, 2023).
+
+[4] Espressif Systems, “ESP32-H2 - Espressif Systems,” Adafruit, https://www.espressif.com/sites/default/files/documentation/esp32-h2_datasheet_en.pdf (accessed Oct. 24, 2023).
