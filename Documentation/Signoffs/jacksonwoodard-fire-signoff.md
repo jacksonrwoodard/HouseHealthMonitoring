@@ -11,7 +11,7 @@ The function of the fire module subsystem is to detect if a fire has ever occurr
 |  1  | Shall be able to detect the minimum temperature of 176&deg; Fahrenheit. | Project Team |
 |  2  | Shall send sensor data to the ESP32 every second. | Project Team |
 |  3  | Shall send temperature data to the head unit if 176&deg; Fahrenheit has been reached. | Project Team |
-|  4  | Sensor shall not be a distraction to the homeowner. | All External Stakeholders, Ethics, & Team Supervisor |
+|  4  | Shall not be a distraction to the homeowner. | All External Stakeholders, Ethics, & Team Supervisor |
 
 <sup>1</sup> In order to determine if a fire has occurred in a room, the temperature sensor needs to be able to detect if the temperature has reached a minimum of 176&deg; Fahrenheit. This is because drywall in a house begins to deteriorate at 176&deg; Fahrenheit [1]. 
 
@@ -37,7 +37,7 @@ The picture shown above is the detailed block diagram of the MLX90614 IR Tempera
 
 <sup>2</sup> The ESP32-H2 is a microcontroller that can be coded to read how often it pulls data from the connected sensor [3]. Having enough storage to hold the data would not be a problem for the ESP32. The largest amount of data that the fire module will use is 1 packet (64 bits) because each sensor is assigned a unique 16-bit PAN ID and the data reading will not need more than 48 bits to hold the raw data and the data type. The data type will take up around 4 bits to know what data type is being sent, and the raw data will never need more than the remaining bits because the temperature sensor can only detect 716&deg; Fahrenheit, which is only 11 bits in binary. The ESP32 has 4MB ROM of storage and there are 32,000,000 bits in 4MB [3]. At 64 bits per packet, the ESP32 can store 500,000 readings at a time. There are 86,400 seconds in 24 hours, so if the ESP32 reads data from the sensor every second, it would only require 5,529,600 bits to store the data for a 24-hour period. With the numbers shown above, it would be possible for the ESP32 to read and store data from the temperature sensor every second.
 
-<sup>3</sup> The ESP32-H2 also has the ability to code it to tell the microcontroller that if 176&deg; Fahrenheit is read from the sensor, to send the data to the head unit.
+<sup>3</sup> The ESP32-H2 can be coded that if 176&deg; Fahrenheit is read from the sensor, to send the data to the head unit [4]. 
 
 ## Bill of Materials (BOM)
 | DEVICE | Quantity | Price Per Unit | Total Price |
