@@ -40,7 +40,7 @@ Transmission Time = Number of Bits / Transmission Rate
 
 Transmission Time = (32 bits) / (400,000 bps)
 
-Transmissino Time = 0.08 ms
+Transmission Time = 0.08 ms
 
 <sup>3</sup> According to all external stakeholders and team supervisor, the system shall not be of visual hindrance to the home owner and require little to no maintenance during its lifespan. The design team is proposing to design the system to last up to 30 years. Therefore, the sensor shall not be exposed to any harsh environmental conditions that might damage it. The SHT30-DIS is designed and produced inside of an enclosed case much like weather-proof mesh sensor [2]. This will ensure that nothing, such as rodents or debris, will damage the sensor while still maintaining a stable, accurate reading of temperature and humidity levels. All of the external connections to the ESP32-H2 will also be within an enclosed case.
 
