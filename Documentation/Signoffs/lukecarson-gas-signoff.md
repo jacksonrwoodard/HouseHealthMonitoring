@@ -3,6 +3,9 @@
 ## Subsystem Function
 The gas module plays a critical role in ensuring safety and well-being by detecting three gases that can be found in homes: propane, carbon monoxide, and ammonia. The module collects data on gas concentrations and wirelessly transmits it to the head unit through our wireless communication module. At the head unit, the data undergoes analysis to ensure compliance with OSHA standards for an eight-hour monitoring window. This process provides real-time data and alerts about gas concentrations, helping the system respond to and manage safety or environmental concerns. The module is a part of our overall system, seamlessly working to preserve the environment of the house and comply with regulatory standards. The module’s performance is essential to maintaining a safe and healthy living environment. Any malfunction of the gas sensor module could result in potential risks, such as gas leaks or air quality degradation. Therefore, its function is crucial in achieving the system's primary goal of providing accurate, timely, and actionable gas-related information while adhering to established safety standards and guidelines.
 
+![Gas Module Block diagram](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/c0c971c0-ab34-4693-a6ac-00cb6879f5f2)
+
+
 ## Constraints
 | No. | Constraints                                                                                    | Origin                              |
 | --- | ---------------------------------------------------------------------------------------------- | ----------------------------------- |
