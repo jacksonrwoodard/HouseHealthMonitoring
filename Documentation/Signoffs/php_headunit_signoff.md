@@ -19,7 +19,11 @@ The function of the head unit is to display active and historical data about eac
 
 <sup>3</sup> The head unit checks if temperatures have been at 176&176; Fahrenheit or higher, since 176&176; Farhenheit is the ignition temperature of drywall. 
 
-<sup>4</sup> The head unit needs to receieve if water has 
+<sup>4</sup> The head unit needs to know if water is detecte and what the level of water is acting as an indicator of water damage within a home.
+
+<sup>5</sup> 
+
+<sup>6</sup> 
 
 ## System Schematic
 
