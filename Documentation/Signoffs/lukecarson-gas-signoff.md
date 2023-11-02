@@ -20,19 +20,18 @@ The gas module plays a critical role in ensuring safety and well-being by detect
 
 <sup>2</sup> In order to abide by OSHA standards, these are the gas concentrations perserve home pro will be detecting for an eight hour monitoring window. [2]
 
-<sup>3</sup> In accordance to NFPA standards, perserve home pro will adhere to the located specified in the third constraint. [3] [4]
-
+<sup>3</sup> In accordance to NFPA standards, perserve home pro will adhere to the located specified in the third constraint. [3-4]
 <sup>4</sup> For perserve home pro to best maximize the potential in finding gas leaks the gas module will be placed where gas piping is being feed into. [5]
 
 <sup>5</sup> For the gases that are being targeted, they will be orientated either near the ceiling or near the floor because the each gas is heavier or lighter than air and either flow up or down. [5]
 
-<sup>6</sup> From looking at exisitng products installation manuals, perserve home pro will not be placing the gas sensors where their is a potential disturbance that will effect the sensing of the sensor.[3] [4] [5]
+<sup>6</sup> From looking at exisitng products installation manuals, perserve home pro will not be placing the gas sensors where their is a potential disturbance that will effect the sensing of the sensor.[3-5]
 
 <sup>7</sup> From looking at existing products installation manuals, perserve home pro will not place sensors in environments where there will be false positives for the sensor from other environments.[4]
 
-<sup>8</sup> To meet the manufacturers work environment, the sensors will not be placed in the specified temperature range in order to keep functionality.[6] [7]
+<sup>8</sup> To meet the manufacturers work environment, the sensors will not be placed in the specified temperature range in order to keep functionality.[6-7]
 
-<sup>9</sup> To meet the manufacturers work environment, the sensors will not be placed in the specified temperature range in order to keep functionality.[6] [7]
+<sup>9</sup> To meet the manufacturers work environment, the sensors will not be placed in the specified temperature range in order to keep functionality.[6-7]
 
 ## Buildable Schematic  
 
