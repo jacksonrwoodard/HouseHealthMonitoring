@@ -10,7 +10,7 @@ The gas module plays a critical role in ensuring safety and well-being by detect
 |  2  | Head unit shall receive data from the gas module and follow OSHA standards for ammonia, propane, and carbon oxides (50 ppm, 1000 ppm, and 50 ppm respectively over an eight-hour window)| OSHA |
 |  3  | The Gas module shall be installed in a central location outside each sleeping area or in the immediate vicinity of the bedrooms, at the maximum of 20 feet | NFPA |
 |  4  | The Gas module shall be placed as close as possible to potential gas leak spots | Project Team, Existing Products |
-|  5  | The Gas module shall be orientated to where our target gas vapours tend to rise or drop | Project Team, Existing Produts |
+|  5  | The Gas module shall be orientated to where the target gas vapours tend to rise or fall | Project Team, Existing Produts |
 |  6  | The Gas module shall not be placed near entrances/disturbances or fresh air vents where concentrations can be diluted | Project Team, Existing Products |
 |  7  | The Gas module shall not be placed in bathrooms, garages, kitchens, furnace rooms, extremely dusty or dirty areas | Project Team, Existing Products |
 |  8  | The Gas module shall not be placed in areas of the house enviroment where it is colder than -10°C or hotter than 50°C | Manufacturer |
