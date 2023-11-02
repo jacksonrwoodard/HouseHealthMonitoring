@@ -21,6 +21,7 @@ The gas module plays a critical role in ensuring safety and well-being by detect
 <sup>2</sup> In order to abide by OSHA standards, these are the gas concentrations perserve home pro will be detecting for an eight hour monitoring window. [2]
 
 <sup>3</sup> In accordance to NFPA standards, perserve home pro will adhere to the located specified in the third constraint. [3-4]
+
 <sup>4</sup> For perserve home pro to best maximize the potential in finding gas leaks the gas module will be placed where gas piping is being feed into. [5]
 
 <sup>5</sup> For the gases that are being targeted, they will be orientated either near the ceiling or near the floor because the each gas is heavier or lighter than air and either flow up or down. [5]
