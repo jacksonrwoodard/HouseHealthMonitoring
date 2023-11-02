@@ -1,7 +1,9 @@
 # Gas Module Signoff
 
 ## Subsystem Function
-The gas module plays a critical role in ensuring safety and well-being by detecting three gases that can be found in homes: propane, carbon monoxide, and ammonia. The module collects data on gas concentrations and wirelessly transmits it to the head unit through our wireless communication module. At the head unit, the data undergoes analysis to ensure compliance with OSHA standards for an eight-hour monitoring window. This process provides real-time data and alerts about gas concentrations, helping the system respond to and manage safety or environmental concerns. The module is a part of our overall system, seamlessly working to preserve the environment of the house and comply with regulatory standards. The module’s performance is essential to maintaining a safe and healthy living environment. Any malfunction of the gas sensor module could result in potential risks, such as gas leaks or air quality degradation. Therefore, its function is crucial in achieving the system's primary goal of providing accurate, timely, and actionable gas-related information while adhering to established safety standards and guidelines.
+The gas module plays a critical role in ensuring safety and well-being by detecting three gases that can be found in homes: propane, carbon monoxide, and ammonia. The module collects data on gas concentrations and wirelessly transmits it to the head unit through our wireless communication module. At the head unit, the data undergoes analysis to ensure compliance with OSHA standards for an eight-hour monitoring window. This process provides real-time data and alerts about gas concentrations, helping the system respond to and manage safety or environmental concerns.
+
+The module is a part of our overall system, seamlessly working to preserve the environment of the house and comply with regulatory standards. The module’s performance is essential to maintaining a safe and healthy living environment. Any malfunction of the gas sensor module could result in potential risks, such as gas leaks or air quality degradation. Therefore, its function is crucial in achieving the system's primary goal of providing accurate, timely, and actionable gas-related information while adhering to established safety standards and guidelines.
 
 ![Gas Module Block diagram](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/c0c971c0-ab34-4693-a6ac-00cb6879f5f2)
 
@@ -18,6 +20,7 @@ The gas module plays a critical role in ensuring safety and well-being by detect
 |  7  | The Gas module shall not be placed in bathrooms, garages, kitchens, furnace rooms, extremely dusty or dirty areas | Project Team, Existing Products |
 |  8  | The Gas module shall not be placed in areas of the house enviroment where it is colder than -10°C or hotter than 50°C | Manufacturer |
 |  9  | The Gas module shall not be placed in areas of the house enviroment where the humidity is more than 95% | Manufacturer |
+|  10 | The Gas module shall use analog communication every second, in the range of 0-5V, that will be connected to a ADC on the ESP32-H2 | Project Team |
 
 <sup>1</sup> These are the three specific gases perserve home pro set out to be able to detect due to the common gases causing poisoning at the home. [1]
 
@@ -36,6 +39,9 @@ The gas module plays a critical role in ensuring safety and well-being by detect
 <sup>8</sup> To meet the manufacturers work environment, the sensors will not be placed in the specified temperature range in order to keep functionality.[6-7]
 
 <sup>9</sup> To meet the manufacturers work environment, the sensors will not be placed in the specified temperature range in order to keep functionality.[6-7]
+
+<sup>10</sup> For perserve home pro to keep a coverage of a house's environment to the three target gases, the gas module will need to be sending data every second in order to actively protect homeowner's from potential threats.
+
 
 ## Buildable Schematic  
 
@@ -60,7 +66,9 @@ Figure 3. This the wiring schematic of how the gas sensors will be connected to 
 
 <sup>3</sup> For constraints 4 through 7, perserve home pro looked at alredy existing solutions from gas sensor manufacturers and developers in order to best suit the location of the gas module. The consensus for constraints 4 and 5 was to place the modules prevelant for leaks or sources that are prone to leak.[5] This would be the piping from gas sources to appliances (if homeowners have that feature for their house) so perserve home pro would detect propane accurately and would need to placed near the floor because propane is heavier than air and will naturally flow to the floor.[5] [11] The carbon monoxide spreads evenly through the air and was adressed previously on the location so perserve home pro must have that location meet.[3-4] [10] Ammonia is a lighter than air so will naturally want to float upwards so that module will be placed near ceilings to be in the environment where ammonia resides.[12] The constraints 6 and 7 will be meet for our selection of location in order to best place our module in a environment where accurate readings can be conducted without external environments affecting them.[3-5]
 
-<sup>4</sup> Lastly, perserve home pro will need to meet constraints 8 and 9 given from the manufacturers datasheet in order to have proper work environments for the sensor. If those constraints are not meet from perserve home pro then the sensor will not work properly and potentially lead to harmful affects to homeowners.[6-7]
+<sup>4</sup> Also, perserve home pro will need to meet constraints 8 and 9 given from the manufacturers datasheet in order to have proper work environments for the sensor. If those constraints are not meet from perserve home pro then the sensor will not work properly and potentially lead to harmful affects to homeowners.[6-7]
+
+<sup>5</sup> Lastly, 
 
 ## Bill of Materials
 | DEVICE | Quantity | Price Per Unit | Total Price |
