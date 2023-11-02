@@ -27,6 +27,10 @@ The function of the head unit is to display active and historical data about eac
 
 ## System Schematic
 
+![Head_Unit_Schematic_Design](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/d0a11526-52bf-495c-876b-392f8cdcbe39)
+
+
+
 ## Analysis
 
 <sup>1</sup> 
@@ -43,9 +47,12 @@ The function of the head unit is to display active and historical data about eac
 
 ## Bill of Materials (BOM)
 
-##References
+## References
 [1] N. P. Team, “At what temperature will drywall ignite?,” NCERT POINT, https://www.ncertpoint.com/2022/01/at-what-temperature-will-drywall-ignite.html (accessed Oct. 24, 2023).
+
 [2] Stueber, S. (2023, October 4). What are the common causes of water damage?. West Bend Insurance of Wisconsin. https://www.thesilverlining.com/westbendcares/blog/what-are-the-common-causes-of-water-damage (accessed Oct. 31, 2023).
+
 [3] I. Maloca, J. Macan, V. Varnai, and R. Turk, “[household gas poisonings],” Arhiv za higijenu rada i toksikologiju, https://pubmed.ncbi.nlm.nih.gov/17265686/ (accessed Nov. 1, 2023).
+
 [4] MediLexicon International. (n.d.). Mold in the home: How big A health problem is it?. Medical News Today. https://www.medicalnewstoday.com/articles/288651#mold-and-health (accessed Oct. 28, 2023).
 
