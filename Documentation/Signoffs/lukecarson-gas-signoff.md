@@ -37,8 +37,10 @@ The gas module plays a critical role in ensuring safety and well-being by detect
 ## Buildable Schematic  
 
 ![Screenshot 2023-11-01 145628](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/59f374f8-044c-44ba-af4c-2bbdb6955dba)
+
 Figure 1. This is the schematic of the MQ-9 sensor that is being used on the SRAQ-G014, this sensor targets propane and carbon monoxide. [9]
 ![Screenshot 2023-11-01 150119](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/9e32d46a-e733-4559-89af-41e114e904ec)
+
 Figure 2. This is the schematic of the MQ-135 sensor that is being used on the SRAQ-G016, this sensor targets ammonia. [8]
 
 #### Third-Party Buildable Schematic
