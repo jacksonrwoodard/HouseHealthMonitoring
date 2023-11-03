@@ -20,7 +20,6 @@ The module is a part of our overall system, seamlessly working to preserve the e
 |  7  | The Gas module shall not be placed in bathrooms, garages, kitchens, furnace rooms, extremely dusty or dirty areas | Project Team, Existing Products |
 |  8  | The Gas module shall not be placed in areas of the house enviroment where it is colder than -10°C or hotter than 50°C | Manufacturer |
 |  9  | The Gas module shall not be placed in areas of the house enviroment where the humidity is more than 95% | Manufacturer |
-|  10 | The Gas module shall use analog communication every second, in the range of 0-5V, that will be connected to a ADC on the ESP32-H2 | Project Team |
 
 <sup>1</sup> These are the three specific gases perserve home pro set out to be able to detect due to the common gases causing poisoning at the home. [1]
 
@@ -40,9 +39,6 @@ The module is a part of our overall system, seamlessly working to preserve the e
 
 <sup>9</sup> To meet the manufacturers work environment, the sensors will not be placed in the specified temperature range in order to keep functionality.[6-7]
 
-<sup>10</sup> For perserve home pro to keep a coverage of a house's environment to the three target gases, the gas module will need to be sending data every second in order to actively protect homeowner's from potential threats.
-
-
 ## Buildable Schematic  
 
 ![Screenshot 2023-11-01 145628](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/59f374f8-044c-44ba-af4c-2bbdb6955dba)
@@ -60,16 +56,16 @@ Figure 3. This the wiring schematic of how the gas sensors will be connected to 
 
 ## Analysis
 
-<sup>1</sup> In order to meet constraints 1 and 2, there will be a need for two sensors in order to detect the gases perserve home pro is targeting. The SRAQ-G014 will be used to detect the prescence and concentration of flammable gases (Propane) and carbon monoxide. The device features the MQ-9 sensing element that is highly sensitivity to those gases mentioned and has a detection range of 50-10000 ppm for propane and 10-1000 ppm for carbon monoxide.[6] This range is crucial in order to meet the standards set by OSHA for the eight hour monitoring window. The MQ-9 technical parameters from the datasheet shows that it will have a "burn in" time for more than 30 minutes that allows for calibration of meeting the specified ppm ranges that will be done by introducing the gases to the sensor and calibrating the sensor using the adjusting knob (potentiometer) to find the range specified for propane and carbon monoxide.[6] The SRAQ-G016 is very similar to the SRAQ-G014 but has the MQ-135 sensing element that is highly sensitive to ammonia. The detection range is from 10-1000ppm and that is sufficient to meeting our OSHA standard for ammonia.[7] The SRAQ-G016 will be calibrated and tested just like the SRAQ-G014 in order to meet the given protocals for ammonia. 
+<sup>1</sup> To meet constraints 1 and 2, there will be a need for two sensors to detect the gases Preserve Home Pro is targeting. The SRAQ-G014 will detect the presence and concentration of flammable gases (Propane) and carbon monoxide. The device features the MQ-9 sensing element that is highly sensitive to propane and carbon monoxide and has a detection range of 50-10000 ppm for propane and 10-1000 ppm for carbon monoxide.[6] The SRAQ-G016 is like the SRAQ-G014 but features the MQ-135 sensor whose elements are highly sensitive to ammonia and the detection range is from 10-1000ppm.[7] These ranges are crucial to meet the standards set by OSHA for the eight-hour monitoring window.
 
+The gas module technical parameters show that the module will need a one-time 24-48 hour burn-in time for the sensors to be correctly calibrated and accurate. After that, the pre-heat time will be 30 minutes for the gas module to be calibrated and then the sensor will start collecting accurate data and be checked every second.[6-7] Since the gas module detects and measures the concentrations of the specified gas ranges using analog voltage levels (within 0-5V), the analog output pins from the gas module will be connected to a 16-bit ADC pin on the ESP32-H2 so the microcontroller can collect and process into meaning concentration data. The 16-bit ADC provides 65,536 discrete values within the 0-5V range, enabling fine voltage distinctions required for the calculation of ppm measurements. [13]
+ 
 <sup>2</sup> To meet constraint 3, perserve home pro will be mounting the gas module no further than 20 feet from a location that is central to the surrounding vicinitys of bedrooms. This is a requirement that NFPA has set on carbon monoxide detectors and will be adressed by perserve home pro. Also, from already existing carbon monoxide alarms, the installation manuals address that if a home has a bedroom hallway of 40 feet then a module will be needed at each end to make up for 40 feet. [3] [4]
 
 <sup>3</sup> For constraints 4 through 7, perserve home pro looked at alredy existing solutions from gas sensor manufacturers and developers in order to best suit the location of the gas module. The consensus for constraints 4 and 5 was to place the modules prevelant for leaks or sources that are prone to leak.[5] This would be the piping from gas sources to appliances (if homeowners have that feature for their house) so perserve home pro would detect propane accurately and would need to placed near the floor because propane is heavier than air and will naturally flow to the floor.[5] [11] The carbon monoxide spreads evenly through the air and was adressed previously on the location so perserve home pro must have that location meet.[3-4] [10] Ammonia is a lighter than air so will naturally want to float upwards so that module will be placed near ceilings to be in the environment where ammonia resides.[12] The constraints 6 and 7 will be meet for our selection of location in order to best place our module in a environment where accurate readings can be conducted without external environments affecting them.[3-5]
 
 <sup>4</sup> Also, perserve home pro will need to meet constraints 8 and 9 given from the manufacturers datasheet in order to have proper work environments for the sensor. If those constraints are not meet from perserve home pro then the sensor will not work properly and potentially lead to harmful affects to homeowners.[6-7]
-
-<sup>5</sup> Lastly, 
-
+ 
 ## Bill of Materials
 | DEVICE | Quantity | Price Per Unit | Total Price |
 | ------ | -------- | -------------- | ----------- |
@@ -102,3 +98,5 @@ Figure 3. This the wiring schematic of how the gas sensors will be connected to 
 [11] “Where should a fixed gas detector sensor be mounted?,” RKI, https://www.rkiinstruments.com/blog/where-should-a-fixed-gas-detector-sensor-be-mounted/ (accessed Nov. 1, 2023). 
 
 [12] Sensidyne, “(NH3) ammonia gas detection,” Sensidyne, https://www.sensidynegasdetection.com/support/application-support/ammonia-gas-detection.php (accessed Nov. 1, 2023). 
+
+[13] Espressif Systems, “ESP32-H2 - Espressif Systems,” Adafruit, https://www.espressif.com/sites/default/files/documentation/esp32-h2_datasheet_en.pdf (accessed Oct. 24, 2023).
