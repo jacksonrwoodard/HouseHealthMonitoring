@@ -1,0 +1,43 @@
+Opening
+The team meeting of Capstone I Team 4 was held at 12:00 PM on November 2, 2023 in Brown Hall in room 408.
+
+Present
+Nate Campbell, Team Member
+Luke Carson, Team Member
+Cole Cooper, Secretary
+Dylan Robbins, Team Member
+Jackson Woodard, Team Lead
+
+Absent
+Jesse Roberts, Sponsor
+
+Approval of Agenda
+The agenda was unanimously approved by the team.
+
+Approval of Minutes
+The meeting minutes were unanimously approved by the team.
+
+Business From Previous Meeting
+The completion of our first design submission’s first full sign off.
+
+New Business 
+No new business was started from this meeting. 
+
+Additions to the Agenda
+After reviewing more feedback from Mr. Roberts, more information and explanations were needed for the communications sign-off. 
+The team all focused on responding to the feedback. The other individual submissions also received some feedback, 
+so the team worked on addressing their individual feedback as well. More discussion of what microcontroller is needed for the head unit also occurred. 
+We found that the Raspberry Pi 3 and 4 use too much power for us to realistically keep powered through a two-week power outage. 
+We then talked about moving to an Arduino based head unit since Arduinos do have a sleep mode. 
+The Arduino Uno Rev3 will not work since it does not have enough ports for interfacing with the XB-24, the 2.7” TFT display, and additional storage. 
+The Arduino Mega 2560 Rev3 should be able to work with our requirements based on initial research.
+
+Agenda for Next Meeting
+Finish remaining sign-offs.
+
+Adjournment 
+Meeting was adjourned at 3:00 PM by Jackson Woodard. With planning of meeting again on November 9, 2023 at 12:00 PM.
+
+Minutes Submitted by: Cole Cooper
+Approved by: Jackson Woodard
+
