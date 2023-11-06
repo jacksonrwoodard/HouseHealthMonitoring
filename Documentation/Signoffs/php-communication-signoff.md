@@ -44,7 +44,7 @@ The picture shown above is the ESP32-H2, the schematic shows an in-depth design 
 
 ![CommunicationSchematic](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/c7b3f395-ec80-4f64-8f86-e75e936cf3f9)
 
-This is a third-party buildable schematic to show connections and communications from the sensor modules and the head unit. The pins labeled DOUT and DIN are the UART pins on the XB24 [1]. The ESP32-H2 has 3 transmitters (TX) and 3 receiver (RX) pins for UART communication. So, the ESP32s will be able to send the data to the head unit using UART communication [1].
+This is a third-party buildable schematic to show connections and communications from the sensor modules and the head unit. The pins labeled DOUT (TX) and DIN (RX) on the XB24 are the UART pins [4]. The XB24 will use these pins to transmit and receive information to and from the head unit using serial UART communication [4]. The ESP32-H2 has many peripherals that can be used through most of the GPIO pins [1]. The use of these GPIO pins will vary from sensor to sensor depending on the required pinouts to serially send and receive information between the ESP32-H2 and sensor. Communication between each ESP32-H2 and the XB24 will be wireless using and following Zigbee protocols.
 
 
 ## Analysis
