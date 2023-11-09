@@ -46,6 +46,8 @@ The figure shown above is the dimensions of 4965 water sensor.
 
 <img width="727" alt="Screenshot 2023-11-01 at 5 41 44 PM" src="https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143025461/ac856427-aae6-4f39-89dd-7e41b464e54c">
 
+The datasheet for the water sensor claims that it outputs an analog signal [4]. Because of this it will need to be connected to the appropiate pin to process this data. According to the manufacturer, the GPIO1 pin on the ESP32 has an analog to digital converter [5]. This will convert the analog voltage from the water sensor into a digital value that the microcontroller can interpret.
+
 ## Analysis
 <sup>1</sup> The sensor itself has 42 mm or about 1.65 inches of measurable length. It could be placed at the bottom of a wall and measure a 1 inch depth easily.
 
@@ -53,7 +55,7 @@ The figure shown above is the dimensions of 4965 water sensor.
 
 <sup>3</sup> The sensor will be connected to the communication module powered by an ESP32 microcontroller. As stated in the communication sign-off, the microcontroller has a transmission rate of 250 Kbps and sends two packets of data at a time. The sensor outputs an analog value that can reach the mid-500s when fully submerged. This analog value is equivalent to about 10 bits in binary. Even with the PAN ID and data type as mentioned in the communication module, one sensor reading will not take up the full 128 bits in the two-packet transmission. Since the ESP32 can send at a 250 Kbps rate, one reading will take less than a second to reach the head unit.
 
-<sup>4</sup> Floodwater can enter a house through doors, windows, cracks in the foundation, sewer systems, and flood vents [5]. Placing the sensors near these areas could provide a more accurate response that flood damage has occurred. Placing multiple sensors at various heights in these locations can also provide the depth of water in the house. Assuming the home is level, the water from a flood will pool throughout the house, so placing a sensor at the base of every room will provide a more detailed view of where the water is in the house.
+<sup>4</sup> Floodwater can enter a house through doors, windows, cracks in the foundation, sewer systems, and flood vents [6]. Placing the sensors near these areas could provide a more accurate response that flood damage has occurred. Placing multiple sensors at various heights in these locations can also provide the depth of water in the house. Assuming the home is level, the water from a flood will pool throughout the house, so placing a sensor at the base of every room will provide a more detailed view of where the water is in the house.
 
 <sup>5</sup> Sensors that are placed in areas such as a bathroom where condensation is likely to occur will have to be placed with extra consideration to avoid false positives. Placing the sensors right outside the door of a bathroom or in a floor vent could prevent this condensation from building up while still allowing the system to detect if a flood has occurred in that room.
 
@@ -71,4 +73,6 @@ The figure shown above is the dimensions of 4965 water sensor.
 
 [4] 123 model (1) - adafruit industries, https://cdn-shop.adafruit.com/product-files/4965/Datasheet.pdf (accessed Nov. 1, 2023). 
 
-[5] “What are the effects of a flood on your home?,” PuroClean, https://www.puroclean.com/blog/effects-of-a-flood-home/ (accessed Nov. 2, 2023). 
+[5] “Esp32-H2-DevKitM-1,” esp, https://docs.espressif.com/projects/espressif-esp-dev-kits/en/latest/esp32h2/esp32-h2-devkitm-1/user_guide.html (accessed Nov. 9, 2023). 
+
+[6] “What are the effects of a flood on your home?,” PuroClean, https://www.puroclean.com/blog/effects-of-a-flood-home/ (accessed Nov. 2, 2023). 
