@@ -1,0 +1,40 @@
+Opening
+The team meeting of Capstone I Team 4 was held at 12:00 PM on November 9, 2023 in Brown Hall in room 408.
+
+Present
+Nate Campbell, Team Member
+Luke Carson, Team Member
+Cole Cooper, Secretary
+Dylan Robbins, Team Member
+Jackson Woodard, Team Lead
+Jesse Roberts, Sponsor
+
+Absent
+All present
+
+Approval of Agenda
+The agenda was unanimously approved by the team.
+
+Approval of Minutes
+The meeting minutes were unanimously approved by the team.
+
+Business From Previous Meeting
+The completion of our first design submission’s first full sign off.
+
+New Business 
+No new business was started from this meeting. 
+
+Additions to the Agenda
+This meeting started out by asking about direct feedback by each group member on their ongoing sign-offs. Mr. Roberts added in this feedback that we need to include an explanation that pins from the ESP 32s to the individual sensors work with the data being sent between sensors and ESPs. Since the parts we are implementing are mostly existent already, we just need to use the data-sheets to prove such claims. Another piece of conversation included the team asking if our interpretation of the given feedback for the sign-offs has been correct. Mr. Roberts and the team have come to an agreement that the total number of ESP 32s will equal three instead of the five that were originally requested. Major modifications for the original power system are needed. We have been requested to fully develop an uninterruptible power supply, UPS, instead of using a pre-built option. 
+
+Agenda for Next Meeting
+Finish remaining sign-offs.
+
+Adjournment 
+Meeting was adjourned at 3:00 PM by Jackson Woodard. With planning of meeting again on November 9, 2023 at 12:00 PM.
+
+Minutes Submitted by: Cole Cooper
+Approved by: Jackson Woodard
+
+
+
