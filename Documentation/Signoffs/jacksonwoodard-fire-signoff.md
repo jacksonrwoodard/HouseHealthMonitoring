@@ -29,13 +29,15 @@ The picture shown above is the detailed block diagram of the MLX90614 IR Tempera
 
 #### Third-Party Buildable Schematic
 
-![FireModule](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/21745023-155e-400d-9e3b-4971ce87a83e)
+![FireModule](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/de01e5be-32fa-455c-9808-7899623ca64a)
+
+According to the datasheet, the PWM pin can be customized to detect the desired range of temperature and can also be easily configured to act as a thermal relay that can be used for alarting the homeowner of a potential fire [2]. In the case of this subsystem, the temperature sensor will only output the temperature value to the ESP32, and the ESP32 will store the values and send them to the head unit if the 176&deg; limit has been reached.  The PWM pin calculates the math internally and will output a temperature in degrees Celsius, that could later be converted into Fahrenheit, in coding, for the user to understand easier [2]. So, with the information provided above, the SCL/VZ pin on the sensor will not be needed for this application.
 
 ## Analysis
 
 <sup>1</sup> Drywall will begin to have thermal damage at temperatures of 176&deg; Fahrenheit [1]. If the drywall has begun to have thermal damage, that would mean that a fire has formed in the room. The MLX90614ESF-BAA temperature sensor is an infrared temperature sensor that has the capability to measure object temperatures from -70&deg; Fahrenheit to 716&deg; Fahrenheit [2]. So, this sensor will be able to detect the necessary 176&deg; Fahrenheit. 
 
-<sup>2</sup> The ESP32-H2 is a microcontroller that can be coded to read how often it pulls data from the connected sensor [3]. Having enough storage to hold the data would not be a problem for the ESP32. The ESP32 will be sending the data to the head unit at least once every 24 hours, as stated in the communication module. The largest amount of data that the fire module will use is 1 packet (64 bits) because each sensor is assigned a unique 16-bit PAN ID and the data reading will not need more than 48 bits to hold the raw data and the data type. The data type will take up around 4 bits to know what data type is being sent, and the raw data will never need more than the remaining bits because the temperature sensor can only detect 716&deg; Fahrenheit, which is only 11 bits in binary. The ESP32 has 4MB ROM of storage and there are 32,000,000 bits in 4MB [3]. At 64 bits per packet, the ESP32 can store 500,000 readings at a time. There are 86,400 seconds in 24 hours, so if the ESP32 reads data from the sensor every second, it would only require 5,529,600 bits to store the data for a 24-hour period. With the numbers shown above, it would be possible for the ESP32 to read and store data from the temperature sensor every second.
+<sup>2</sup> The ESP32-H2 is a microcontroller that can be coded to read how often it pulls data from the connected sensor [3]. Having enough storage to hold the data would not be a problem for the ESP32, as proved in the communication module.
 
 <sup>3</sup> The ESP32-H2 can be coded to send the data to the head unit if 176&deg; Fahrenheit is read from the sensor [4]. The way the fire module is designed, it will send the data to the ESP32 every second, as stated above, and once the temperature value of 176&deg; Fahrenheit or higher is received, the ESP32 will send the data to the head unit.
 
