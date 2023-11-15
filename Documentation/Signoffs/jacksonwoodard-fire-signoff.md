@@ -29,9 +29,9 @@ The picture shown above is the detailed block diagram of the MLX90614 IR Tempera
 
 #### Third-Party Buildable Schematic
 
-![FireModule](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/de01e5be-32fa-455c-9808-7899623ca64a)
+![FireModule](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/99f52667-8397-4c6b-b802-8eb47b2bb9fb)
 
-According to the datasheet, the PWM pin can be customized to detect the desired range of temperature and can also be easily configured to act as a thermal relay that can be used for alarting the homeowner of a potential fire [2]. In the case of this subsystem, the temperature sensor will only output the temperature value to the ESP32, and the ESP32 will store the values and send them to the head unit if the 176&deg; limit has been reached.  The PWM pin calculates the math internally and will output a temperature in degrees Celsius, that could later be converted into Fahrenheit, in coding, for the user to understand easier [2]. So, with the information provided above, the SCL/VZ pin on the sensor will not be needed for this application.
+According to the datasheet, the PWM pin can be customized to detect the desired range of temperature and can also be easily configured to act as a thermal relay that can be used for alarting the homeowner of a potential fire [2]. In the case of this subsystem, the temperature sensor will only output the temperature value to the ESP32, and the ESP32 will store the values and send them to the head unit if the 176&deg; limit has been reached.  The PWM pin calculates the math internally and will output a temperature in degrees Celsius, that could later be converted into Fahrenheit, in coding, for the user to understand easier [2]. The SCL/VZ pin on the sensor is used for the 2-wire communication protocol and an internal clock [2]. The clock can be used to measure how long it has been active, making it easier for the ESP32 to pull data from the sensor.
 
 ## Analysis
 
