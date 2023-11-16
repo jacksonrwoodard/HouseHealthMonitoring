@@ -46,7 +46,7 @@ The figure shown above is the dimensions of 4965 water sensor.
 
 <img width="727" alt="Screenshot 2023-11-01 at 5 41 44 PM" src="https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143025461/ac856427-aae6-4f39-89dd-7e41b464e54c">
 
-The datasheet for the water sensor claims that it outputs an analog signal [4]. Because of this it will need to be connected to the appropiate pin to process this data. According to the manufacturer, the GPIO1 pin on the ESP32 has an analog to digital converter [5]. This will convert the analog voltage from the water sensor into a digital value that the microcontroller can interpret.
+The datasheet for the water sensor claims that it outputs an analog signal [4]. When fully submerged the analog value can reach the mid 500s, or 10 bits. Because of this it will need to be connected to the appropiate pin to process this data. According to the manufacturer, the GPIO1 pin on the ESP32 has a 12 bit analog to digital converter [5]. This is more than enough to convert the analog signal from the water sensor into a digital value that the microcontroller can interpret.
 
 ## Analysis
 <sup>1</sup> The sensor itself has 42 mm or about 1.65 inches of measurable length. It could be placed at the bottom of a wall and measure a 1 inch depth easily.
