@@ -13,9 +13,9 @@ The function of the fire module subsystem is to detect if a fire has ever occurr
 |  3  | Shall send temperature data to the head unit if 176&deg; Fahrenheit has been reached. | Project Team |
 |  4  | Shall not be a distraction to the homeowner. | All External Stakeholders, Ethics, & Team Supervisor |
 
-<sup>1</sup> In order to determine if a fire has occurred in a room, the temperature sensor needs to be able to detect if the temperature has reached a minimum of 176&deg; Fahrenheit. This is because drywall in a house begins to deteriorate at 176&deg; Fahrenheit [1]. 
+<sup>1</sup> To determine if a fire has occurred in a room, the temperature sensor needs to be able to detect if the temperature has reached a minimum of 176&deg; Fahrenheit. This is because drywall in a house begins to deteriorate at 176&deg; Fahrenheit [1]. 
 
-<sup>2</sup> In order to actively monitor the temperature of a room, the ESP32 will need to read the data of the sensor every second. If the temperature is recorded every second, the system will be able to detect if a fire has formed and warn the homeowner.
+<sup>2</sup> To monitor the temperature of a room, the ESP32 will need to read the data of the sensor every second. If the temperature is recorded every second, the system will be able to detect if a fire has formed and warn the homeowner.
 
 <sup>3</sup> If the ESP32 reads in the data from the temperature sensor and the temperature is 176&deg; Fahrenheit or higher, the ESP32 needs to send the data to the head unit so the head unit can warn the homeowner.
 
@@ -35,7 +35,7 @@ According to the datasheet, the temperature sensor uses an I2C communication pro
 
 ## Analysis
 
-<sup>1</sup> Drywall will begin to have thermal damage at temperatures of 176&deg; Fahrenheit [1]. The MLX90614ESF-BAA temperature sensor is an infrared temperature sensor that has the capability to measure object temperatures from -70&deg; Fahrenheit to 716&deg; Fahrenheit [2]. So, this sensor will be able to detect the necessary 176&deg; Fahrenheit. 
+<sup>1</sup> Drywall will begin to have thermal damage at temperatures of 176&deg; Fahrenheit [1]. The MLX90614ESF-BAA temperature sensor is an infrared temperature sensor that can measure object temperatures from -70&deg; Fahrenheit to 716&deg; Fahrenheit [2]. So, this sensor will be able to detect the necessary 176&deg; Fahrenheit. 
 
 The MLX90614 has a built-in ADC, as shown in the block diagram above, that converts the analog data to digital data before sending the data to the microcontroller [2]. Both the SDA/PWM and the SCL/Vz pins will be plugged into a 12-bit I2C-compatible pin on the ESP32-H2 which will allow for communication with the ESP32-H2. Both pins on the temperature sensor will output less than 12 bits, so the information will be able to be sent and interpreted properly [2][3]. 
 
