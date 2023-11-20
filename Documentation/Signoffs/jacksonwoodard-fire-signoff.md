@@ -29,21 +29,21 @@ The picture shown above is the detailed block diagram of the MLX90614 IR Tempera
 
 #### Third-Party Buildable Schematic
 
-![FireModule](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/5c2bbefc-cafa-46db-9813-fdb0c472f4a1)
+![FireModule](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/d180af4c-1e48-4b2a-a8f1-ce3f089e9a83)
 
 According to the datasheet, the temperature sensor uses an I2C communication protocol for the data output pins (SDA/PWM & SCL/Vz) [2]. The ESP32-H2 can interpret data that uses the I2C communication protocol, and every GPIO pin on the ESP32-H2 supports the I2C communication protocol [3]. The SDA/PWM pin is used to read and send data, and the SCL/Vz pin is used for the clock signal [2].
 
 ## Analysis
 
-<sup>1</sup> Drywall will begin to have thermal damage at temperatures of 176&deg; Fahrenheit [1]. If the drywall has begun to have thermal damage, that would mean that a fire has formed in the room. The MLX90614ESF-BAA temperature sensor is an infrared temperature sensor that has the capability to measure object temperatures from -70&deg; Fahrenheit to 716&deg; Fahrenheit [2]. So, this sensor will be able to detect the necessary 176&deg; Fahrenheit. 
+<sup>1</sup> Drywall will begin to have thermal damage at temperatures of 176&deg; Fahrenheit [1]. The MLX90614ESF-BAA temperature sensor is an infrared temperature sensor that has the capability to measure object temperatures from -70&deg; Fahrenheit to 716&deg; Fahrenheit [2]. So, this sensor will be able to detect the necessary 176&deg; Fahrenheit. 
 
-The MLX90614 has a built-in ADC, as shown in the block diagram above, that converts the analog data to digital data before sending the data to the microcontroller [2]. The SDA/PWM pin outputs the digital data in 10 bits that will be converted to a decimal temperature value in coding [2]. The SDA/PWM pin will be plugged into a 12-bit, I2C-compatible pin on the ESP32-H2 so the microcontroller will be able to interpret all the data sent from the temperature sensor [3]. The SCL/Vz pin is used for communication to the ESP32-H2 and the number of bits that it sends is related to the number of bits that the SDA/PWM pin is sending, which is 10 bits [2]. The SCL/Vz pin is also plugged into a 12-bit, I2c-compatible pin on the ESP32-H2, so both of these outputs will be compatible with the ESP32-H2 and the data will be able to be interpreted [3].
+The MLX90614 has a built-in ADC, as shown in the block diagram above, that converts the analog data to digital data before sending the data to the microcontroller [2]. Both the SDA/PWM and the SCL/Vz pins will be plugged into a 12-bit I2C-compatible pin on the ESP32-H2 which will allow for communication with the ESP32-H2. Both pins on the temperature sensor will output less than 12 bits, so the information will be able to be sent and interpreted properly [2][3]. 
 
 <sup>2</sup> The ESP32-H2 is a microcontroller that can be coded to read how often it pulls data from the connected sensor [3]. Having enough storage to hold the data would not be a problem for the ESP32, as proved in the communication module.
 
 <sup>3</sup> The ESP32-H2 can be coded to send the data to the head unit if 176&deg; Fahrenheit is read from the sensor [4]. The way the fire module is designed, it will send the data to the ESP32 every second, as stated above, and once the temperature value of 176&deg; Fahrenheit or higher is received, the ESP32 will send the data to the head unit.
 
-<sup>4</sup> The fire module is going to be designed in a way that will not be too noticeable to a homeowner. The entire module will be put inside an enclosure to avoid damage from any environmental factors, with a small hole in the bottom of it for the sensor to come out of to be able to measure the temperature. The enclosure will be placed on the ceiling of a room with a small hole cut out of the ceiling, allowing the sensor to be able to measure temperature.
+<sup>4</sup> The fire module is going to be designed in a way that will not be too noticeable to a homeowner. The entire module will be put inside an enclosure that will be mounted on the top side of a ceiling panel so it will not be noticeable. The sensor will be placed at the bottom of the enclosure with a hole in the ceiling panel allowing the sensor to measure the temperature of a room.
 
 ## Bill of Materials (BOM)
 | DEVICE | Quantity | Price Per Unit | Total Price |
