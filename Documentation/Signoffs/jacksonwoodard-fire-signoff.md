@@ -35,7 +35,7 @@ According to the datasheet, the temperature sensor uses an I2C communication pro
 
 ## Analysis
 
-<sup>1</sup> Drywall starts getting damaged at 176&deg; Fahrenheit [1]. The MLX90614ESF-BAA infrared temperature sensor measures from -70&deg;F to 716&deg;F, so it can detect this temperature [2].
+<sup>1</sup> Drywall starts getting damaged at 176&deg; Fahrenheit [1]. The MLX90614ESF-BAA infrared temperature sensor measures from -70&deg;F to 716&deg;F, so it can detect this temperature [2]. When measuring temperature, a resolution of whole numbers (176&deg;F / 300&deg;F) will work efficiently because temperature in decimals would not be necessary for determining if a fire has potentially formed. This can be coded in the microcontroller to only output desired values.
 
 <sup>2</sup> The ESP32-H2 is a microcontroller that can be coded to read how often it pulls data from the connected sensor [3]. Having enough storage to hold the data would not be a problem for the ESP32, as proved in the communication module. 
 
