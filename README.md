@@ -6,8 +6,8 @@ Houses face many types of issues like gas leaks, fires, floods, and mold, which 
 
 ## Capabilities
 
-Here explain in more detail (though not as much as will be given in the datasheet) what the version of this project in this repo is capable of doing.
-
+Detailed capabilities for this project are described in the [Signoffs](https://github.com/jacksonrwoodard/HouseHealthMonitoring/tree/main/Documentation/Signoffs) section of this repository. Each signoff includes the function of the subsystem, constraints, buildable schematics, analysis, and bill of materials. The following bullet points detail the current expectations of the house health monitoring system.
+- The communication subsystem will allow the sensors' microcontroller to send data wirelessly to the head unit's microcontroller through Zigbee protocol. 
 
 ## Salient Outcomes
 
