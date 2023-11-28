@@ -12,7 +12,7 @@ The function of the mold module subsystem is to detect if mold is likely to grow
 |  1  | Shall be able to detect temperature ranges between 55&deg; F - 85&deg; F and humidity levels exceeding 50% RH. | Project Team |
 |  2  | Shall be able to communicate through I2C protocol and send data every hour to its local ESP32-H2 transmitter. | Project Team |
 |  3  | Shall be protected and not exposed to harsh environmental conditions to prevent any damage to the sensor. | All External Stakeholders, Ethics, & Team Supervisor |
-|  4  | Shall give precise temperature and humidity readings within 0.5&deg; and 2% RH of the actual values, rounding to the nearest whole number to properly evaluate and determine if mold like conditions are present. | Project Team |
+|  4  | Shall give precise temperature and humidity readings within 0.5&deg; F and 2% RH of the actual values, rounding to the nearest whole number to properly evaluate and determine if mold like conditions are present. | Project Team |
 
 <sup>1</sup> The humidity and temperature sensors must be able to detect the specified levels because mold like conditions are highly probable when in those ranges. The highest probability of mold occurs when the temperature is 80&deg; F and the relative humidity level is 95% [3]. Other mold like conditions arise when temperatures are between 55&deg; F - 85&deg; F and humidity levels exceeding 50% RH.
 
