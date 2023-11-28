@@ -31,7 +31,7 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 [Dylan Robbins](https://www.linkedin.com/in/dylan-robbins-51b933256/)
 
-[Nate Campbell](www.linkedin.com/in/nathaniel-campbell-0b24a2225)
+[Nate Campbell](https://www.linkedin.com/in/nathaniel-campbell-0b24a2225)
 
 [Luke Carson]()
 
@@ -51,7 +51,7 @@ Use this space to recognize anyone that you feel has had an impact on the projec
 
 ### [Reports](/Reports)
 
-The [Project Propsal](/Reports/Proposal/Project_Proposal_V2.pdf) report provides information about what the project problem is and the proposed solution.
+The [Project Propsal](/Reports/Project_Proposal/Project_Proposal_V2.pdf) report provides information about what the project problem is and the proposed solution.
 
 
 ### Reports
