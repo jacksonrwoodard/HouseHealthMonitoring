@@ -7,7 +7,14 @@ Houses face many types of issues like gas leaks, fires, floods, and mold, which 
 ## Capabilities
 
 Detailed capabilities for this project are described in the [Signoffs](https://github.com/jacksonrwoodard/HouseHealthMonitoring/tree/main/Documentation/Signoffs) section of this repository. Each signoff includes the function of the subsystem, constraints, buildable schematics, analysis, and bill of materials. The following bullet points detail the current expectations of the house health monitoring system.
-- The communication subsystem will allow the sensors' microcontroller to send data wirelessly to the head unit's microcontroller through Zigbee protocol. 
+- The Head Unit subsystem expects to receive serial data from the communication receiver and implement a user friendly interface that displays historical and active data from each sensor module.
+- The Communication subsystem will allow the sensors' microcontroller to send data wirelessly to the head unit's microcontroller through the Zigbee protocol.
+- The Power subsystem will supply power functionality for each subsystem. Each subsystem will be hard-wired into the house with each sensor module having an uninteruptable power supply (UPS) to power them when the electricty in the home goes out. All head unit and communication functionality will be disabled while the power is out to ensure maximum battery lifetime.
+- The Mold subsystem will read temperature and humidity levels at its respective sensor in order to detect if mold like conditions are present in a home.
+- The Fire subsytem will read specific temperature levels to detect whether a fire is present or not in a room.
+- The Gas subsystem will read parts per million (ppm) levels to determine if gas is present in a room and specifiy which gas it is.
+- The Flood subsytem will read water levels based on resistivity to detect any amounts of water present in the area.
+- Each sensor module will serially send data to a local microcontroller so that it can send the data to the head unit for computation and storage.
 
 ## Salient Outcomes
 
