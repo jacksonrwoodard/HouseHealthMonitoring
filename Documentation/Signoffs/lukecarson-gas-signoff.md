@@ -54,8 +54,22 @@ Figure 3. This the wiring schematic of how the gas sensors will be connected to 
 
 <sup>1</sup> To meet constraints 1 and 2, there will be a need for two sensors to detect the gases Preserve Home Pro is targeting. The SRAQ-G014 will detect the presence and concentration of flammable gases (Propane) and carbon monoxide. The device features the MQ-9 sensing element that is highly sensitive to propane and carbon monoxide and has a detection range of 50-10000 ppm for propane and 10-1000 ppm for carbon monoxide.[6] The SRAQ-G016 is like the SRAQ-G014 but features the MQ-135 sensor whose elements are highly sensitive to ammonia and the detection range is from 10-1000ppm.[7] These ranges are crucial to meet the standards set by OSHA for the eight-hour monitoring window.
 
-The gas module technical parameters show that the module will need a one-time 24-48 hour burn-in time for the sensors to be correctly calibrated and accurate. After that, the pre-heat time will be 30 minutes for the gas module to be calibrated and then the sensor will start collecting accurate data and be checked every second.[6-7] Since the gas module detects and measures the concentrations of the specified gas ranges using analog voltage levels (within 0-5V), the analog output pins from the gas module will be connected to a 12-bit ADC pin on the ESP32-H2 so the microcontroller can collect and process into meaningful concentration data. The 12-bit ADC provides 4,096 discrete values within the 0-5V range, enabling fine voltage distinctions required for the calculation of ppm measurements. [13] To be able to detect the smallest step size in ppm the ADC provides 4,096 unique values and Preserve Home Pro needs to detect ppm ranges of 10-10000 for the gas targets. To calculate, Preserve Home Pro needs to take the max ppm range we are detecting (10000) and divide it by 4,096 values and find that it is 2.441 ppm/step.[6-7] [13]
- 
+The gas module technical parameters show that the module will need a one-time 24-48 hour burn-in time for the sensors to be correctly calibrated and accurate. After that, the pre-heat time will be 30 minutes for the gas module to be calibrated and then the sensor will start collecting accurate data and be checked every second.[6-7] Since the gas module detects and measures the concentrations of the specified gas ranges using analog voltage levels (within 0-5V), the analog output pins from the gas module will be connected to a 12-bit ADC pin on the ESP32-H2 so the microcontroller can collect and process into meaningful concentration data.[13] Now knowing this, we can use the binary base equation **2<sup>n</sup>**, where n is the number of bits the ADC is using which is 12 bits.[13]
+
+From the equation below, the ADC provides 4,096 discrete values within the 0-5V range, enabling fine voltage distinctions required for the calculation of ppm measurements. [13-15] 
+
+```math
+Resolution = 2^n = 2^{12} = 4,096 steps
+```
+
+To be able to detect the smallest step size in ppm the ADC provides 4,096 unique values and Preserve Home Pro needs to detect the ppm range of 10-10000ppm for the gas targets.[6-7] [13] 
+
+From the equation below, we can calculate smallest possible difference in values that can be measured compared to a scale of 10 to 10,000. This is calculated by dividing 9,990 (or the range between 10-10,000ppm) by the number of steps, or 9,990/steps. [15]
+
+```math
+Smallest-step = \frac{(Maximum-ppm)} {(Resolution)} = \frac{(9,990)} {(4,096)} = 2.439 ppm/step
+```
+
 <sup>2</sup> To meet constraint 3, Preserve Home Pro will be mounting the gas module no further than 20 feet from a location that is central to the surrounding vicinities of bedrooms. This is a requirement that NFPA has set on carbon monoxide detectors and will be addressed. Also, from already existing carbon monoxide alarms, the installation manuals address that if a home has a bedroom hallway of 40 feet then a module will be needed at each end to make up for 40 feet. [3] [4]
 
 <sup>3</sup> For constraints 4 through 7, Preserve Home Pro looked at existing solutions from gas sensor manufacturers and developers to best suit the location of the gas module. The consensus for constraints 4 and 5 was to place the modules where leaks are prevalent or where gas sources are prone to leak.[5] This would include piping from gas sources to appliances (if homeowners have that feature for their house) so that Preserve Home Pro could detect propane accurately. The module for propane detection needs to be placed near the floor because propane is heavier than air and will naturally flow to the floor. [5] [11] The carbon monoxide spreads evenly through the air, and its location was addressed previously, so Preserve Home Pro must meet that location. [3-4] [10] Ammonia is lighter than air and will naturally want to float upwards, so the module will be placed near ceilings to be in the environment where ammonia resides. [12] For constraints 6 and 7, our selection of location will be the best place to conduct accurate readings without external environments affecting them. [3-5]
@@ -96,3 +110,7 @@ The gas module technical parameters show that the module will need a one-time 24
 [12] Sensidyne, “(NH3) ammonia gas detection,” Sensidyne, https://www.sensidynegasdetection.com/support/application-support/ammonia-gas-detection.php (accessed Nov. 1, 2023). 
 
 [13] Espressif Systems, “ESP32-H2 - Espressif Systems,” Adafruit, https://www.espressif.com/sites/default/files/documentation/esp32-h2_datasheet_en.pdf (accessed Oct. 24, 2023).
+
+[14] I. S. U. Share, “Binary world,” Binary World, https://loadingtech.blogspot.com/2012/07/binary-world.html (accessed Nov. 28, 2023). 
+
+[15] S. One, “Bit to measurement resolution converter,” SensorsONE, https://www.sensorsone.com/bit-to-measurement-resolution-converter/#parts (accessed Nov. 28, 2023). 
