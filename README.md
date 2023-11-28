@@ -51,17 +51,26 @@ Use this space to recognize anyone that you feel has had an impact on the projec
 
 ### [Reports](/Reports)
 
-The [Project Propsal](/Reports/Project_Proposal/Project_Proposal_V2.pdf) report provides information about what the project problem is and the proposed solution.
+The [Project Propsal](https://github.com/jacksonrwoodard/HouseHealthMonitoring/blob/main/Reports/Project%20Proposal/Project%20Proposal%20V2.pdf) report provides information about what the project problem is and the proposed solution.
 
+The [Conceptual Design and Planning](https://github.com/jacksonrwoodard/HouseHealthMonitoring/blob/main/Reports/Conceptual%20Design%20%26%20Planning/Conceptual%20Design%20Final.pdf) report provides all specifications and constraints that the House Health Monitoring project must follow. The report includes all standards and regulations that will be followed during the project.
 
-### Reports
+The [Experimentation](/Reports/Experimentation) report includes (will be finished later)
 
-In the reports section of this repository information about the individual expectations for the reports and how they should be housed is provided.
+The [Poster](/Reports/Poster) shows (will be finished later)
 
-### Documentation
+The [Final Report](/Reports/Final_Presentation) includes (will be finished later)
 
-In the documentaion section information regarding the documentation that is required and how it should be organized is given.
+The [Lessons Learned](/Reports/Lessons_Learned_&_Acquired_Skills) files show the lessons the team learned throughout the project process. 
+
+### [Documentation](/Documentation)
+
+All documentation for the project is included in the folder listed above. There are folders for 3D Models, Electrical, Images, Meeting Minutes, and Signoffs. All folders can be found in the documentation folder. 
+
+The [Signoffs](/Documentation/Signoffs) folder has all of the approved detailed designs. The designs met all specifications and constraints for each subsystem. 
+
+The [Meeting Minutes](https://github.com/jacksonrwoodard/HouseHealthMonitoring/tree/main/Documentation/Meeting%20Minutes) folder contains detailed minutes for each team meeting that occurred throughout the project process. Reading these files will provide you will knowledge of how the team advanced week to week.
 
 ### Software
 
-In the software directory of the repo information regarding how each team is expected to document software can be found.
+All software used in the project will be located in this directory. For each system, a folder will be created that contains the relevant code with a readme file explaining the process of installing, executing, and testing the code.
