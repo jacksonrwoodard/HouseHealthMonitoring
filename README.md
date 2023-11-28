@@ -28,7 +28,15 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 ### Team
 
-Give a brief bio for each team member and their broad contribution to the project (no need to be terribly specifc).
+#### Jackson Woodard
+
+#### Cole Cooper
+
+#### Dylan Robbins
+
+#### Nate Campbell
+
+#### Luke Carson
 
 ### Faculty Supervisor
 
