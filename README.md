@@ -1,7 +1,4 @@
 # Preserve Home Pro (PHP)
-
-The descriptions and information in all readme files in the starter repo (including this one) must be edited. All section descriptions must be deleted. Any failure to remove the description information (like the statement that you are currently reading) will be heavily penalized!
-
 ## Executive Summary
 
 Give the elevator pitch and abstract for the project. It should allow interested visitors to broadly understand the motivation for the project and what the project has accomplished.
@@ -28,19 +25,19 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 ### Team
 
-#### Jackson Woodard
+[Jackson Woodard](https://www.linkedin.com/in/jacksonrwoodard/) 
 
-#### Cole Cooper
+[Cole Cooper](https://www.linkedin.com/in/cole-cooper-78063520b/)
 
-#### Dylan Robbins
+[Dylan Robbins](https://www.linkedin.com/in/dylan-robbins-51b933256/)
 
-#### Nate Campbell
+[Nate Campbell](www.linkedin.com/in/nathaniel-campbell-0b24a2225)
 
-#### Luke Carson
+[Luke Carson]()
 
 ### Faculty Supervisor
 
-Tell who the faculty supervisor was for the project
+[Jesse Roberts, M.S.](https://www.tntech.edu/directory/engineering/faculty/jesse-roberts.php) is a professor at Tennessee Technological University. He has received both a Bachelor's and Master's degree in Electrical Engineering at Tennessee Technological University. He is currently pursuing a Doctorate of Philosophy in Computer Science at Vanderbilt University.
 
 ### Stakeholders
 
@@ -52,7 +49,9 @@ Use this space to recognize anyone that you feel has had an impact on the projec
 
 ## Repo Organization
 
-Give the layout of the repo and what can be found where. Make it easy on those who are interested by making the headings of the various things in this section clickable links to the relevant folder or file in the repo.
+### [Reports](/Reports)
+
+The [Project Propsal](/Reports/Proposal/Project_Proposal_V2.pdf) report provides information about what the project problem is and the proposed solution.
 
 
 ### Reports
