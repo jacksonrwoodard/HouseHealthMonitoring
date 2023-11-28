@@ -36,7 +36,7 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 [Cole Cooper](https://www.linkedin.com/in/cole-cooper-78063520b/) is a student of Electrical Engineering enrolled at Tennessee Technological University in Cookeville. He has an academic interest in following the development and sustainment of power systems, microcontrollers, and communication protocols to name a few. Cole's role in this project is the development of the head unit and the communications system between the head unit and the sensor modules.
 
-[Dylan Robbins](https://www.linkedin.com/in/dylan-robbins-51b933256/)
+[Dylan Robbins](https://www.linkedin.com/in/dylan-robbins-51b933256/) is a student currently pursuing a bachelor's degree in Computer Engineering at Tennessee Technological University. His academic interests are focused in Embedded Systems, microcontrollers, and computer programming. Dylan's role in the project is to develop a mold sensing module and design it to detect any mold like conditions in a home. He is also responsible in assisting in any programminng of the sensors and data computations for the system.
 
 [Nate Campbell](https://www.linkedin.com/in/nathaniel-campbell-0b24a2225) is a dedicated Electrical Engineering student enrolled at Tennessee Technological University. His academic focus revolves around Power Systems and Programmable Logic Controllers (PLC). Within the current project, Nathaniel assumes a pivotal role, primarily concentrating on the water sensor aspect and actively contributing to the development of the Uninterruptible Power Supply (UPS) for the overall power system.
 
