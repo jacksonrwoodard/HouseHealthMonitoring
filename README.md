@@ -25,7 +25,7 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 ### Team
 
-[Jackson Woodard](https://www.linkedin.com/in/jacksonrwoodard/) 
+[Jackson Woodard](https://www.linkedin.com/in/jacksonrwoodard/) is currently pursuing a degree in Electrical Engineering with a minor in Computer Science at Tennessee Technological University. His academic focus lies in the field of Programmable Logic Controllers (PLC) and Control Systems. In the context of the project, Jackson has been assigned the responsibility of developing a Fire Module designed to detect potential fire occurrences within a designated space. He is also helping design the 3D models for all the subsystems for the project. 
 
 [Cole Cooper](https://www.linkedin.com/in/cole-cooper-78063520b/)
 
