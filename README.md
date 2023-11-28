@@ -1,7 +1,7 @@
 # Preserve Home Pro (PHP)
 ## Executive Summary
 
-Give the elevator pitch and abstract for the project. It should allow interested visitors to broadly understand the motivation for the project and what the project has accomplished.
+Houses face many types of issues like gas leaks, fires, floods, and mold, which cause damage to the house leading to a decrease in value. Unlike a smartphone or a modern car, current house constructions lack a mechanism to detect and monitor this information. This information, such as knowing if water damage has occurred, could improve the value of the house by proving that issues have not occurred or were taken care of quickly by the homeowner. To detect and monitor all of these problems, this project proposes a collection of sensors and a head unit, called Preserve Home Pro. The goal of the system is to measure, record, and display important active and historical data, giving a homeowner valuable information to help maintain and protect the value of their home. The Preserve Home Pro will be designed as a semi-permanent system that will last for up to thirty years. The system will also communicate information through a closed network without requiring the Internet. Combining these concepts, this project proposes an advanced solution to house health monitoring.
 
 
 ## Capabilities
@@ -31,9 +31,9 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 [Dylan Robbins](https://www.linkedin.com/in/dylan-robbins-51b933256/)
 
-[Nate Campbell](https://www.linkedin.com/in/nathaniel-campbell-0b24a2225)
+[Nate Campbell](https://www.linkedin.com/in/nathaniel-campbell-0b24a2225) is a dedicated Electrical Engineering student enrolled at Tennessee Technological University. His academic focus revolves around Power Systems and Programmable Logic Controllers (PLC). Within the current project, Nathaniel assumes a pivotal role, primarily concentrating on the water sensor aspect and actively contributing to the development of the Uninterruptible Power Supply (UPS) for the overall power system.
 
-[Luke Carson]()
+[Luke Carson](https://www.linkedin.com/in/luke-carson/) is an Electrical Engineering at Tennessee Technological University with a minor in Mathematics. His primary area of interest lies in power systems, including power generation, transmission, and distribution. As part of a project, Luke is responsible for designing the gas module for the Preserve Home Pro system. The module will be used to detect the presence of propane, carbon monoxide, and ammonia.
 
 ### Faculty Supervisor
 
