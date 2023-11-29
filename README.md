@@ -52,7 +52,7 @@ Tell a bit about the customer for the project. Also discuss any other groups (sp
 
 ### Recognitions
 
-Use this space to recognize anyone that you feel has had an impact on the project. Be sure to recognize the work of previous teams if you referenced it for style or content. 
+The team would like to thank the ECE Department at Tennessee Technological University for all the assistance needed in the design process. The team would also like to thank Jesse Roberts for all the assistance that he has given throughout the entire Capstone Project. Finally, the team would like to thank one of the external stakeholders, Wes Harris from State Farm, for answering any questions and providing the team with useful information to further advance the project.
 
 ## Repo Organization
 
