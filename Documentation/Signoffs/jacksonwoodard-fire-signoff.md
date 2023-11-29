@@ -33,6 +33,11 @@ The picture shown above is the detailed block diagram of the MLX90614 IR Tempera
 
 According to the datasheet, the temperature sensor uses an I2C communication protocol for the data output pins (SDA/PWM & SCL/Vz) [2]. The ESP32-H2 can interpret data that uses the I2C communication protocol, and every GPIO pin on the ESP32-H2 supports the I2C communication protocol [3]. The SDA/PWM pin is used to read and send data, and the SCL/Vz pin is used for the clock signal [2].
 
+![FireModuleEnclosure](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/d47dc04e-840a-4080-9ac5-f1674434aae5)
+
+The picture shown above is the 3D Model of the enclosure that is going to be used for this module. The smaller box is used to hold the sensor with the sensor facing down out of the hole to detect temperature. The larger box is used to hold the ESP32-H2. The two divots are used for wire management and for the ESP32-H2 to receive power from the power module. Both boxes are made to fit their respective parts snugly with only a little room for connection purposes. The lid will be screwed on with two screws and will be able to be taken off to access the components.
+
+
 ## Analysis
 
 <sup>1</sup> Drywall starts getting damaged at 176&deg; Fahrenheit [1]. The MLX90614ESF-BAA infrared temperature sensor measures from -70&deg;F to 716&deg;F, so it can detect this temperature [2]. When measuring temperature, a resolution of whole numbers (176&deg;F / 300&deg;F) will work efficiently because temperature in decimals would not be necessary for determining if a fire has potentially formed. This can be coded in the microcontroller to only output desired values.
