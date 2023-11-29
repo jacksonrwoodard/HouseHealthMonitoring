@@ -31,7 +31,7 @@ The picture shown above is the detailed block diagram of the MLX90614 IR Tempera
 
 ![FireModule](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/d180af4c-1e48-4b2a-a8f1-ce3f089e9a83)
 
-According to the datasheet, the temperature sensor uses an I2C communication protocol for the data output pins (SDA/PWM & SCL/Vz) [2]. The ESP32-H2 can interpret data that uses the I2C communication protocol, and every GPIO pin on the ESP32-H2 supports the I2C communication protocol [3]. The SDA/PWM pin is used to read and send data, and the SCL/Vz pin is used for the clock signal [2].
+According to the datasheet, the temperature sensor uses an I2C communication protocol for the data output pins (SDA/PWM & SCL/Vz) [2]. The ESP32-H2 can interpret data that uses the I2C communication protocol, and every GPIO pin on the ESP32-H2 supports the I2C communication protocol [3]. The I2C pins can be chosen by configuring, in coding, which GPIO pins are going to be used for I2C communication [3]. The SDA/PWM pin is used to read and send data, and the SCL/Vz pin is used for the clock signal [2].
 
 ![FireModuleEnclosure](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/1a0c1469-771a-40c7-84a5-148f20308453)
 
