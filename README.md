@@ -20,12 +20,16 @@ Detailed capabilities for this project are described in the [Signoffs](https://g
 
 Projects often have some outcomes that are more interesting than others. Here, highlight those things that you found interesting!
 
+(Coming Spring 2024!)
+
 
 ## Project Demonstration & Images
 
 Give a link to a video of the project being demonstrated. The video should be hosted on the capstone youtube.
 
 Below the video link show some well-taken, appropriately sized images of the project.
+
+(Coming Spring 2024!)
 
 
 ## About Us
@@ -48,7 +52,7 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 ### Stakeholders
 
-The customer and major stakeholder for the project is any home owner wanting to monitor and maintain their home's health. This system can be installed in any pre-existing or newly built home to display active and historical data pertaining to the specific sensing modules. Home owners are majorly impacted by this system becuase this system will physically be installed into their home and will assist inspections of areas and things that might be hard to detect will human senses. One major internal stakeholder for this project is the project supervisor, Jesse Roberts. He has given a majority of the feedback to help further the design process. One major external stakeholder for this project is insurance companies, or more specifically, Wes Harris from State Farm. He has provided valuable feedback on how the project affects not only homeowners but also insurance agencies. With this house health monitoring system being installed into homes, home owners could potentially get discounts on their home insurance since issues will be detected before they are major issues.
+The customer and major stakeholder for the project is any home owner wanting to monitor and maintain their home's health. This system can be installed in any pre-existing or newly built home to display active and historical data pertaining to the specific sensing modules. Home owners are majorly impacted by this system because this system will physically be installed into their home and will assist inspections of areas and things that might be hard to detect will human senses. One major internal stakeholder for this project is the project supervisor, Jesse Roberts. He has given a majority of the feedback to help further the design process. One major external stakeholder for this project is insurance companies, or more specifically, Wes Harris from State Farm. He has provided valuable feedback on how the project affects not only homeowners but also insurance agencies. With this house health monitoring system being installed into homes, home owners could potentially get discounts on their home insurance since issues will be detected before they are major issues as well as potentially raising the value of their home.
 
 ### Recognitions
 
