@@ -1,7 +1,7 @@
 Reports
 =========================
 
-Listen below are all of the completed documents for the House Health Monitering project.
+Listen below are all of the completed documents for the House Health Monitoring project.
 
 ## Completed Documents
 1. [Project Proposal](https://github.com/jacksonrwoodard/HouseHealthMonitoring/blob/main/Reports/Project%20Proposal/Project%20Proposal%20V2.pdf)
