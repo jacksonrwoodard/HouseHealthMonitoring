@@ -48,7 +48,7 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 ### Stakeholders
 
-Tell a bit about the customer for the project. Also discuss any other groups (specific or general) that are expected to be impacted by the project.
+The customer and major stakeholder for the project is any home owner wanting to monitor and maintain their home's health. This system can be installed in any pre-existing or newly built home to display active and historical data pertaining to the specific sensing modules. Home owners are majorly impacted by this system becuase this system will physically be installed into their home and will assist inspections of areas and things that might be hard to detect will human senses. One major internal stakeholder for this project is the project supervisor, Jesse Roberts. He has given a majority of the feedback to help further the design process. One major external stakeholder for this project is insurance companies, or more specifically, Wes Harris from State Farm. He has provided valuable feedback on how the project affects not only homeowners but also insurance agencies. With this house health monitoring system being installed into homes, home owners could potentially get discounts on their home insurance since issues will be detected before they are major issues.
 
 ### Recognitions
 
