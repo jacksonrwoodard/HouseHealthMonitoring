@@ -27,7 +27,7 @@ The function of the head unit is to display active and historical data about eac
 
 ## System Schematic
 
-![Head_Unit_Schematic_Design](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/d0a11526-52bf-495c-876b-392f8cdcbe39)
+![Head_Unit_Schematic_Design_V2](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/b23fee8a-9346-4b98-840e-78da58318e56)
 
 
 
