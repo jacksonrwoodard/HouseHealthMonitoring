@@ -33,7 +33,7 @@ The function of the head unit is to display active and historical data about eac
 
 ## Analysis
 
-<sup>1</sup> 
+<sup>1</sup> The head unit will know which sensor is detecting an issue to let the homeowner know where an issue has occurred and what type of issue has occurred. This information will be determined by using each module's PAN ID. For the head unit to be able to communicate with each module, a XB24 will be used. The Raspberry Pi 4 will be able to communicate with the XB24 using the RX and TX UART communication pins. The Raspberry’s RX pin, pin 16, is the receive pin that the Raspberry Pi 4 will use for the reception of data from the XB-24’s UART Data Out, pin 2. While, the Raspberry’s TX 1 pin 15 is the transmit pin that the Raspberry Pi 4 will use for the transmission of data to the XB-24’s UART Data In, pin 3. 
 
 <sup>2</sup>
 
