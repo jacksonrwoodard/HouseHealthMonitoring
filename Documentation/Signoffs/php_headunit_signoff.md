@@ -35,15 +35,16 @@ The function of the head unit is to display active and historical data about eac
 
 <sup>1</sup> The head unit will know which sensor is detecting an issue to let the homeowner know where an issue has occurred and what type of issue has occurred. This information will be determined by using each module's PAN ID. For the head unit to be able to communicate with each module, a XB24 will be used. The Raspberry Pi 4 will be able to communicate with the XB24 using the RX and TX UART communication pins. The Raspberry’s RX pin, pin 16, is the receive pin that the Raspberry Pi 4 will use for the reception of data from the XB-24’s UART Data Out, pin 2. While, the Raspberry’s TX 1 pin 15 is the transmit pin that the Raspberry Pi 4 will use for the transmission of data to the XB-24’s UART Data In, pin 3. 
 
-<sup>2</sup>
+<sup>2</sup> The head unit needs to be able to compute, store and display data received from the modules. Computing the data is comparing the received values compared to a database of acceptable versus unacceptable values.
+The data base of values is defined by specifications mentioned in each sensor module section. The Raspberry Pi 4 B has at minimum 2 GBs of RAM, which allows us to keep 16,000,000,000 bits of data at any given moment while powered on. This allows the head unit to hold onto an active library of checked information from 100 modules received every second with over a 24 hour period leaves 14,000,000,000 bits for holding the values of comparison. Additional storage is required since the Raspberry Pi 4 does not come with ROM storage. 32 gigabytes of sd storage would give us ample storage for holding information from 100 modules recorded every second for over a year. For the 30 year targert a 1 terabyte USB hard drive or solid state drive would still have over 1,900,000,000,000 bits remaining. Finally the data needs to be readable by the user, which can be solved easily by taking advantage of the RPI-Display Port output on the Raspberry Pi and its power out in order to power and use a touch screen display. Using a touch screen display allows the user to interact with the head unit and choose what information should be displayed. 
 
-<sup>3</sup>
+<sup>3</sup> 
 
-<sup>4</sup>
+<sup>4</sup> 
 
-<sup>5</sup>
+<sup>5</sup> 
 
-<sup>6</sup>
+<sup>6</sup> 
 
 ## Bill of Materials (BOM)
 
