@@ -48,6 +48,14 @@ The data base of values is defined by specifications mentioned in each sensor mo
 
 ## Bill of Materials (BOM)
 
+| DEVICE | Quantity | Price Per Unit | Total Price | Overall Total |
+| ------ | -------- | -------------- | ----------- | ----- |
+| Raspberry Pi 4B | 1 | $45.00 | $45.00 | |
+| 7" 800x480 TFT DSI Capacitive Touchscreen | 1 | $54.90 | $54.90 | |
+| 32 GB Micro SDHC Memory Card | 1 | $9.51 | $9.51|  |
+| PLA Filament 1.75 mm 1 KG | 1 | $13.99 | $13.99 |  |
+
+
 ## References
 [1] N. P. Team, “At what temperature will drywall ignite?,” NCERT POINT, https://www.ncertpoint.com/2022/01/at-what-temperature-will-drywall-ignite.html (accessed Oct. 24, 2023).
 
