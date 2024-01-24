@@ -38,13 +38,13 @@ The function of the head unit is to display active and historical data about eac
 <sup>2</sup> The head unit needs to be able to compute, store and display data received from the modules. Computing the data is comparing the received values compared to a database of acceptable versus unacceptable values.
 The data base of values is defined by specifications mentioned in each sensor module section. The Raspberry Pi 4 B has at minimum 2 GBs of RAM, which allows us to keep 16,000,000,000 bits of data at any given moment while powered on. This allows the head unit to hold onto an active library of checked information from 100 modules received every second with over a 24 hour period leaves 14,000,000,000 bits for holding the values of comparison. Additional storage is required since the Raspberry Pi 4 does not come with ROM storage. 32 gigabytes of sd storage would give us ample storage for holding information from 100 modules recorded every second for over a year. For the 30 year targert a 1 terabyte USB hard drive or solid state drive would still have over 1,900,000,000,000 bits remaining. Finally the data needs to be readable by the user, which can be solved easily by taking advantage of the RPI-Display Port output on the Raspberry Pi and its power out in order to power and use a touch screen display. Using a touch screen display allows the user to interact with the head unit and choose what information should be displayed. 
 
-<sup>3</sup> 
+<sup>3</sup> According to the EPA, North America accounts for over 50% of the worldwide consumption of drywall [5].  176&#176; Farhenheit is the ignition point of drywall, which is used in North American household construction. The head unit will compute temperatures from the fire module and check if that temperature reaches over 176&#176; Farhenheit.
 
-<sup>4</sup> 
+<sup>4</sup> The head unit will check if water has accumulated in parts of the home it is not supposed to be. The presence of water can cause mold, foundation damage, or show that a water line has busted [2].
 
-<sup>5</sup> 
+<sup>5</sup> The head unit will check if common household gasses -Ammonia, Carbon-Oxides, and Propane- have accumulated past an acceptable threshhold. The gas thresholds are 50 ppm, 1000 ppm, and 50 ppm respectively over an eight hour window. According to OSHA this is the minimum amount of time the gasses can be present before major health issues [3].
 
-<sup>6</sup> 
+<sup>6</sup> The head unit will check if temperature is in the range between 55&#176; and 85&#176; Fahrenheit and if humidity levels exceed 50% over a period of two days. This is the minimum amount of time that it takes for mold to grow in a house [4].
 
 ## Bill of Materials (BOM)
 
@@ -53,7 +53,7 @@ The data base of values is defined by specifications mentioned in each sensor mo
 | Raspberry Pi 4B | 1 | $45.00 | $45.00 | |
 | 7" 800x480 TFT DSI Capacitive Touchscreen | 1 | $54.90 | $54.90 | |
 | 32 GB Micro SDHC Memory Card | 1 | $9.51 | $9.51|  |
-| PLA Filament 1.75 mm 1 KG | 1 | $13.99 | $13.99 |  |
+| PLA Filament 1.75 mm 1 KG | 1 | $13.99 | $13.99 | $123.40 |
 
 
 ## References
@@ -65,3 +65,4 @@ The data base of values is defined by specifications mentioned in each sensor mo
 
 [4] MediLexicon International. (n.d.). Mold in the home: How big A health problem is it?. Medical News Today. https://www.medicalnewstoday.com/articles/288651#mold-and-health (accessed Oct. 28, 2023).
 
+[5] Huang, X. AND T. Tolaymat. Characterization of Drywall Products for Assessing Impacts Associated with End-of-Life Management. U.S. Environmental Protection Agency, Washington, DC, EPA/600/R-20/286, 2020.
