@@ -6,7 +6,6 @@ The power system allows the sensor modules to function properly on power from a 
 ## Constraints
 | No. | Constraints | Origin |
 | --- | ----------- | ------ |
-System shall be primarily powered from the house's 120 Volt power supply. | Project Team |
 |  1  | System shall be primarily powered from the house's 120 Volt power supply. | Project Team |
 |  2  |  Shall have a backup power system that will allow the system to function in case of primary power outage for up to two continuous weeks. | Project Team & Team Supervisor |
 |  3  | Shall fully function witout regularly changing sensors or head unit batteries. | All External Stakeholders, & Team Supervisor |
