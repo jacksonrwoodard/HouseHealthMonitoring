@@ -11,29 +11,32 @@ The gas module detects three gases that can be found in homes: propane, carbon m
 | --- | ---------------------------------------------------------------------------------------------- | ----------------------------------- |
 |  1  | The Gas module shall be able to detect ammonia, propane, and carbon oxide. | Project  Team, Insurance Agencies|
 |  2  | Head unit shall receive data from the gas module and follow OSHA standards for ammonia, propane, and carbon oxides (50 ppm, 1000 ppm, and 50 ppm respectively over an eight-hour window)| OSHA |
-|  3  | The Gas module shall be installed in a central location outside each sleeping area or in the immediate vicinity of the bedrooms, at the maximum of 20 feet | NFPA |
-|  4  | The Gas module shall be placed as close as possible to potential gas leak spots | Project Team, Existing Products |
-|  5  | The Gas module shall be orientated to where the target gas vapours tend to rise or fall | Project Team, Existing Produts |
-|  6  | The Gas module shall not be placed near entrances/disturbances or fresh air vents where concentrations can be diluted | Project Team, Existing Products |
-|  7  | The Gas module shall not be placed in bathrooms, garages, kitchens, furnace rooms, extremely dusty or dirty areas | Project Team, Existing Products |
-|  8  | The Gas module shall not be placed in areas of the house enviroment where it is colder than -10°C or hotter than 50°C | Manufacturer |
-|  9  | The Gas module shall not be placed in areas of the house enviroment where the humidity is more than 95% | Manufacturer |
+|  3  | The Gas module shall send data to headunit every second if the targeted gases are detected | Project Team |
+|  4  | The Gas module shall be installed in a central location outside each sleeping area or in the immediate vicinity of the bedrooms, at the maximum of 20 feet | NFPA |
+|  5  | The Gas module shall be placed as close as possible to potential gas leak spots | Project Team, Existing Products |
+|  6  | The Gas module shall be orientated to where the target gas vapours tend to rise or fall | Project Team, Existing Produts |
+|  7  | The Gas module shall not be placed near entrances/disturbances or fresh air vents where concentrations can be diluted | Project Team, Existing Products |
+|  8  | The Gas module shall not be placed in bathrooms, garages, kitchens, furnace rooms, extremely dusty or dirty areas | Project Team, Existing Products |
+|  9  | The Gas module shall not be placed in areas of the house enviroment where it is colder than -10°C or hotter than 50°C | Manufacturer |
+|  10  | The Gas module shall not be placed in areas of the house enviroment where the humidity is more than 95% | Manufacturer |
 
 <sup>1</sup> Preserve Home Pro aims to detect three specific gases commonly known for causing poisoning at home. [1]
 
 <sup>2</sup> To comply with OSHA standards, the gas concentrations monitored by Preserve Home Pro will be checked for an eight-hour period. [2]
 
-<sup>3</sup> Preserve Home Pro will follow the guidelines specified in the third constraint as per the NFPA standards. [3-4]
+<sup>3</sup> Preserve Home Pro will ensure fast response times if there is a adequate amount of gas presence specified in the other constraints in order to prevent harmful effects to the customer.
 
-<sup>4</sup> To maximize the potential in detecting gas leaks, the gas module will be installed where gas piping is being fed into. [5]
+<sup>4</sup> Preserve Home Pro will follow the guidelines specified in the fourth constraint as per the NFPA standards. [3-4]
 
-<sup>5</sup> The targeted gases will be placed either near the ceiling or near the floor since each gas is either heavier or lighter than air and flows up or down. [5]
+<sup>5</sup> To maximize the potential in detecting gas leaks, the gas module will be installed where gas piping is being fed into. [5]
 
-<sup>6</sup> Based on existing product installation manuals, Preserve Home Pro will avoid placing gas sensors in areas where there is a potential disturbance that could affect sensor detection. [3-5]
+<sup>6</sup> The targeted gases will be placed either near the ceiling or near the floor since each gas is either heavier or lighter than air and flows up or down. [5]
 
-<sup>7</sup> Based on existing product installation manuals, Preserve Home Pro will avoid placing sensors in environments where there is a likelihood of false positives from other sources. [4]
+<sup>7</sup> Based on existing product installation manuals, Preserve Home Pro will avoid placing gas sensors in areas where there is a potential disturbance that could affect sensor detection. [3-5]
 
-<sup>8</sup> To meet the manufacturer's work environment, the sensors will not be placed within the specified temperature range.in order to keep functionality for constraints 8 and 9. [6-7]
+<sup>8</sup> Based on existing product installation manuals, Preserve Home Pro will avoid placing sensors in environments where there is a likelihood of false positives from other sources. [4]
+
+<sup>9</sup> To meet the manufacturer's work environment, the sensors will not be placed within the specified temperature range.in order to keep functionality for constraints 9 and 10. [6-7]
 
 ## Buildable Schematic  
 
@@ -54,9 +57,11 @@ Figure 3. This the wiring schematic of how the gas sensors will be connected to 
 
 <sup>1</sup> To meet constraints 1 and 2, there will be a need for two sensors to detect the gases Preserve Home Pro is targeting. The SRAQ-G014 will detect the presence and concentration of flammable gases (Propane) and carbon monoxide. The device features the MQ-9 sensing element that is highly sensitive to propane and carbon monoxide and has a detection range of 50-10000 ppm for propane and 10-1000 ppm for carbon monoxide.[6] The SRAQ-G016 is like the SRAQ-G014 but features the MQ-135 sensor whose elements are highly sensitive to ammonia and the detection range is from 10-1000ppm.[7] These ranges are crucial to meet the standards set by OSHA for the eight-hour monitoring window.
 
-The gas module technical parameters show that the module will need a one-time 24-48 hour burn-in time for the sensors to be correctly calibrated and accurate. After that, the pre-heat time will be 30 minutes for the gas module to be calibrated and then the sensor will start collecting accurate data and be checked every second.[6-7] Since the gas module detects and measures the concentrations of the specified gas ranges using analog voltage levels (within 0-5V), the analog output pins from the gas module will be connected to a 12-bit ADC pin on the ESP32-H2 so the microcontroller can collect and process into meaningful concentration data.[13] Now knowing this, we can use the binary base equation **2<sup>n</sup>**, where n is the number of bits the ADC is using which is 12 bits.[13]
+The gas module technical parameters show that the module will need a one-time 24-48 hour burn-in time for the sensors to be correctly calibrated and accurate. After that, the pre-heat time will be 30 minutes for the gas module to be calibrated and then the sensor will start collecting accurate data and be checked every second.[6-7]
 
-From the equation below, the ADC provides 4,096 discrete values within the 0-5V range, enabling fine voltage distinctions required for the calculation of ppm measurements. [13-15] 
+Since the gas module detects and measures the concentrations of the specified gas ranges using analog voltage levels (within 0-5V), the analog output pins from the gas module will be connected to a 12-bit ADC pin on the ESP32-H2 so the microcontroller can collect and process into meaningful concentration data.[13] The ESP ADC takes data from the range of 0-3.3V, this means Preserve Home Pro will have to incorporate of voltage divider with the gas sensors in order to bring the voltage levels down from 5V to 3.3V in order to record accurate data and not lose any. Now knowing this, we can use the binary base equation **2<sup>n</sup>**, where n is the number of bits the ADC is using which is 12 bits.[13]
+
+From the equation below, the ADC provides 4,096 discrete values within the 0-3.3V range, enabling fine voltage distinctions required for the calculation of ppm measurements. [13-15]
 
 ```math
 Resolution = 2^n = 2^{12} = 4,096 steps
@@ -70,11 +75,13 @@ From the equation below, we can calculate smallest possible difference in values
 Smallest-step = \frac{(Maximum-ppm)} {(Resolution)} = \frac{(9,990)} {(4,096)} = 2.439 ppm/step
 ```
 
-<sup>2</sup> To meet constraint 3, Preserve Home Pro will be mounting the gas module no further than 20 feet from a location that is central to the surrounding vicinities of bedrooms. This is a requirement that NFPA has set on carbon monoxide detectors and will be addressed. Also, from already existing carbon monoxide alarms, the installation manuals address that if a home has a bedroom hallway of 40 feet then a module will be needed at each end to make up for 40 feet. [3] [4]
+<sup>2</sup> For constraint 3, the sensor will be connected to the communication module powered by an ESP32 microcontroller. As stated in the communication sign-off, the microcontroller has a transmission rate of 250 Kbps and sends two packets of data at a time. The sensor will will output a max value of 4096 or 12 bits when converted. Even with the PAN ID and data type as mentioned in the communication module, one sensor reading will not take up the full 128 bits in the two-packet transmission. Since the ESP32 can send at a 250 Kbps rate, one reading will take less than a second to reach the head unit.
 
-<sup>3</sup> For constraints 4 through 7, Preserve Home Pro looked at existing solutions from gas sensor manufacturers and developers to best suit the location of the gas module. The consensus for constraints 4 and 5 was to place the modules where leaks are prevalent or where gas sources are prone to leak.[5] This would include piping from gas sources to appliances (if homeowners have that feature for their house) so that Preserve Home Pro could detect propane accurately. The module for propane detection needs to be placed near the floor because propane is heavier than air and will naturally flow to the floor. [5] [11] The carbon monoxide spreads evenly through the air, and its location was addressed previously, so Preserve Home Pro must meet that location. [3-4] [10] Ammonia is lighter than air and will naturally want to float upwards, so the module will be placed near ceilings to be in the environment where ammonia resides. [12] For constraints 6 and 7, our selection of location will be the best place to conduct accurate readings without external environments affecting them. [3-5]
+<sup>3</sup> To meet constraint 4, Preserve Home Pro will be mounting the gas module no further than 20 feet from a location that is central to the surrounding vicinities of bedrooms. This is a requirement that NFPA has set on carbon monoxide detectors and will be addressed. Also, from already existing carbon monoxide alarms, the installation manuals address that if a home has a bedroom hallway of 40 feet then a module will be needed at each end to make up for 40 feet. [3] [4]
 
-<sup>4</sup> According to the manufacturer's datasheet, Preserve Home Pro needs to meet constraints 8 and 9 to provide suitable work environments for the sensor. If the constraints are not met, the sensor will not function correctly and may potentially cause harm to homeowners. [6-7]
+<sup>4</sup> For constraints 5 through 7, Preserve Home Pro looked at existing solutions from gas sensor manufacturers and developers to best suit the location of the gas module. The consensus for constraints 4 and 5 was to place the modules where leaks are prevalent or where gas sources are prone to leak.[5] This would include piping from gas sources to appliances (if homeowners have that feature for their house) so that Preserve Home Pro could detect propane accurately. The module for propane detection needs to be placed near the floor because propane is heavier than air and will naturally flow to the floor. [5] [11] The carbon monoxide spreads evenly through the air, and its location was addressed previously, so Preserve Home Pro must meet that location. [3-4] [10] Ammonia is lighter than air and will naturally want to float upwards, so the module will be placed near ceilings to be in the environment where ammonia resides. [12] For constraints 6 and 7, our selection of location will be the best place to conduct accurate readings without external environments affecting them. [3-5]
+
+<sup>5</sup> According to the manufacturer's datasheet, Preserve Home Pro needs to meet constraints 8 and 9 to provide suitable work environments for the sensor. If the constraints are not met, the sensor will not function correctly and may potentially cause harm to homeowners. [6-7]
  
 ## Bill of Materials
 | DEVICE | Quantity | Price Per Unit | Total Price |
