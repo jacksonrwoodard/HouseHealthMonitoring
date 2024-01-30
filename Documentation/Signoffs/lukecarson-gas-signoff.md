@@ -19,6 +19,7 @@ The gas module detects three gases that can be found in homes: propane, carbon m
 |  8  | The Gas module shall not be placed in bathrooms, garages, kitchens, furnace rooms, extremely dusty or dirty areas | Project Team, Existing Products |
 |  9  | The Gas module shall not be placed in areas of the house enviroment where it is colder than -10°C or hotter than 50°C | Manufacturer |
 |  10  | The Gas module shall not be placed in areas of the house enviroment where the humidity is more than 95% | Manufacturer |
+|  11  | The Gas module shall be protected from unwanted variation of sensor readings due to noise | Project Team |
 
 <sup>1</sup> Preserve Home Pro aims to detect three specific gases commonly known for causing poisoning at home. [1]
 
@@ -37,6 +38,8 @@ The gas module detects three gases that can be found in homes: propane, carbon m
 <sup>8</sup> Based on existing product installation manuals, Preserve Home Pro will avoid placing sensors in environments where there is a likelihood of false positives from other sources. [4]
 
 <sup>9</sup> To meet the manufacturer's work environment, the sensors will not be placed within the specified temperature range.in order to keep functionality for constraints 9 and 10. [6-7]
+
+<sup>10</sup> In order to provide reliable, accurate, and usable data the team will need to implement filtering in order to provide stable sensor readings. [16]
 
 ## Buildable Schematic  
 
@@ -79,10 +82,22 @@ Smallest-step = \frac{(Maximum-ppm)} {(Resolution)} = \frac{(9,990)} {(4,096)} =
 
 <sup>3</sup> To meet constraint 4, Preserve Home Pro will be mounting the gas module no further than 20 feet from a location that is central to the surrounding vicinities of bedrooms. This is a requirement that NFPA has set on carbon monoxide detectors and will be addressed. Also, from already existing carbon monoxide alarms, the installation manuals address that if a home has a bedroom hallway of 40 feet then a module will be needed at each end to make up for 40 feet. [3] [4]
 
-<sup>4</sup> For constraints 5 through 7, Preserve Home Pro looked at existing solutions from gas sensor manufacturers and developers to best suit the location of the gas module. The consensus for constraints 4 and 5 was to place the modules where leaks are prevalent or where gas sources are prone to leak.[5] This would include piping from gas sources to appliances (if homeowners have that feature for their house) so that Preserve Home Pro could detect propane accurately. The module for propane detection needs to be placed near the floor because propane is heavier than air and will naturally flow to the floor. [5] [11] The carbon monoxide spreads evenly through the air, and its location was addressed previously, so Preserve Home Pro must meet that location. [3-4] [10] Ammonia is lighter than air and will naturally want to float upwards, so the module will be placed near ceilings to be in the environment where ammonia resides. [12] For constraints 6 and 7, our selection of location will be the best place to conduct accurate readings without external environments affecting them. [3-5]
+<sup>4</sup> For constraints 5 through 8, Preserve Home Pro looked at existing solutions from gas sensor manufacturers and developers to best suit the location of the gas module. The consensus for constraints 4 and 5 was to place the modules where leaks are prevalent or where gas sources are prone to leak.[5] This would include piping from gas sources to appliances (if homeowners have that feature for their house) so that Preserve Home Pro could detect propane accurately. The module for propane detection needs to be placed near the floor because propane is heavier than air and will naturally flow to the floor. [5] [11] The carbon monoxide spreads evenly through the air, and its location was addressed previously, so Preserve Home Pro must meet that location. [3-4] [10] Ammonia is lighter than air and will naturally want to float upwards, so the module will be placed near ceilings to be in the environment where ammonia resides. [12] For constraints 6 and 7, our selection of location will be the best place to conduct accurate readings without external environments affecting them. [3-5]
 
-<sup>5</sup> According to the manufacturer's datasheet, Preserve Home Pro needs to meet constraints 8 and 9 to provide suitable work environments for the sensor. If the constraints are not met, the sensor will not function correctly and may potentially cause harm to homeowners. [6-7]
- 
+<sup>5</sup> According to the manufacturer's datasheet, Preserve Home Pro needs to meet constraints 9 and 10 to provide suitable work environments for the sensor. If the constraints are not met, the sensor will not function correctly and may potentially cause harm to homeowners. [6-7]
+
+<sup>6</sup> Lastly for constraint 11, anytime when sensor measurements are taking place that data needs to be accurate and reliable. Preserve Home Pro has addressed the concerning attention of noise interference in the area of the system. A LTspice simulation was conducted in order to model the environment of our system and be able to verify the noise implemented on the system and to make sure the noise is not affecting the data involving measurements. 
+
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/a3b1a6d4-1486-43d5-b311-09cb2f74e465)
+Figure 4. The LTspice circuit of two coupled parallel wires next to each other.
+
+From the figure above, this is modeling the system with wall power wires running next to the sensor wiring. The circuit on the left is the AC wiring of the house with 120V at 60 Hz frequency being modeled. This is then coupled together using inductors with the secondary circuit which is the sensor circuit. The turns ratio was selected by a regarded source on how to model noise source that gave a range of 500-1000 turns to 1 for noise simulation [17]. The coupling coefficent was calculated by an online calculator using the specifications of 14 AWG that is commonly used for wiring residential houses wall sockets [18-19]. The secondary circuit is modeled using a sinusoidal voltage source with a DC offset of 3.3V which is the ADC voltage range of the microcontroller being used in order to take the data and make it useful for the customer to understand, then factoring in ripple voltage from the wall wart which is specified 120mVpp on the datasheet [20]. A variable resistor is then placed in series with the secondary source in order to model the gas modules sensing resistor that is found on the datasheet schematic [6-7].
+
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/9adef9d7-66fb-49c3-8670-3f39a8acf8b5)
+Figure 5. The output simulation taken from figure 4 LTspice schematic on the secondary side.
+
+The acceptable noise would have to be based on the smallest step found above in the analysis section. This means that 2.439 ppm/step is the standard for noise interfernce. Noise over that standard will create unwanted and unreliable data values that would put the customer in health jeporady. The Figure 5 illustration shows that there is a 500nVpp sinusoid which would be the noise of the coupled wires together. Now seeing this is such a small value which nears zero there would be little to no affect on the sensor measurements. 
+
 ## Bill of Materials
 | DEVICE | Quantity | Price Per Unit | Total Price |
 | ------ | -------- | -------------- | ----------- |
@@ -121,3 +136,13 @@ Smallest-step = \frac{(Maximum-ppm)} {(Resolution)} = \frac{(9,990)} {(4,096)} =
 [14] I. S. U. Share, “Binary world,” Binary World, https://loadingtech.blogspot.com/2012/07/binary-world.html (accessed Nov. 28, 2023). 
 
 [15] S. One, “Bit to measurement resolution converter,” SensorsONE, https://www.sensorsone.com/bit-to-measurement-resolution-converter/#parts (accessed Nov. 28, 2023). 
+
+[16] B. Murphy, “How do you deal with Sensor Data Noise, outliers, and missing values?,” Sensor Data Cleaning: Noise, Outliers, and Missing Values, https://www.linkedin.com/advice/0/how-do-you-deal-sensor-data-noise-outliers-missing#:~:text=Noise%20can%20be%20caused%20by,the%20data%20analysis%20and%20modeling. (accessed Jan. 30, 2024). 
+
+[17] Wideband power amplifier illustration | keysight, https://www.keysight.com/us/en/assets/9921-02529/help-files/5306PPD-FAQ-42.pdf (accessed Jan. 30, 2024).
+
+[18] “Parallel wire inductance calculator - engineering calculators & tools,” All About Circuits, https://www.allaboutcircuits.com/tools/parallel-wire-inductance-calculator/ (accessed Jan. 30, 2024). 
+
+[19] T. Thiele, “A guide to electrical wire sizes,” The Spruce, https://www.thespruce.com/electrical-wire-sizes-1152851 (accessed Jan. 30, 2024). 
+
+[20] Chicago Electronic Distributors, “Raspberry pi 4 power supply in white,” Chicago Electronic Distributors, https://chicagodist.com/products/raspberry-pi-4-psu-us-white?src=raspberrypi (accessed Jan. 30, 2024). 
