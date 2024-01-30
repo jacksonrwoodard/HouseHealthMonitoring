@@ -59,9 +59,9 @@ Figure 3. This the wiring schematic of how the gas sensors will be connected to 
 
 The gas module technical parameters show that the module will need a one-time 24-48 hour burn-in time for the sensors to be correctly calibrated and accurate. After that, the pre-heat time will be 30 minutes for the gas module to be calibrated and then the sensor will start collecting accurate data and be checked every second.[6-7]
 
-Since the gas module detects and measures the concentrations of the specified gas ranges using analog voltage levels (within 0-5V), the analog output pins from the gas module will be connected to a 12-bit ADC pin on the ESP32-H2 so the microcontroller can collect and process into meaningful concentration data.[13] The ESP ADC takes data from the range of 0-3.3V, this means Preserve Home Pro will have to incorporate of voltage divider with the gas sensors in order to bring the voltage levels down from 5V to 3.3V in order to record accurate data and not lose any. Now knowing this, we can use the binary base equation **2<sup>n</sup>**, where n is the number of bits the ADC is using which is 12 bits.[13]
+Since the gas module detects and measures the concentrations of the specified gas ranges using analog voltage levels (within 0-5V), the analog output pins from the gas module will be connected to a 12-bit ADC pin on the ESP32-H2 so the microcontroller can collect and process into meaningful concentration data.[13] The ESP ADC takes data from the range of 0-3.3V, this means Preserve Home Pro will have to incorporate of voltage divider with the gas sensors in order to bring the voltage levels down from 5V to 3.3V in order to record accurate data and not lose any.
 
-From the equation below, the ADC provides 4,096 discrete values within the 0-3.3V range, enabling fine voltage distinctions required for the calculation of ppm measurements. [13-15]
+Now knowing this, we can use the binary base equation **2<sup>n</sup>**, where n is the number of bits the ADC is using which is 12 bits.[13] From the equation below, the ADC provides 4,096 discrete values within the 0-3.3V range, enabling fine voltage distinctions required for the calculation of ppm measurements. [13-15]
 
 ```math
 Resolution = 2^n = 2^{12} = 4,096 steps
