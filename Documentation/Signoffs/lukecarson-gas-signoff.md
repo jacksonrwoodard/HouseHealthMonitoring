@@ -88,15 +88,56 @@ Smallest-step = \frac{(Maximum-ppm)} {(Resolution)} = \frac{(9,990)} {(4,096)} =
 
 <sup>6</sup> Lastly for constraint 11, anytime when sensor measurements are taking place that data needs to be accurate and reliable. Preserve Home Pro has addressed the concerning attention of noise interference in the area of the system. A LTspice simulation was conducted in order to model the environment of our system and be able to verify the noise implemented on the system and to make sure the noise is not affecting the data involving measurements. 
 
-![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/a3b1a6d4-1486-43d5-b311-09cb2f74e465)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/d418b6dd-fde1-494f-9b79-628e3f4e1c17)
+
 Figure 4. The LTspice circuit of two coupled parallel wires next to each other.
 
-From the figure above, this is modeling the system with wall power wires running next to the sensor wiring. The circuit on the left is the AC wiring of the house with 120V at 60 Hz frequency being modeled. This is then coupled together using inductors with the secondary circuit which is the sensor circuit. The turns ratio was selected by a regarded source on how to model noise source that gave a range of 500-1000 turns to 1 for noise simulation [17]. The coupling coefficent was calculated by an online calculator using the specifications of 14 AWG that is commonly used for wiring residential houses wall sockets [18-19]. The secondary circuit is modeled using a sinusoidal voltage source with a DC offset of 3.3V which is the ADC voltage range of the microcontroller being used in order to take the data and make it useful for the customer to understand, then factoring in ripple voltage from the wall wart which is specified 120mVpp on the datasheet [20]. A variable resistor is then placed in series with the secondary source in order to model the gas modules sensing resistor that is found on the datasheet schematic [6-7].
+From the figure above, this is modeling the system with wall power wires running next to the sensor wiring. The circuit on the left is the AC wiring of the house with 120V at 60 Hz frequency being modeled. This is then coupled together using inductors with the secondary circuit which is the sensor circuit. The turns ratio was selected by a regarded source on how to model noise source that gave a range of 500-1000 turns to 1 for noise simulation [17]. The coupling coefficent was calculated by using a derivation of the mutual inductance of two parallel wires while using the specifications of 14 AWG that is commonly used for wiring residential houses wall sockets [18-19].
 
-![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/9adef9d7-66fb-49c3-8670-3f39a8acf8b5)
-Figure 5. The output simulation taken from figure 4 LTspice schematic on the secondary side.
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/b95ada3e-2ea1-4f91-b9aa-a3abeb213af5)
+Figure 5. This is the simplied derivation of two parallel wires for finding mutual inductance
 
-The acceptable noise would have to be based on the smallest step found above in the analysis section. This means that 2.439 ppm/step is the standard for noise interfernce. Noise over that standard will create unwanted and unreliable data values that would put the customer in health jeporady. The Figure 5 illustration shows that there is a 500nVpp sinusoid which would be the noise of the coupled wires together. Now seeing this is such a small value which nears zero there would be little to no affect on the sensor measurements. 
+Now using the specifications of 14 AWG copper wire [19]: distance between wires (d), radius of the wire (rw), and length of the wire of how long they run together (l). These calculations are taken from inches to meters in order to match the units, 1 inch = 0.0254 meters
+
+```math
+d= 3×0.0254 = 0.0762 m
+```
+
+```math
+rw​= 0.03205×0.0254 = 0.000814 m
+```
+
+```math
+l= 6×0.0254 = 0.1524 m
+```
+
+```math
+k = \frac{2 \times 4\pi \times 10^{-7} \times 0.1524}{3.14} \ln\left(\frac{0.0762}{0.000814}\right)^{-1} \text{ H/m}
+```
+
+```math
+k = 1.3024 \times 10^{-9} \text{ H/m}
+```
+
+The secondary circuit is modeled using a sinusoidal voltage source with a DC offset of 3.3V which is the ADC voltage range of the microcontroller being used in order to take the data and make it useful for the customer to understand, then factoring in ripple voltage from the wall wart which is specified 120mVpp on the datasheet [20]. A variable resistor is then placed in series with the secondary source in order to model the gas modules sensing resistor that is found on the datasheet schematic [6-7].
+
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/fad92991-abd8-42a2-b4a2-192ca0de5cab)
+Figure 6. The output simulation taken from figure 4 LTspice schematic on the secondary side.
+
+The acceptable noise would have to be based on the smallest step found above in the analysis section. This means that 2.439 ppm/step is the standard for noise interfernce. Noise over that standard will create unwanted and unreliable data values that would put the customer in health jeporady. The Figure 6 illustration shows that there is a 13nVpp sinusoid which would be the noise of the coupled wires together. Now we must convert the 13nVpp to ppm in order to see if this under the standard for the ppm measurement.
+
+```math
+\text{ppm} = \frac{\text{nVpp}}{V_{ref}} \times 10^9
+```
+
+```math
+\text{ppm} = \frac{13}{3.3} \times 10^9 \approx 3.94 \times 10^9
+```
+
+This means that there are about 3.94 billion parts per million of 13 nVpp in 3.3 V. In order to reduce that noise Preserve Home Pro would need to use a low pass filter to block out the high frequency noise and keep under the 2.439 ppm bar. 
+
+
+
 
 ## Bill of Materials
 | DEVICE | Quantity | Price Per Unit | Total Price |
@@ -141,7 +182,7 @@ The acceptable noise would have to be based on the smallest step found above in 
 
 [17] Wideband power amplifier illustration | keysight, https://www.keysight.com/us/en/assets/9921-02529/help-files/5306PPD-FAQ-42.pdf (accessed Jan. 30, 2024).
 
-[18] “Parallel wire inductance calculator - engineering calculators & tools,” All About Circuits, https://www.allaboutcircuits.com/tools/parallel-wire-inductance-calculator/ (accessed Jan. 30, 2024). 
+[18] G. Lee, Guy LeeGuy Lee 16311 gold badge11 silver badge1313 bronze badges, and analogsystemsrfanalogsystemsrf 34k22 gold badges1919 silver badges4646 bronze badges, “Calculating mutual inductance in parallel wires,” Electrical Engineering Stack Exchange, https://electronics.stackexchange.com/questions/304211/calculating-mutual-inductance-in-parallel-wires#:~:text=L%20%3D%20%28%CE%BCo%20%E2%88%97%20Length%20%CF%80%29%20%E2%88%97%20ln%28separation,the%20center_to_center%20distance%2C%20to%20be%20greater%20than%202%2Aradius (accessed Jan. 30, 2024).  
 
 [19] T. Thiele, “A guide to electrical wire sizes,” The Spruce, https://www.thespruce.com/electrical-wire-sizes-1152851 (accessed Jan. 30, 2024). 
 
