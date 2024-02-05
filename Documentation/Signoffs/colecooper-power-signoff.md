@@ -18,8 +18,7 @@ The power system allows the sensor modules to function properly on power from a 
 
 ## Buildable Schematic
 
-![UPS Circuit Diagram](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/bc01d92c-44ac-4ca9-aafa-a11561d60d88)
-
+![UPS Circuit Diagram](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/04ff5965-c44b-45eb-a4da-9af6c19f0982)
 
 ## Analysis
 <sup>1</sup> The Raspberry Pi 4B and the ESP32 H2 DEVKITM-1 both use 5 volt power in for proper operation. 
@@ -32,7 +31,11 @@ The power system allows the sensor modules to function properly on power from a 
 ## Bill of Materials (BOM)
 | DEVICE | Quantity | Price Per Unit | Total Price |
 | ------ | -------- | -------------- | ----------- |
-| Raspberry Pi 4 Power Supply | 4 | $8.00 | $32.00 |
+| Raspberry Pi 4 Power Supply | 3 | $8.00 | $32.00 |
+| 15V 2A Power Supply | 1 | $11.99 | $11.99 |
+| 1N4001 Diode | 1 | $4.07 | $4.07 |
+| 12V 9Ah SLA Battery | 1 | $24.99 | $24.99 |
+| L7805CV Voltage Regulator | 1 | $8.59 | $8.59 |
 
 
 ## References
