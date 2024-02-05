@@ -8,7 +8,7 @@ The power system allows the sensor modules to function properly on power from a 
 | --- | ----------- | ------ |
 |  1  | System shall be primarily powered from the house's 120 Volt power supply. | Project Team |
 |  2  |  Shall have a backup power system that will allow the system to function in case of primary power outage for up to two continuous weeks. | Project Team & Team Supervisor |
-|  3  | Shall fully function witout regularly changing sensors or head unit batteries. | All External Stakeholders, & Team Supervisor |
+|  3  | Shall fully function without regularly changing sensors or head unit batteries. | All External Stakeholders, & Team Supervisor |
 
 <sup>1</sup> The standard residential voltage is 120 V power in the United States. The power module will need to work with the North American standard in order for the sensor modules and head units to have reliable power access.
 
@@ -23,9 +23,9 @@ The power system allows the sensor modules to function properly on power from a 
 ## Analysis
 <sup>1</sup> The Raspberry Pi 4B and the ESP32 H2 DEVKITM-1 both use 5 volt power in for proper operation. 
 
-<sup>2</sup> 
+<sup>2</sup> The team is creating a uninteruptable power supply (UPS) using diodes, a voltage regulator, a resistor, a 12V 9Ah battery, and a 120V AC to 15V DC transformer. The circuit diagram is shown above. When running the ESP32-H2 and one sensor, the minimum amount of amp hours needed is 6216 mAh for two weeks. The battery that has been chosen operates at 9Ah which is greater than the 6.216 Ah (6216 mAh) needed, so the system will be able to operate for a minimum of two weeks with the chosen battery. The UPS is created to recharge the battery using the wall power from the house, so when the power is on the battery will be charging, and when the power is off the battery will be powering the ESP32 and the sensor.
 
-<sup>3</sup> 
+<sup>3</sup> The 12V 9Ah battery has the power to let the system fully function without the need of standard wall power. The UPS will recharge the battery when the power is on, allowing the backup batteries for each subsystem to have a longer lifespan then a normal nonrechargeable battery.
 
 
 ## Bill of Materials (BOM)
