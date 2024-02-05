@@ -22,7 +22,7 @@ The power system allows the sensor modules to function properly on power from a 
 
 
 ## Analysis
-<sup>1</sup>
+<sup>1</sup> The Raspberry Pi 4B and the ESP32 H2 DEVKITM-1 both use 5 volt power in for proper operation. 
 
 <sup>2</sup> 
 
