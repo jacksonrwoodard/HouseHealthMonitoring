@@ -12,9 +12,9 @@ The power system allows the sensor modules to function properly on power from a 
 
 <sup>1</sup> The standard residential voltage is 120 V power in the United States. The power module will need to work with the North American standard in order for the sensor modules and head units to have reliable power access.
 
-<sup>2</sup> The sensor modules and head unit should still be functional even when the primary power source is out. In the United States the year of 2021 had multiple record breaking power outages lasting up to two weeks. The modules and head unit should still be able to record information while the power is out. 
+<sup>2</sup> The sensor modules should still be functional even when the primary power source is out. In the United States the year of 2021 had multiple record breaking power outages lasting up to two weeks. The modules should still be able to record information while the power is out. 
 
- <sup>3</sup> Having functional 
+<sup>3</sup> The ESPs and sensors will be powered through the UPS while the main power source is out, to allow for minimal functionality, until it kicks back on. The UPS will include a charging circuit so that the same batteries can stay in place and be recharged.
 
 ## Buildable Schematic
 
@@ -29,4 +29,4 @@ The power system allows the sensor modules to function properly on power from a 
 
 
 ## References
-
+[1] J. Smith, “Create your own battery backup power supplies - projects,” All About Circuits, https://www.allaboutcircuits.com/projects/battery-backup-power-supplies/ (accessed Feb. 5, 2024).
