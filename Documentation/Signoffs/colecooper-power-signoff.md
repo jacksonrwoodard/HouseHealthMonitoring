@@ -20,6 +20,11 @@ The power system allows the sensor modules to function properly on power from a 
 
 
 ## Analysis
+<sup>1</sup>
+
+<sup>2</sup> 
+
+<sup>3</sup> 
 
 
 ## Bill of Materials (BOM)
