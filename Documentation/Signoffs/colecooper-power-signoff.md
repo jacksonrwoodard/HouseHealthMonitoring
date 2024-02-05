@@ -23,6 +23,9 @@ The power system allows the sensor modules to function properly on power from a 
 
 
 ## Bill of Materials (BOM)
+| DEVICE | Quantity | Price Per Unit | Total Price |
+| ------ | -------- | -------------- | ----------- |
+| Raspberry Pi 4 Power Supply | 4 | $8.00 | $32.00 |
 
 
 ## References
