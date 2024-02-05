@@ -18,6 +18,8 @@ The power system allows the sensor modules to function properly on power from a 
 
 ## Buildable Schematic
 
+![UPS Circuit Diagram](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/bc01d92c-44ac-4ca9-aafa-a11561d60d88)
+
 
 ## Analysis
 <sup>1</sup>
