@@ -88,8 +88,7 @@ Smallest-step = \frac{(Maximum-ppm)} {(Resolution)} = \frac{(9,990)} {(4,096)} =
 
 <sup>6</sup> Lastly for constraint 11, anytime when sensor measurements are taking place that data needs to be accurate and reliable. Preserve Home Pro has addressed the concerning attention of noise interference in the area of the system. A LTspice simulation was conducted in order to model the environment of our system and be able to verify the noise implemented on the system and to make sure the noise is not affecting the data involving measurements. 
 
-![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/d418b6dd-fde1-494f-9b79-628e3f4e1c17)
-
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/80fe956f-3d1c-4251-9f92-490f9948aac3)
 Figure 4. The LTspice circuit of two coupled parallel wires next to each other.
 
 From the figure above, this is modeling the system with wall power wires running next to the sensor wiring. The circuit on the left is the AC wiring of the house with 120V at 60 Hz frequency being modeled. This is then coupled together using inductors with the secondary circuit which is the sensor circuit. The turns ratio was selected by a regarded source on how to model noise source that gave a range of 500-1000 turns to 1 for noise simulation [17]. The coupling coefficent was calculated by using a derivation of the mutual inductance of two parallel wires while using the specifications of 14 AWG that is commonly used for wiring residential houses wall sockets [18-19].
@@ -121,23 +120,10 @@ k = 1.3024 \times 10^{-9} \text{ H/m}
 
 The secondary circuit is modeled using a sinusoidal voltage source with a DC offset of 3.3V which is the ADC voltage range of the microcontroller being used in order to take the data and make it useful for the customer to understand, then factoring in ripple voltage from the wall wart which is specified 120mVpp on the datasheet [20]. A variable resistor is then placed in series with the secondary source in order to model the gas modules sensing resistor that is found on the datasheet schematic [6-7].
 
-![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/fad92991-abd8-42a2-b4a2-192ca0de5cab)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/237fb844-b49c-41f9-874f-5611858bb2eb)
 Figure 6. The output simulation taken from figure 4 LTspice schematic on the secondary side.
 
-The acceptable noise would have to be based on the smallest step found above in the analysis section. This means that 2.439 ppm/step is the standard for noise interfernce. Noise over that standard will create unwanted and unreliable data values that would put the customer in health jeporady. The Figure 6 illustration shows that there is a 13nVpp sinusoid which would be the noise of the coupled wires together. Now we must convert the 13nVpp to ppm in order to see if this under the standard for the ppm measurement.
-
-```math
-\text{ppm} = \frac{\text{nVpp}}{V_{ref}} \times 10^9
-```
-
-```math
-\text{ppm} = \frac{13}{3.3} \times 10^9 \approx 3.94 \times 10^9
-```
-
-This means that there are about 3.94 billion parts per million of 13 nVpp in 3.3 V. In order to reduce that noise Preserve Home Pro would need to use a low pass filter to block out the high frequency noise and keep under the 2.439 ppm bar. 
-
-
-
+The acceptable noise would have to be based on the smallest step found above in the analysis section. This means that 2.439 ppm/step is the standard for noise interfernce. Noise over that standard will create unwanted and unreliable data values that would put the customer in health jeporady. The Figure 6 illustration shows that there is two sinusoids, the green is the 20k ohm resistor and the blue is the 2k ohm resistor, which would be the noise of the coupled wires together. After zooming in on the 2k resistor, there is a 12 microVolt peak to peak sinusoid.
 
 ## Bill of Materials
 | DEVICE | Quantity | Price Per Unit | Total Price |
