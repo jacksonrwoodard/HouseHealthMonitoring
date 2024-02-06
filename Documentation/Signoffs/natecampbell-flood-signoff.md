@@ -46,7 +46,7 @@ The figure shown above is the dimensions of 4965 water sensor.
 
 <img width="727" alt="Screenshot 2023-11-01 at 5 41 44 PM" src="https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143025461/ac856427-aae6-4f39-89dd-7e41b464e54c">
 
-The datasheet for the water sensor claims that it outputs an analog signal [4]. When fully submerged the analog value will be 3.3 volts because that is what is supplied by the esp-32.  Because of this it will need to be connected to the appropiate pin to process this data. According to the manufacturer, the GPIO1 pin on the ESP32 has a 12 bit analog to digital converter [5]. This will convert the voltage from the sensor of 0 to 3.3 volts into a digital value of 0 to 4095 due to the 12 bits output from the converter. The sensor itself has 42 mm of sensing element that when divided by 4096 values equals about 10 micrometers per step. 
+The datasheet for the water sensor claims that it outputs an analog signal [4]. When fully submerged the analog value will be 3.3 volts because that is what is supplied by the esp-32.  Because of this it will need to be connected to the appropiate pin to process this data. According to the manufacturer, the GPIO1 pin on the ESP32 has a 12 bit analog to digital converter [5]. This will convert the output voltage from the sensor into a digital value of 0 to 4095 due to the 12 bits output from the converter. The sensor itself has 42 mm of sensing element that when divided by 4096 values equals about 10 micrometers per step. 
 
 ## Analysis
 <sup>1</sup> The sensor itself has 42 mm or about 1.65 inches of measurable length. It could be placed at the bottom of a wall and measure a 1 inch depth easily.
@@ -58,6 +58,47 @@ The datasheet for the water sensor claims that it outputs an analog signal [4]. 
 <sup>4</sup> Floodwater can enter a house through doors, windows, cracks in the foundation, sewer systems, and flood vents [6]. Placing the sensors near these areas could provide a more accurate response that flood damage has occurred. Placing multiple sensors at various heights in these locations can also provide the depth of water in the house. Assuming the home is level, the water from a flood will pool throughout the house, so placing a sensor at the base of every room will provide a more detailed view of where the water is in the house.
 
 <sup>5</sup> Sensors that are placed in areas such as a bathroom where condensation is likely to occur will have to be placed with extra consideration to avoid false positives. Placing the sensors right outside the door of a bathroom or in a floor vent could prevent this condensation from building up while still allowing the system to detect if a flood has occurred in that room.
+
+## Noise
+<img width="757" alt="Screenshot 2024-02-06 at 12 18 05 PM" src="https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143025461/e617af58-481e-44cb-b73e-2fe445e65dac">
+
+The figure above shows a simulation of the sensor. It features noise from the wall mutually inducted with the sensor to simulate a wall wire running alongside the sensor along with noise from the power supply of the sensor.
+
+The mutual inductance was found by using the formula and specifications below[7]:
+```math
+d= 3×0.0254 = 0.0762 m
+```
+
+```math
+rw​= 0.03205×0.0254 = 0.000814 m
+```
+
+```math
+l= 6×0.0254 = 0.1524 m
+```
+
+```math
+k = \frac{2 \times 4\pi \times 10^{-7} \times 0.1524}{3.14} \ln\left(\frac{0.0762}{0.000814}\right)^{-1} \text{ H/m}
+```
+
+```math
+k = 1.3024 \times 10^{-9} \text{ H/m}
+```
+The winding values for the indcutors were chosen based on a help file from Keysight illustrating how to impose noise[8].
+
+The ripple for the power supply was found in the datasheet for the power supply[9].
+
+The 250 ohm resistor was chosen as that is what was measured from a similiar water sensor with resistance values from 250-750. The 250 ohm reading provides the simulation with more noise giving the worst case scenario. 
+
+<img width="544" alt="Screenshot 2024-02-06 at 12 43 32 PM" src="https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143025461/fe900648-e8fc-4b46-bc87-c7d765c9497b">
+
+The image above shows the noise before the filter being close to 200 mV.
+
+<img width="710" alt="Screenshot 2024-02-06 at 12 49 51 PM" src="https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143025461/0698dde2-2796-49ad-95f7-fda999a9b38f">
+
+<img width="548" alt="Screenshot 2024-02-06 at 12 50 26 PM" src="https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143025461/aeb16a26-3b61-4320-ac1d-9fdd753e29bb">
+
+After filtering the noise is reduced to less than a millivolt. The RC values were chosen based on the filtering values for 60 Hz [10].
 
 ## Bill of Materials (BOM)
 | DEVICE | Quantity | Price Per Unit | Total Price | Overall Total |
@@ -76,3 +117,11 @@ The datasheet for the water sensor claims that it outputs an analog signal [4]. 
 [5] “Esp32-H2-DevKitM-1,” esp, https://docs.espressif.com/projects/espressif-esp-dev-kits/en/latest/esp32h2/esp32-h2-devkitm-1/user_guide.html (accessed Nov. 9, 2023). 
 
 [6] “What are the effects of a flood on your home?,” PuroClean, https://www.puroclean.com/blog/effects-of-a-flood-home/ (accessed Nov. 2, 2023). 
+
+[7] “Parallel wire inductance calculator - engineering calculators & tools,” All About Circuits, https://www.allaboutcircuits.com/tools/parallel-wire-inductance-calculator/ (accessed Feb. 6, 2024). 
+
+[8] “How can noise be superimposed on the output of a DC power supply?,” How can noise be superimposed on the output of a dc power supply? - Technical Support Knowledge Center Open, https://edadocs.software.keysight.com/kkbopen/how-can-noise-be-superimposed-on-the-output-of-a-dc-power-supply-589744645.html (accessed Feb. 6, 2024).
+
+[9] Raspberry pi 15W USB-C power supply, https://datasheets.raspberrypi.com/power-supply/15w-usb-c-power-supply-product-brief.pdf (accessed Feb. 6, 2024).
+
+[10] “Low pass/high pass filter calculator,” RC, RL, LC Passive Filter Calculator | DigiKey Electronics, https://www.digikey.com/en/resources/conversion-calculators/conversion-calculator-low-pass-and-high-pass-filter?utm_adgroup=&utm_source=google&utm_medium=cpc&utm_campaign=PMax_DK%2BProduct_Product+Categories+-+Top+15&utm_term=&utm_content=&utm_id=go_cmp-19646629144_adg-_ad-__dev-c_ext-_prd-_sig-Cj0KCQiAzoeuBhDqARIsAMdH14GOfln4oUhfKv9-p9uDzAoSUsxbda0ytGGlZlNq9cnYGRHXUEetfCUaAvf_EALw_wcB&gad_source=1&gclid=Cj0KCQiAzoeuBhDqARIsAMdH14GOfln4oUhfKv9-p9uDzAoSUsxbda0ytGGlZlNq9cnYGRHXUEetfCUaAvf_EALw_wcB (accessed Feb. 6, 2024). 
