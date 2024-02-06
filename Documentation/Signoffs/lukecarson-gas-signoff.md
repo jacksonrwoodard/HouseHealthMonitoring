@@ -89,6 +89,7 @@ Smallest-step = \frac{(Maximum-ppm)} {(Resolution)} = \frac{(9,990)} {(4,096)} =
 <sup>6</sup> Lastly for constraint 11, anytime when sensor measurements are taking place that data needs to be accurate and reliable. Preserve Home Pro has addressed the concerning attention of noise interference in the area of the system. A LTspice simulation was conducted in order to model the environment of our system and be able to verify the noise implemented on the system and to make sure the noise is not affecting the data involving measurements. 
 
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/80fe956f-3d1c-4251-9f92-490f9948aac3)
+
 Figure 4. The LTspice circuit of two coupled parallel wires next to each other.
 
 From the figure above, this is modeling the system with wall power wires running next to the sensor wiring. The circuit on the left is the AC wiring of the house with 120V at 60 Hz frequency being modeled. This is then coupled together using inductors with the secondary circuit which is the sensor circuit. The turns ratio was selected by a regarded source on how to model noise source that gave a range of 500-1000 turns to 1 for noise simulation [17]. The coupling coefficent was calculated by using a derivation of the mutual inductance of two parallel wires while using the specifications of 14 AWG that is commonly used for wiring residential houses wall sockets [18-19].
