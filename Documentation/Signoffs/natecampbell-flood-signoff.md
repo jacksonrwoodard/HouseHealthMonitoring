@@ -20,7 +20,7 @@ The figure above shows how the water sensor's conductivity improves as it gets s
 |  2  | Sensors shall be able to detect water levels at various depths.| Project Team |
 |  3  | Sensor shall send data to headunit in seconds if water is detected.| Project Team |
 |  4  | Sensor shall be placed in areas flooding is most likely to occur. | Project Team |
-|  5  | Sensor shall not be placed in areas where condensation can easily form. | Broader Implications |
+|  5  | Sensor shall not be placed in areas where condensation can't easily form. | Broader Implications |
 
 
 <sup>1</sup> 1-inch of water can cause thousands of dollars of damage [2]. Being able to detect a minimum of this depth would be essential in determining if a home has significant water damage. 
@@ -98,7 +98,21 @@ The image above shows the noise before the filter being close to 200 mV.
 
 <img width="548" alt="Screenshot 2024-02-06 at 12 50 26 PM" src="https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143025461/aeb16a26-3b61-4320-ac1d-9fdd753e29bb">
 
-After filtering the noise is reduced to less than a millivolt. The RC values were chosen based on the filtering values for 60 Hz [10].
+After filtering the noise is reduced to approximately 0.0008 volts. The RC values were chosen based on the filtering values for 60 Hz [10].
+
+As for the resolution, testing the sensor yielded the output voltage to be .45 volts with miniscule submergence in water and .85 volts when fully submerged. This gives .4 volts of range. Because the ESP-32 operates on a 3.3 volts, the resolution will need to scaled down to use the .4 volt range. this can be found by 
+
+3.3/4096= 0.00081 volts per step in normal 3.3 volt range
+
+.4/.00081 ≈ 494 steps in the .4 volt range
+
+.4/42 = 0.0095 volts per mm
+
+494/42 = 11.76 steps per mm, due to the sensor having 42 mm of sensing element
+
+.0095/11.76 ≈ 0.0008 volts per step
+
+The effective noise reduction achieved by the filter will allow for better sensor accuracy, bringing the noise down to approximately 0.0008 volts, which is roughly equivalent to the 0.0008 volts per step. This single step of noise corresponds to an inaccuracy of about 0.085 mm (or 0.003 inches). Because floods are usually several inches and multiple sensors would be placed in the home at various heights, 0.003 inches is negligible to the accuracy of the sensor.
 
 ## Bill of Materials (BOM)
 | DEVICE | Quantity | Price Per Unit | Total Price | Overall Total |
