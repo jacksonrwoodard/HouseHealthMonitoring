@@ -132,7 +132,7 @@ Figure 8. The output simulation taken from figure 6 LTspice schematic on the sec
 
 After the filtering, looking at the green sinusoid, a measurement of 110 uVpp is found which is reduced from the 40mV seen in figure 5. 
 
-The Voltage resolution is found to be 3.3V/4096 = 0.00081 V/step or 0.8mV/step
+The Voltage resolution is found to be 3.3V/4096 = 0.0008 V/step or 0.8mV/step
 
 The PPM resolution was 2.439 ppm/step
 
