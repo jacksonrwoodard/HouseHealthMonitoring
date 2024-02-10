@@ -123,7 +123,7 @@ Figure 5. This is the ouputs of the simulation with the green sinusoid being the
 
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/80fe956f-3d1c-4251-9f92-490f9948aac3)
 
-Figure 6. This is the schematic where we introduce a RC filter, this is useful in order to filter out the high frequencies and only capture the signal preserve home pro needs.
+Figure 6. This is the schematic where a RC filter is introduced, this is useful in order to filter out the high frequencies and only capture the signal preserve home pro needs for accurate measuring.
 
 The secondary circuit is modeled using a sinusoidal voltage source with a DC offset of 3.3V which is the ADC voltage range of the microcontroller being used in order to take the data and make it useful for the customer to understand, then factoring in ripple voltage from the wall wart which is specified 120mVpp on the datasheet [20]. 
 
