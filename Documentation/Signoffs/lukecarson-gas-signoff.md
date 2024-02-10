@@ -86,18 +86,16 @@ Smallest-step = \frac{(Maximum-ppm)} {(Resolution)} = \frac{(9,990)} {(4,096)} =
 
 <sup>5</sup> According to the manufacturer's datasheet, Preserve Home Pro needs to meet constraints 9 and 10 to provide suitable work environments for the sensor. If the constraints are not met, the sensor will not function correctly and may potentially cause harm to homeowners. [6-7]
 
-<sup>6</sup> Lastly for constraint 11, anytime when sensor measurements are taking place that data needs to be accurate and reliable. Preserve Home Pro has addressed the concerning attention of noise interference in the area of the system. A LTspice simulation was conducted in order to model the environment of our system and be able to verify the noise implemented on the system and to make sure the noise is not affecting the data involving measurements. 
+<sup>6</sup> Lastly for constraint 11, anytime when sensor measurements are taking place that data needs to be accurate and reliable. Preserve Home Pro has addressed the concerning attention of noise interference in the area of the system. A LTspice simulation was conducted in order to model the environment of our system and be able to verify the noise implemented on the system and to make sure the noise is not affecting the data involving measurements.
 
-![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/80fe956f-3d1c-4251-9f92-490f9948aac3)
+## Noise Simulation
 
-Figure 4. The LTspice circuit of two coupled parallel wires next to each other.
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/e091db1c-9e8b-45e2-82b3-53d51c8fcc6f)
+Figure 4.The LTspice circuit of two coupled parallel wires next to each other.
 
-From the figure above, this is modeling the system with wall power wires running next to the sensor wiring. The circuit on the left is the AC wiring of the house with 120V at 60 Hz frequency being modeled. This is then coupled together using inductors with the secondary circuit which is the sensor circuit. The turns ratio was selected by a regarded source on how to model noise source that gave a range of 500-1000 turns to 1 for noise simulation [17]. The coupling coefficent was calculated by using a derivation of the mutual inductance of two parallel wires while using the specifications of 14 AWG that is commonly used for wiring residential houses wall sockets [18-19].
+From the figure above, this is modeling the system with wall power wires running next to the sensor wiring. The circuit on the left is the AC wiring of the house with 120V at 60 Hz frequency being modeled. This is then coupled together using inductors with the secondary circuit which is the sensor circuit. The turns ratio was selected by a regarded source on how to model noise source that gave a range of 500-1000 turns to 1 for noise simulation [17]. The choice of the resistor values was from the datasheets of the gas sensors that shows the sensing resistor is from this range due to various gas concentrations [6-7]. The coupling coefficent was calculated by using a derivation of the mutual inductance of two parallel wires while using the specifications of 14 AWG that is commonly used for wiring residential houses wall sockets as seen below [18-19]. 
 
-![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/b95ada3e-2ea1-4f91-b9aa-a3abeb213af5)
-Figure 5. This is the simplied derivation of two parallel wires for finding mutual inductance
-
-Now using the specifications of 14 AWG copper wire [19]: distance between wires (d), radius of the wire (rw), and length of the wire of how long they run together (l). These calculations are taken from inches to meters in order to match the units, 1 inch = 0.0254 meters
+distance between wires (d), radius of the wire (rw), and length of the wire of how long they run together (l). These calculations are taken from inches to meters in order to match the units, 1 inch = 0.0254 meters
 
 ```math
 d= 3×0.0254 = 0.0762 m
@@ -119,12 +117,30 @@ k = \frac{2 \times 4\pi \times 10^{-7} \times 0.1524}{3.14} \ln\left(\frac{0.076
 k = 1.3024 \times 10^{-9} \text{ H/m}
 ```
 
-The secondary circuit is modeled using a sinusoidal voltage source with a DC offset of 3.3V which is the ADC voltage range of the microcontroller being used in order to take the data and make it useful for the customer to understand, then factoring in ripple voltage from the wall wart which is specified 120mVpp on the datasheet [20]. A variable resistor is then placed in series with the secondary source in order to model the gas modules sensing resistor that is found on the datasheet schematic [6-7].
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/79e9de13-0b8f-4022-a8d8-03d85eecee42)
+
+Figure 5. This is the ouputs of the simulation with the green sinusoid being the 2k ohm resistor and the 20k ohm resistor being the blue, hypothetically the 2k ohm resistor would be the most noise as seeing the larger sinusoid produced. The nosie being about 40mV as seen in the figure.
+
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/80fe956f-3d1c-4251-9f92-490f9948aac3)
+
+Figure 6. This is the schematic where we introduce a RC filter, this is useful in order to filter out the high frequencies and only capture the signal preserve home pro needs.
+
+The secondary circuit is modeled using a sinusoidal voltage source with a DC offset of 3.3V which is the ADC voltage range of the microcontroller being used in order to take the data and make it useful for the customer to understand, then factoring in ripple voltage from the wall wart which is specified 120mVpp on the datasheet [20]. 
 
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/237fb844-b49c-41f9-874f-5611858bb2eb)
-Figure 6. The output simulation taken from figure 4 LTspice schematic on the secondary side.
+Figure 8. The output simulation taken from figure 6 LTspice schematic on the secondary side after the filter.
 
-The acceptable noise would have to be based on the smallest step found above in the analysis section. This means that 2.439 ppm/step is the standard for noise interfernce. Noise over that standard will create unwanted and unreliable data values that would put the customer in health jeporady. The Figure 6 illustration shows that there is two sinusoids, the green is the 20k ohm resistor and the blue is the 2k ohm resistor, which would be the noise of the coupled wires together. After zooming in on the 2k resistor, there is a 12 microVolt peak to peak sinusoid.
+After the filtering, looking at the green sinusoid, a measurement of 110 uVpp is found which is reduced from the 40mV seen in figure 5. 
+
+The Voltage resolution is found to be 3.3V/4096 = 0.00081 V/step or 0.8mV/step
+
+The PPM resolution was 2.439 ppm/step
+
+To calculate the value representing the smallest detectable change in gas concentration per unit change in voltage, you can simply multiply the voltage resolution by the ppm resolution
+
+Sensitivity = 0.8mV×2.439ppm = 1.95 ppm/mV
+
+The RC filtering shows that the noise being reduced to 110 uV would be negligible until the noise got to that 0.8mV or 800uV mark then there would be a change in ppm which would result in giving false readings or measurements of the gas module. Therefore, with this filter in place there will be better sensor or measurement accuracy creating a reliable gas monitoring system. 
 
 ## Bill of Materials
 | DEVICE | Quantity | Price Per Unit | Total Price |
