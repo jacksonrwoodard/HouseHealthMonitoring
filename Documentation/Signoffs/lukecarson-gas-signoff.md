@@ -140,6 +140,12 @@ steps per ppm = 4096/9990 = 0.41 step/ppm
 
 volts per step = volts per ppm/ steps per ppm = 0.00033/0.41 = 0.00081 V/step
 
+voltage change in ppm = steps per ppm * voltage per step = 0.41 * 0.00081 = 0.00033V/ppm
+
+So the change of 1 ppm results in a change of 0.33mV 
+
+The noise level of 110uV is indeed significantly smaller than the voltage change associated with a 1 ppm change in gas concentration (0.32816 mV). This reaffirms that the noise level is negligible compared to the resolution of your sensor.
+
 The RC filtering shows that the noise being reduced to 110 uV would be negligible until the noise got to that 0.8mV or 800uV mark then there would be a change in volt that leads to a change in ppm which would result in giving false readings or measurements of the gas module. Therefore, with this filter in place there will be better sensor or measurement accuracy creating a reliable gas monitoring system. 
 
 ## Bill of Materials
