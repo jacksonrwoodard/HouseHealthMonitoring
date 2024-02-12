@@ -136,7 +136,7 @@ Voltage resolution = 3.3V/4096 = 0.0008 V/step or 0.8mV/step
 
 volts per ppm = 3.3/9990 = 0.00033 V/ppm
 
-So the change of 1 ppm results in a change of 0.33mV, the noise level of 110uV is indeed significantly smaller than the voltage change associated with a 1 ppm change in gas concentration (0.32816 mV). This reaffirms that the noise level is negligible compared to the resolution of your sensor.
+So the change of 1 ppm results in a change of 0.33mV, the noise level of 110uV is indeed significantly smaller than the voltage change associated with a 1 ppm change in gas concentration (0.32816 mV). This confirms that the noise level is negligible compared to the resolution of your sensor.
 
 steps per ppm = 4096/9990 = 0.41 step/ppm
 
