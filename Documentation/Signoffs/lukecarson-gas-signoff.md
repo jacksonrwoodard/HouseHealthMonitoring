@@ -134,13 +134,13 @@ After the filtering, looking at the green sinusoid, a measurement of 110 uVpp is
 
 The Voltage resolution is found to be 3.3V/4096 = 0.0008 V/step or 0.8mV/step
 
-The PPM resolution was 2.439 ppm/step
+volts per ppm = 3.3/9990 = 0.00033 V/ppm
 
-To calculate the value representing the smallest detectable change in gas concentration per unit change in voltage, you can simply multiply the voltage resolution by the ppm resolution
+steps per ppm = 4096/9990 = 0.41 step/ppm
 
-Sensitivity = 0.8mV×2.439ppm = 1.95 ppm/mV
+volts per step = volts per ppm/ steps per ppm = 0.00033/0.41 = 0.00081 V/step
 
-The RC filtering shows that the noise being reduced to 110 uV would be negligible until the noise got to that 0.8mV or 800uV mark then there would be a change in ppm which would result in giving false readings or measurements of the gas module. Therefore, with this filter in place there will be better sensor or measurement accuracy creating a reliable gas monitoring system. 
+The RC filtering shows that the noise being reduced to 110 uV would be negligible until the noise got to that 0.8mV or 800uV mark then there would be a change in volt that leads to a change in ppm which would result in giving false readings or measurements of the gas module. Therefore, with this filter in place there will be better sensor or measurement accuracy creating a reliable gas monitoring system. 
 
 ## Bill of Materials
 | DEVICE | Quantity | Price Per Unit | Total Price |
