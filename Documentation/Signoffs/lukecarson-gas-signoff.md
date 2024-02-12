@@ -53,8 +53,8 @@ Figure 2. This is the schematic of the MQ-135 sensor that is being used on the S
 
 #### Third-Party Buildable Schematic
 
-![Gas module](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/781086de-2ab5-424b-b295-1be82180a822)
-Figure 3. This the wiring schematic of how the gas sensors will be connected to the each respective ESP32-H2
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/dab13fc7-a006-4461-8139-cf4c1afe8943)
+Figure 3. This the wiring schematic of how the gas sensors will be connected to the each respective ESP32-H2, with the RC Filter in place.
 
 ## Analysis
 
@@ -148,7 +148,10 @@ The RC filtering shows that the noise being reduced to 110 uV. This would be neg
 | ------ | -------- | -------------- | ----------- |
 |  SRAQ-G014 | 1 | $7.19 | $7.19 |
 |  SRAQ-G016 | 1 | $18.99 | $18.99 |
-|  |  |  | $26.18 |
+|  2700uF capacitor | 3 | $2.29 | $6.87 |
+|  1 ohm resistor | 3 | $0.23 | $0.69 |
+|  Soldered Breadboard | 3 | $3.99 | $11.97 |
+|  |  |  | $45.71 |
 
 ## References
 
