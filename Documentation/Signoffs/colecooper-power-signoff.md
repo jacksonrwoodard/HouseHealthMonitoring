@@ -17,8 +17,8 @@ The power system allows the sensor modules to function properly on power from a 
 <sup>3</sup> The ESPs and sensors will be powered through the UPS while the main power source is out, to allow for minimal functionality, until it kicks back on. The UPS will include a charging circuit so that the same batteries can stay in place and be recharged.
 
 ## Buildable Schematic
-
-![UPS Circuit Diagram](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/04ff5965-c44b-45eb-a4da-9af6c19f0982) [1]
+ ![UPS Circuit Diagram](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/0be42f93-a2a2-449d-90c9-f369e8c9a1ef)
+[1]
 
 ## Analysis
 <sup>1</sup> The Raspberry Pi 4B and the ESP32 H2 DEVKITM-1 both use 5 volt power in for proper operation. The Raspberry Pi 4 power supply is a transformer that converts the 120V AC down to the needed 5V DC to make the microcontrollers work properly. 
