@@ -132,19 +132,15 @@ Figure 8. The output simulation taken from figure 6 LTspice schematic on the sec
 
 After the filtering, looking at the green sinusoid, a measurement of 110 uVpp is found which is reduced from the 40mV seen in figure 5. 
 
-The Voltage resolution is found to be 3.3V/4096 = 0.0008 V/step or 0.8mV/step
+Voltage resolution = 3.3V/4096 = 0.0008 V/step or 0.8mV/step
 
 volts per ppm = 3.3/9990 = 0.00033 V/ppm
 
+So the change of 1 ppm results in a change of 0.33mV, the noise level of 110uV is indeed significantly smaller than the voltage change associated with a 1 ppm change in gas concentration (0.32816 mV). This reaffirms that the noise level is negligible compared to the resolution of your sensor.
+
 steps per ppm = 4096/9990 = 0.41 step/ppm
 
-volts per step = volts per ppm/ steps per ppm = 0.00033/0.41 = 0.00081 V/step
-
-voltage change in ppm = steps per ppm * voltage per step = 0.41 * 0.00081 = 0.00033V/ppm
-
-So the change of 1 ppm results in a change of 0.33mV 
-
-The noise level of 110uV is indeed significantly smaller than the voltage change associated with a 1 ppm change in gas concentration (0.32816 mV). This reaffirms that the noise level is negligible compared to the resolution of your sensor.
+volts per step = volts per ppm/ steps per ppm = 0.00033/0.41 = 0.00081 V/step 
 
 The RC filtering shows that the noise being reduced to 110 uV would be negligible until the noise got to that 0.8mV or 800uV mark then there would be a change in volt that leads to a change in ppm which would result in giving false readings or measurements of the gas module. Therefore, with this filter in place there will be better sensor or measurement accuracy creating a reliable gas monitoring system. 
 
