@@ -21,6 +21,19 @@ The power system allows the sensor modules to function properly on power from a 
 
 The power comes from the 15V 2A wall wart that goes through a diode to prevent the eletricity from the battery pack from feeding back into the wall power. The 1 kOhm resistor is used to reduce the amount of amperage that will go to the battery pack allowing for the battery to be charged slowly and not over charge the battery. The other diode is used to provide a low resistance path between the voltage regulator and the battery pack. This enables the ESP32 to be powered if the voltage drops too low. The voltage regulator is used to step down the voltage to output exactly 5V into the ESP32 [1].
 
+## Simulations
+![UPS Circuit Design (LTSpice)](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/c8c725cf-a400-472c-b269-5448f329e8d4)
+![LTSpice Wall Power Vin](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/5074b587-caf4-4989-b81b-23e3357ab1a2)
+![LTSpice Wall Power Vout](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/a686f230-e30d-4d95-8c55-f5097ead8871)
+
+The three pictures shown above are the LTSpice simulations showing the voltage going into the voltage regualtor and the voltage going out of the voltage regulator when there is power in the house.
+
+![UPS Circuit Design (LTSpice) 0V Wall Power](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/3c87b037-fc9f-4db5-8e65-c5ce64d6cd90)
+![LTSpice Battery Power Vin](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/853a048f-0d6e-4936-a431-8755fdd66848)
+![LTSpice Wall Power Vout](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/062e91d1-5f9b-4085-a865-3825cb048048)
+
+The three pictures shown above are the LTSpice simulations showing the voltage going into the voltage regualtor and the voltage going out of the voltage regulator when there is no power in the house.
+
 ## Analysis
 <sup>1</sup> The Raspberry Pi 4B and the ESP32 H2 DEVKITM-1 both use 5 volt power in for proper operation. The Raspberry Pi 4 power supply is a transformer that converts the 120V AC down to the needed 5V DC to make the microcontrollers work properly. 
 
