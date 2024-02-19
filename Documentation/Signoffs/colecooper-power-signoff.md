@@ -43,13 +43,13 @@ The three pictures shown above are the LTSpice simulations showing the voltage g
 
 
 ## Bill of Materials (BOM)
-| DEVICE | Quantity | Price Per Unit | Total Price |
-| ------ | -------- | -------------- | ----------- |
-| Raspberry Pi 4 Power Supply | 3 | $8.00 | $32.00 |
-| 14.6V Charger LiFePO4 Battery Charger | 1 | $11.99 | $11.99 |
-| 1N4001 Diode | 1 | $4.07 | $4.07 |
-| 12V 8Ah LiFePO4 Lithium Battery | 1 | $24.99 | $24.99 |
-| L7805CV Voltage Regulator | 1 | $8.59 | $8.59 |
+| DEVICE | PART NUMBER | Quantity | Price Per Unit | Total Price |
+| ------ | ----------- | -------- | -------------- | ----------- |
+| Raspberry Pi 4 Power Supply | SC0214 | 3 | $8.00 | $32.00 |
+| 14.6V LiFePO4 Battery Charger | TP-30W-1462000 | 1 | $13.59 | $13.59 |
+| 1N4001 Diode | 1N4001 | 2 | $4.07 | $4.07 |
+| 12V 8Ah LiFePO4 Lithium Battery | 3164-PSL-SC-1290F2-ND | 1 | $39.99 | $39.99 |
+| L7805CV Voltage Regulator | L7805 | 1 | $8.59 | $8.59 |
 
 
 ## References
