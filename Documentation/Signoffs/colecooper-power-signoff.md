@@ -37,7 +37,7 @@ The three pictures shown above are the LTSpice simulations showing the voltage g
 ## Analysis
 <sup>1</sup> The Raspberry Pi 4B and the ESP32 H2 DEVKITM-1 both use 5 volt power in for proper operation. The Raspberry Pi 4 power supply is a transformer that converts the 120V AC down to the needed 5V DC to make the microcontrollers work properly. 
 
-<sup>2</sup> The team is creating a uninteruptable power supply (UPS) using diodes, a voltage regulator, a resistor, a 12V 9Ah battery, and a 120V AC to 15V DC transformer. The circuit diagram is shown above [1]. When running the ESP32-H2 and one sensor, the minimum amount of amp hours needed is 6216 mAh for two weeks. The battery that has been chosen operates at 9Ah which is greater than the 6.216 Ah (6216 mAh) needed, so the system will be able to operate for a minimum of two weeks with the chosen battery. The UPS is created to recharge the battery using the wall power from the house, so when the power is on the battery will be charging, and when the power is off the battery will be powering the ESP32 and the sensor.
+<sup>2</sup> The team is creating a uninteruptable power supply (UPS) using diodes, a voltage regulator, a resistor, a 12.8V 9Ah battery, and a 120V AC to 15V DC transformer. The circuit diagram is shown above [1]. When running the ESP32-H2 and one sensor, the minimum amount of amp hours needed is 6216 mAh for two weeks. The battery that has been chosen operates at 9Ah which is greater than the 6.216 Ah (6216 mAh) needed, so the system will be able to operate for a minimum of two weeks with the chosen battery. The UPS is created to recharge the battery using the wall power from the house, so when the power is on the battery will be charging, and when the power is off the battery will be powering the ESP32 and the sensor.
 
 <sup>3</sup> The 12.8V 9Ah battery has the power to let the system fully function without the need of standard wall power. The UPS will recharge the battery when the power is on, allowing the backup batteries for each subsystem to have a longer lifespan then a normal nonrechargeable battery. The 12.8V 9Ah battery is a lead acid battery, which is being used for cheaper cost and high tolerances [2].
 
@@ -47,7 +47,7 @@ The three pictures shown above are the LTSpice simulations showing the voltage g
 | ------ | ----------- | -------- | -------------- | ----------- |
 | Raspberry Pi 4 Power Supply | SC0214 | 3 | $8.00 | $32.00 |
 | 14.6V LiFePO4 Battery Charger | TP-30W-1462000 | 1 | $13.59 | $13.59 |
-| 1N4001 Diode | 1N4001 | 2 | $4.07 | $8.14 |
+| 1N4001 Diode Pack | 1N4001 | 1 | $4.07 | $4.07 |
 | 12.8V 9Ah LiFePO4 Lithium Battery | 3164-PSL-SC-1290F2-ND | 1 | $37.99 | $37.99 |
 | L7805CV Voltage Regulator | L7805 | 1 | $8.59 | $8.59 |
 
