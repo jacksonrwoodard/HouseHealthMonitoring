@@ -46,9 +46,9 @@ The three pictures shown above are the LTSpice simulations showing the voltage g
 | DEVICE | Quantity | Price Per Unit | Total Price |
 | ------ | -------- | -------------- | ----------- |
 | Raspberry Pi 4 Power Supply | 3 | $8.00 | $32.00 |
-| 15V 2A Power Supply | 1 | $11.99 | $11.99 |
+| 14.6V Charger LiFePO4 Battery Charger | 1 | $11.99 | $11.99 |
 | 1N4001 Diode | 1 | $4.07 | $4.07 |
-| 12V 9Ah SLA Battery | 1 | $24.99 | $24.99 |
+| 12V 8Ah LiFePO4 Lithium Battery | 1 | $24.99 | $24.99 |
 | L7805CV Voltage Regulator | 1 | $8.59 | $8.59 |
 
 
