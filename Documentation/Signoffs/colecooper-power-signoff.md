@@ -39,7 +39,7 @@ The three pictures shown above are the LTSpice simulations showing the voltage g
 
 <sup>2</sup> The team is creating a uninteruptable power supply (UPS) using diodes, a voltage regulator, a resistor, a 12.8V 9Ah battery, and a 120V AC to 15V DC transformer. The circuit diagram is shown above [1]. When running the ESP32-H2 and one sensor, the minimum amount of amp hours needed is 6216 mAh for two weeks. The battery that has been chosen operates at 9Ah which is greater than the 6.216 Ah (6216 mAh) needed, so the system will be able to operate for a minimum of two weeks with the chosen battery. The UPS is created to recharge the battery using the wall power from the house, so when the power is on the battery will be charging, and when the power is off the battery will be powering the ESP32 and the sensor.
 
-<sup>3</sup> The 12.8V 9Ah battery has the power to let the system fully function without the need of standard wall power. The UPS will recharge the battery when the power is on, allowing the backup batteries for each subsystem to have a longer lifespan then a normal nonrechargeable battery. The 12.8V 9Ah battery is a lithium iron phosphate battery (LiFePO4), which is being used for cheaper cost and high tolerances [2].
+<sup>3</sup> The 12.8V 9Ah battery has the power to let the system fully function without the need of standard wall power. The UPS will recharge the battery when the power is on, allowing the backup batteries for each subsystem to have a longer lifespan then a normal nonrechargeable battery. The 12.8V 9Ah battery is a lithium iron phosphate battery (LiFePO4), which is being used for longer life span, no maintenance, and improved discharge and charge effciency [2].
 
 
 ## Bill of Materials (BOM)
@@ -55,4 +55,4 @@ The three pictures shown above are the LTSpice simulations showing the voltage g
 ## References
 [1] J. Smith, “Create your own battery backup power supplies - projects,” All About Circuits, https://www.allaboutcircuits.com/projects/battery-backup-power-supplies/ (accessed Feb. 5, 2024).
 
-[2] Energy, H. (2022, October 18). What are the different types of UPS Batteries. Renewable Alternative Energy Solutions. https://www.hcienergy.com/blog/what-are-the-different-types-of-ups-batteries#:~:text=Lead-Acid%20batteries%20are%20known,like%20in%20large%20power%20applications 
+[2] 
