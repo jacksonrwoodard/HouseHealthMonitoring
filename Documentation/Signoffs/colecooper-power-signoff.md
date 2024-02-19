@@ -55,4 +55,4 @@ The three pictures shown above are the LTSpice simulations showing the voltage g
 ## References
 [1] J. Smith, “Create your own battery backup power supplies - projects,” All About Circuits, https://www.allaboutcircuits.com/projects/battery-backup-power-supplies/ (accessed Feb. 5, 2024).
 
-[2] 
+[2] SuperB, “The lithium difference,” Benefits of Lithium Iron Phosphate batteries (LiFePO4), https://www.super-b.com/en/lithium-iron-phosphate-batteries/benefits-lithium batteries#:~:text=Lithium%20iron%20phosphate%20battery%20advantages&text=Longer%20life%20span%2C%20no%20maintenance,you%20can%20make%20over%20time. (accessed Feb. 19, 2024). 
