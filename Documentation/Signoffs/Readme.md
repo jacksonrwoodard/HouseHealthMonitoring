@@ -8,3 +8,4 @@ Listed below are all of the team's completed signoffs:
 - [Headunit Module Signoff](https://github.com/jacksonrwoodard/HouseHealthMonitoring/blob/main/Documentation/Signoffs/php_headunit_signoff.md)
 - [Gas Module Signoff](https://github.com/jacksonrwoodard/HouseHealthMonitoring/blob/main/Documentation/Signoffs/lukecarson-gas-signoff.md)
 - [Flood Module Signoff](https://github.com/jacksonrwoodard/HouseHealthMonitoring/blob/main/Documentation/Signoffs/natecampbell-flood-signoff.md)
+- [Power Module Signoff](https://github.com/jacksonrwoodard/HouseHealthMonitoring/blob/main/Documentation/Signoffs/colecooper-power-signoff.md)
