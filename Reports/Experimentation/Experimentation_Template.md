@@ -22,7 +22,7 @@ The deliverable for this assignment is a demonstration of the experiments (live 
 | **No.** | **Constraints** | **Origin** |
 | -- | -- | ------ |
 | -- | **Head Unit** | ------ |
-| -- | ----------- | ------ |
+|  |  |  |
 |  1  | The head unit shall know what sensor is sending data to it, the sensors location, and be able to differentiate from other sensors. | Team Supervisor & Project Team |
 |  2  | The head unit shall be able to display and log active and historical data from sensors. | Project Team & Team Supervisor |
 |  3  | The head unit shall be able to detect if the fire module temperature is at 176&#176; Fahrenheit or higher and display a warning. | Project Team |
