@@ -29,7 +29,7 @@ The deliverable for this assignment is a demonstration of the experiments (live 
 |  5  | The head unit shall be able to receive data and follow OSHA standards for ammonia, propane, and carbon oxides (50 ppm, 1000 ppm, and 50 ppm respectively over an eight hour window). | Standards & Project Team |
 |  6  | The head unit shall be able to interpret, from the received data, that mold could form if the humidity levels exceed 50% and temperatures range between 55&#176; and 85&#176; Fahrenheit for a minimum of two days. | Project Team |
 | -- | **Communication** | ------ |
-| -- | ---------------------------------------------------------------------------------------------- | ----------------------------------- |
+| -- | ---------------------------------------------------------------------------------------------- | --------------------------------- |
 |  1  | System shall not require an internet connection to work and communicate with the head unit and sensors | Home Owners, Insurance Agencies, & Team Supervisor |
 |  2  | At least one sensor shall be placed within 200ft of the head unit. | Project Team |
 |  3  | Sensors shall be within 32ft from each other for every sensor outside of 200ft of the head unit. | Project Team |
@@ -37,14 +37,14 @@ The deliverable for this assignment is a demonstration of the experiments (live 
 |  5  | ESP32 shall be able to send a minimum of 128 bits (2 packets) at a transmission rate of at most 250 Kbps on a 2.4 GHz frequency. | Project Team & Standards|
 |  6  | The head unit shall, at minimum, receive data every 24 hours, when the data from the sensor reaches a critical level, or when the user requests the data. | Project Team |
 | -- | **Flood** | ------ |
-| -- | ---------------------------------------------------------------------------------------------- | ----------------------------------- |
+| -- | ---------------------------------------------------------------------------------------------- | --------------------------------- |
 |  1  | Sensor shall be able to detect if at least one inch of water is present in a room. | Project Team & Broader Implications |
 |  2  | Sensors shall be able to detect water levels at various depths.| Project Team |
 |  3  | Sensor shall send data to headunit in seconds if water is detected.| Project Team |
 |  4  | Sensor shall be placed in areas flooding is most likely to occur. | Project Team |
 |  5  | Sensor shall not be placed in areas where condensation can't easily form. | Broader Implications |
 | -- | **Gas** | ------ |
-| -- | ---------------------------------------------------------------------------------------------- | ----------------------------------- |
+| -- | ---------------------------------------------------------------------------------------------- | --------------------------------- |
 |  1  | The Gas module shall be able to detect ammonia, propane, and carbon oxide. | Project  Team, Insurance Agencies|
 |  2  | Head unit shall receive data from the gas module and follow OSHA standards for ammonia, propane, and carbon oxides (50 ppm, 1000 ppm, and 50 ppm respectively over an eight-hour window)| OSHA |
 |  3  | The Gas module shall send data to headunit every second if the targeted gases are detected | Project Team |
