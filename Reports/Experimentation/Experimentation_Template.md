@@ -21,7 +21,7 @@ The deliverable for this assignment is a demonstration of the experiments (live 
 ### Table of Constraints
 | **No.** | **Constraints** | **Origin** |
 | -- | -- | ------ |
-| -- | **Head Unit** | -- |
+| -- | :**Head Unit**: | :--: |
 |  |  |  |
 |  1  | The head unit shall know what sensor is sending data to it, the sensors location, and be able to differentiate from other sensors. | Team Supervisor & Project Team |
 |  2  | The head unit shall be able to display and log active and historical data from sensors. | Project Team & Team Supervisor |
@@ -30,7 +30,7 @@ The deliverable for this assignment is a demonstration of the experiments (live 
 |  5  | The head unit shall be able to receive data and follow OSHA standards for ammonia, propane, and carbon oxides (50 ppm, 1000 ppm, and 50 ppm respectively over an eight hour window). | Standards & Project Team |
 |  6  | The head unit shall be able to interpret, from the received data, that mold could form if the humidity levels exceed 50% and temperatures range between 55&#176; and 85&#176; Fahrenheit for a minimum of two days. | Project Team |
 |  |  |  |
-| -- | **Communication** | -- |
+| -- | :**Communication**: | :--: |
 |  |  |  |
 |  1  | System shall not require an internet connection to work and communicate with the head unit and sensors | Home Owners, Insurance Agencies, & Team Supervisor |
 |  2  | At least one sensor shall be placed within 200ft of the head unit. | Project Team |
@@ -39,7 +39,7 @@ The deliverable for this assignment is a demonstration of the experiments (live 
 |  5  | ESP32 shall be able to send a minimum of 128 bits (2 packets) at a transmission rate of at most 250 Kbps on a 2.4 GHz frequency. | Project Team & Standards|
 |  6  | The head unit shall, at minimum, receive data every 24 hours, when the data from the sensor reaches a critical level, or when the user requests the data. | Project Team |
 |  |  |  |
-| -- | **Flood** | -- |
+| -- | :**Flood**: | :--: |
 |  |  |  |
 |  1  | Sensor shall be able to detect if at least one inch of water is present in a room. | Project Team & Broader Implications |
 |  2  | Sensors shall be able to detect water levels at various depths.| Project Team |
@@ -47,7 +47,7 @@ The deliverable for this assignment is a demonstration of the experiments (live 
 |  4  | Sensor shall be placed in areas flooding is most likely to occur. | Project Team |
 |  5  | Sensor shall not be placed in areas where condensation can't easily form. | Broader Implications |
 |  |  |  |
-| -- | **Gas** | -- |
+| -- | :**Gas**: | :--: |
 |  |  |  |
 |  1  | The Gas module shall be able to detect ammonia, propane, and carbon oxide. | Project  Team, Insurance Agencies|
 |  2  | Head unit shall receive data from the gas module and follow OSHA standards for ammonia, propane, and carbon oxides (50 ppm, 1000 ppm, and 50 ppm respectively over an eight-hour window)| OSHA |
@@ -61,21 +61,21 @@ The deliverable for this assignment is a demonstration of the experiments (live 
 |  10  | The Gas module shall not be placed in areas of the house enviroment where the humidity is more than 95% | Manufacturer |
 |  11  | The Gas module shall be protected from unwanted variation of sensor readings due to noise | Project Team |
 |  |  |  |
-| -- | **Fire** | -- |
+| -- | :**Fire**: | :--: |
 |  |  |  |
 |  1  | Shall be able to detect the minimum temperature of 176&deg; Fahrenheit. | Project Team |
 |  2  | Shall send sensor data to the ESP32 every second. | Project Team |
 |  3  | Shall send temperature data to the head unit if 176&deg; Fahrenheit has been reached. | Project Team |
 |  4  | Shall not be a distraction to the homeowner. | All External Stakeholders, Ethics, & Team Supervisor |
 |  |  |  |
-| -- | **Mold** | -- |
+| -- | :**Mold**: | :--: |
 |  |  |  |
 |  1  | Shall be able to detect temperature ranges between 55&deg; F - 85&deg; F and humidity levels exceeding 50% RH. | Project Team |
 |  2  | Shall be able to communicate through I2C protocol and send data once every hour to its local ESP32-H2 transmitter, then enter sleep mode until the next hour. | Project Team |
 |  3  | Shall be protected and not exposed to harsh environmental conditions to prevent any damage to the sensor. | All External Stakeholders, Ethics, & Team Supervisor |
 |  4  | Shall give precise temperature and humidity readings within 0.5&deg; F and 2% RH of the actual values, rounding to the nearest whole number to properly evaluate and determine if mold like conditions are present. | Project Team |
 |  |  |  |
-| -- | **Power** | -- |
+| -- | :**Power**: | :--: |
 |  |  |  |
 |  1  | System shall be primarily powered from the house's 120 Volt power supply. | Project Team |
 |  2  | Shall have a backup power system that will allow the system to function in case of primary power outage for up to two continuous weeks. | Project Team & Team Supervisor |
