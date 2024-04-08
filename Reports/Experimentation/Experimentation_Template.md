@@ -16,7 +16,8 @@ The deliverable for this assignment is a demonstration of the experiments (live 
 5. a data table or graph of the results (whichever is appropriate) 
 6. an interpretation of the data (interpreting the data requires the writer to explain what the results of the experiments mean and conclusions you draw)
 
-## Head Unit Module Constraints
+## Module Constraints
+| --- | Head Unit | ------ |
 | No. | Constraints | Origin |
 | --- | ----------- | ------ |
 |  1  | The head unit shall know what sensor is sending data to it, the sensors location, and be able to differentiate from other sensors. | Team Supervisor & Project Team |
@@ -25,7 +26,7 @@ The deliverable for this assignment is a demonstration of the experiments (live 
 |  4  | The head unit shall be able to receive data from the water module to display a warning if water is present and the total water depth. | Project Team |
 |  5  | The head unit shall be able to receive data and follow OSHA standards for ammonia, propane, and carbon oxides (50 ppm, 1000 ppm, and 50 ppm respectively over an eight hour window). | Standards & Project Team |
 |  6  | The head unit shall be able to interpret, from the received data, that mold could form if the humidity levels exceed 50% and temperatures range between 55&#176; and 85&#176; Fahrenheit for a minimum of two days. | Project Team |
-## Communcation Module Constraints
+| --- | Communication | ------ |
 | No. | Constraints                                                                                    | Origin                              |
 | --- | ---------------------------------------------------------------------------------------------- | ----------------------------------- |
 |  1  | System shall not require an internet connection to work and communicate with the head unit and sensors | Home Owners, Insurance Agencies, & Team Supervisor |
@@ -34,7 +35,7 @@ The deliverable for this assignment is a demonstration of the experiments (live 
 |  4  | Sensor communication shall send the sensor name, number, data type, and raw data to the head unit. | Project Team |
 |  5  | ESP32 shall be able to send a minimum of 128 bits (2 packets) at a transmission rate of at most 250 Kbps on a 2.4 GHz frequency. | Project Team & Standards|
 |  6  | The head unit shall, at minimum, receive data every 24 hours, when the data from the sensor reaches a critical level, or when the user requests the data. | Project Team |
-## Flood Module Constraints
+| --- | Flood | ------ |
 | No. | Constraints                                                                                    | Origin                              |
 | --- | ---------------------------------------------------------------------------------------------- | ----------------------------------- |
 |  1  | Sensor shall be able to detect if at least one inch of water is present in a room. | Project Team & Broader Implications |
@@ -42,7 +43,7 @@ The deliverable for this assignment is a demonstration of the experiments (live 
 |  3  | Sensor shall send data to headunit in seconds if water is detected.| Project Team |
 |  4  | Sensor shall be placed in areas flooding is most likely to occur. | Project Team |
 |  5  | Sensor shall not be placed in areas where condensation can't easily form. | Broader Implications |
-## Gas Module Constraints
+| --- | Gas | ------ |
 | No. | Constraints                                                                                    | Origin                              |
 | --- | ---------------------------------------------------------------------------------------------- | ----------------------------------- |
 |  1  | The Gas module shall be able to detect ammonia, propane, and carbon oxide. | Project  Team, Insurance Agencies|
@@ -56,21 +57,21 @@ The deliverable for this assignment is a demonstration of the experiments (live 
 |  9  | The Gas module shall not be placed in areas of the house enviroment where it is colder than -10°C or hotter than 50°C | Manufacturer |
 |  10  | The Gas module shall not be placed in areas of the house enviroment where the humidity is more than 95% | Manufacturer |
 |  11  | The Gas module shall be protected from unwanted variation of sensor readings due to noise | Project Team |
-## Fire Moodule Constraints
+| --- | Fire | ------ |
 | No. | Constraints | Origin |
 | --- | ----------- | ------ |
 |  1  | Shall be able to detect the minimum temperature of 176&deg; Fahrenheit. | Project Team |
 |  2  | Shall send sensor data to the ESP32 every second. | Project Team |
 |  3  | Shall send temperature data to the head unit if 176&deg; Fahrenheit has been reached. | Project Team |
 |  4  | Shall not be a distraction to the homeowner. | All External Stakeholders, Ethics, & Team Supervisor |
-## Mold Module Constraints
+| --- | Mold | ------ |
 | No. | Constraints | Origin |
 | --- | ----------- | ------ |
 |  1  | Shall be able to detect temperature ranges between 55&deg; F - 85&deg; F and humidity levels exceeding 50% RH. | Project Team |
 |  2  | Shall be able to communicate through I2C protocol and send data once every hour to its local ESP32-H2 transmitter, then enter sleep mode until the next hour. | Project Team |
 |  3  | Shall be protected and not exposed to harsh environmental conditions to prevent any damage to the sensor. | All External Stakeholders, Ethics, & Team Supervisor |
 |  4  | Shall give precise temperature and humidity readings within 0.5&deg; F and 2% RH of the actual values, rounding to the nearest whole number to properly evaluate and determine if mold like conditions are present. | Project Team |
-## Power Module Signoff
+| --- | Power | ------ |
 | No. | Constraints | Origin |
 | --- | ----------- | ------ |
 |  1  | System shall be primarily powered from the house's 120 Volt power supply. | Project Team |
