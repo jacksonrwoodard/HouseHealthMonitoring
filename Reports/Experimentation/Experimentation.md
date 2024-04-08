@@ -1,7 +1,7 @@
 # Experimental Analysis Report
 
 ## Introduction
-
+The purpose of this report is to show the experimentation, results, and interpretation of results for each module. These results will then be compared to our constraints and measures of success in ordere to determine if each module has been implemented successfully. Each set of constraint is seperated by their associated module. 
 
 ## Specifications and Constraints
 
