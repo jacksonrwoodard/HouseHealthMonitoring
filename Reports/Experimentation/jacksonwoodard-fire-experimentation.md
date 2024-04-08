@@ -1,2 +1,3 @@
-Fire Module Experimentation
-----------------------------------------
+## Fire Module Experimentation
+
+#### Purpose of Experiment
