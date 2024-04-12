@@ -302,6 +302,8 @@ Click to go to [Power](#power) experimentation. <br/>
 | 4 | 176&deg;F | 187.9&deg;F |
 | 5 | 176&deg;F | 257.5&deg;F |
 
+![FireSensor176Plus](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/770fc938-6d27-4a5d-9564-22a9b3c843a6)
+
 -Interpretation: Based of the data provided above, it is safe to say that the temperature sensor can easily display 176&deg;F with no issues.
 
 #### Constraint 2 - Shall send sensor data to the ESP32 every second.
@@ -316,21 +318,25 @@ Click to go to [Power](#power) experimentation. <br/>
 | 4 | 1 second | 1 second |
 | 5 | 1 second | 1 second |
 
+![FireSensorUpdating](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/a5da7ddc-2e81-49a3-8e74-082f62505235)
+
 -Interpretation: Based on the picture and chart shown above, it is easy to see that the sensor can send the data every second consistly.
 
 #### Constraint 3 -  Shall send temperature data to the head unit if 176&deg; Fahrenheit has been reached.
 -Experimental Design: This constraint ties into the two contraints above. The sensor is sending data to the headunit every second, so it will send data to the temperature when 176&deg;F has been reached. For testing purposes, the team ran the same test that was done for testing if the sensor can detect 176&deg;F. So, the flame of a lighter is put next to the temperature sensor to make the temperature raise to 176&deg;F, and then the data is sent to the headunit.
 
--Results: The expected results for this is that it will work with no issues. The results are the same as the first constraint and are shown below in the chart. 
+-Results: The expected results for this is that it will work with no issues. The results are the same as the first constraint and are shown below in the chart. Also, in the picture you can see that the temperature above 176&deg;F, is displayed on the head unit.
 | Trail # | Expected Result | Actual Result |
 | ------- | --------------- | ------------- |
-| 1 | 176&deg;F | |
-| 2 | 176&deg;F | |
-| 3 | 176&deg;F | |
-| 4 | 176&deg;F | |
-| 5 | 176&deg;F | |
+| 1 | 176&deg;F | 212.4&deg;F |
+| 2 | 176&deg;F | 252.5&deg;F |
+| 3 | 176&deg;F | 201.2&deg;F |
+| 4 | 176&deg;F | 192.5&deg;F |
+| 5 | 176&deg;F | 232.4&deg;F |
 
--Interpretation
+![FireSensorUpdating](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/a5da7ddc-2e81-49a3-8e74-082f62505235)
+
+-Interpretation: As shown above in the chart, you can see that the sensor sends the data over the head unit when it reaches 176&deg;F. These results can also be proved by looking at the first two constraints becuase they both have to do with the temperature being 176&deg;F or higher and sending the data to the headunit.
 
 #### Constraint 4 - Shall not be a distraction to the homeowner.
 -Experimental Design
