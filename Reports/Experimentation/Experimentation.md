@@ -334,7 +334,7 @@ Click to go to [Power](#power) experimentation. <br/>
 | 4 | 176&deg;F | 192.5&deg;F |
 | 5 | 176&deg;F | 232.4&deg;F |
 
-![FireSensorUpdating](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/a5da7ddc-2e81-49a3-8e74-082f62505235)
+![FireSensor176Plus](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/770fc938-6d27-4a5d-9564-22a9b3c843a6)
 
 -Interpretation: As shown above in the chart, you can see that the sensor sends the data over the head unit when it reaches 176&deg;F. These results can also be proved by looking at the first two constraints becuase they both have to do with the temperature being 176&deg;F or higher and sending the data to the headunit.
 
