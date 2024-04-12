@@ -283,23 +283,44 @@ The purpose of this report is to show the experimentation, results, and interpre
 
 ### Fire
 #### Constraint 1 - Shall be able to detect the minimum temperature of 176&deg; Fahrenheit.
--Experimental Design
+-Experimental Design: To test this constraint, the team used the working temperature sensor and out a lighter next to it and recorded the data.
 
--Results
+-Results: The team expected the results to display a minimum of 176&deg;F, and it did. Shown below is a chart showing the five trails showing what was expected to see vs. what the actual sensor outputted.
+| Trail # | Expected Result | Actual Result |
+| ------- | --------------- | ------------- |
+| 1 | 176&deg;F | |
+| 2 | 176&deg;F | |
+| 3 | 176&deg;F | |
+| 4 | 176&deg;F | |
+| 5 | 176&deg;F | |
 
--Interpretation
+-Interpretation: Based of the data provided above, it is safe to say that the temperature sensor can easily display 176&deg;F with no issues.
 
 #### Constraint 2 - Shall send sensor data to the ESP32 every second.
--Experimental Design
+-Experimental Design: On the Home Assistant UI, the user can click on the sensor and watch how fast it updates. The sensor is meant to send data every second to the head unit and looking Home Assistant UI, it is possible to prove this.
 
--Results
+-Results: The team expected this to work properly because it is all something to is edited easily in the code. Shown below is a picture of what the Home Assistant UI looks like when it shows that the sensor is updating, as well as a chart showing the five trials proving that it sends the data every second consistly.
+| Trail # | Expected Result | Actual Result |
+| - | - | - |
+| 1 | 1 second | 1 second |
+| 2 | 1 second | 1 second |
+| 3 | 1 second | 1 second |
+| 4 | 1 second | 1 second |
+| 5 | 1 second | 1 second |
 
--Interpretation
+-Interpretation: Based on the picture and chart shown above, it is easy to see that the sensor can send the data every second consistly.
 
 #### Constraint 3 -  Shall send temperature data to the head unit if 176&deg; Fahrenheit has been reached.
--Experimental Design
+-Experimental Design: This constraint ties into the two contraints above. The sensor is sending data to the headunit every second, so it will send data to the temperature when 176&deg;F has been reached. For testing purposes, the team ran the same test that was done for testing if the sensor can detect 176&deg;F. So, the flame of a lighter is put next to the temperature sensor to make the temperature raise to 176&deg;F, and then the data is sent to the headunit.
 
--Results
+-Results: The expected results for this is that it will work with no issues. The results are the same as the first constraint and are shown below in the chart. 
+| Trail # | Expected Result | Actual Result |
+| ------- | --------------- | ------------- |
+| 1 | 176&deg;F | |
+| 2 | 176&deg;F | |
+| 3 | 176&deg;F | |
+| 4 | 176&deg;F | |
+| 5 | 176&deg;F | |
 
 -Interpretation
 
