@@ -3,17 +3,13 @@
 ## Introduction
 The purpose of this report is to show the experimentation, results, and interpretation of results for each module. These results will then be compared to our constraints and measures of success in ordere to determine if each module has been implemented successfully. Each set of constraint is seperated by their associated module. 
 
-Click to go to [Head Unit](#head-unit) experimentation.
-
-Click to go to [Communication](#communication) experimentation.
-
-Click to go to [Flood](#flood) experimentation.
-
-Click to go to [Gas](#gas) experimentation.
-
-Click to go to [Fire](#fire) experimentation.
-
-Click to go to [Mold](#mold) experimentation.
+Click to go to [Head Unit](#head-unit) experimentation. <br/>
+Click to go to [Communication](#communication) experimentation. <br/>
+Click to go to [Flood](#flood) experimentation. <br/>
+Click to go to [Gas](#gas) experimentation. <br/>
+Click to go to [Fire](#fire) experimentation. <br/>
+Click to go to [Mold](#mold) experimentation. <br/>
+Click to go to [Power](#power) experimentation. <br/>
 
 ## Specifications and Constraints
 
