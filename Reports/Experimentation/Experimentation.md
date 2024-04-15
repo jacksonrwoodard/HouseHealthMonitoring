@@ -92,7 +92,9 @@ Click to go to [Power](#power) experimentation. <br/>
 -Experimental Design: After connecting the fire temperature sensor to the head unit, we checked the head unit for storage of previous data over the period of 3 and a half hours. 
 
 -Results: The temperature sensor's data was successfully stored and shown over the 3 and a half hour period tested.
-![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/5b5a0ef3-81a6-46dd-944d-3eb9c67872fb)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/97e04e1b-6e5a-4bf9-995f-3e0c2d21957b)
+
+
 
 
 -Interpretation: The head unit is able to store data from sensors for long term logging. 
@@ -181,10 +183,10 @@ Click to go to [Power](#power) experimentation. <br/>
 -Experimental Design: The team tested this constraint by increasing the send and receive frequency to every 2 seconds from the fire module.
 
 -Results: The head unit was able to receive and store information from the fire module every 2 to 5 seconds.
-![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/4b56b762-d802-4c1a-8e9d-ad47710c6caf)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/6547e898-c534-4e48-880e-9f17483877c9)
 
 
--Interpretation: The modules should be able to communicate much faster than the minimum 24 hours declared by this constraint.
+-Interpretation: The tested module is able to communicate every 2 to 5 seconds
 
 
 ### Flood
