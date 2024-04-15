@@ -211,82 +211,114 @@ Click to go to [Power](#power) experimentation. <br/>
 
 
 ### Gas
+
 #### Constraint 1 - The Gas module shall be able to detect ammonia, propane, and carbon oxide.
--Experimental Design
 
--Results
+-Experimental Design: For testing this constraint, the team thought it would be best to use datasheets for test results. This is due to dangerous gases and not having a safe environment for these tests.
 
--Interpretation
+-Results:
+For the SRAQ-GO14, the sensor's job was to be able to detect the presence of propane (LPG) and carbon monoxide (CO). The datasheet has a graph that shows the relationships between the different gases that are applied to the sensor.
+
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/d42b2aa7-2f19-4db5-bf25-cc4c39664bfb)
+Figure 1. SRAQ-GO14 sensitivity curve
+
+For the SRAQ-GO16, the sensor's job was to be able to detect the presence of ammonia (NH4). The datasheet has a graph that shows the relationships between the different gases that are applied to the sensor.
+
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/771da9c3-a208-4f04-9230-441933070bb4)
+Figure 2. SRAQ-GO16 sensitivity curve
+
+-Interpretation: Based on these datasheets, when the sensor's are properly calibrated and connected properly there would be no doubt that they could be able to detect the specified gases.
 
 #### Constraint 2 - Head unit shall receive data from the gas module and follow OSHA standards for ammonia, propane, and carbon oxides.
--Experimental Design
 
--Results
+-Experimental Design: For this experiment, the sensor's would sense the gases and the data would be sent to the ESP32-H2 ADC and from there Preserve Home Pro coded the microcontrollers to make sure the gas levels stayed under those levels specified in the constraint previously for the eight hour window.
 
--Interpretation
+-Results: As previously mentioned, since they are dangerous gases involved, Preserve Home Pro did not test this feature.
+
+-Interpretation: Based on the sensor datasheets, Preserve Home Pro would be able to code the sensor's in order to work together and be able to maintain that data information so that constraint can be met. 
 
 #### Constraint 3 - The Gas module shall send data to headunit every second if the targeted gases are detected.
--Experimental Design
 
--Results
+-Experimental Design: On the Home Assistant UI, the user can click on the sensor and watch how fast it updates. The sensor is meant to send data every second to the head unit and looking Home Assistant UI, it is possible to prove this. The history can be looked at for previous data times.
 
--Interpretation
+-Results: The team expected this to work properly because it was edited easily in the code. Shown below is a picture of what the Home Assistant UI looks like when it shows that the sensor is updating, as well as a chart showing the history of the gas sensors proving that it sends the data every second consistly.
+| Trail # | Expected Result | Actual Result |
+| - | - | - |
+| 1 | 1 second | 1 second |
+| 2 | 1 second | 1 second |
+| 3 | 1 second | 1 second |
+| 4 | 1 second | 1 second |
+| 5 | 1 second | 1 second |
+
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/64398029-9d7d-418c-a2b3-7a3dca8b6101)
+Figure 3. Gas sensor history in home assistant user interface.
+
+-Interpretation: Based on the history graph shown above, it is easy to see that the sensor can send the data every second.
 
 #### Constraint 4 - The Gas module shall be installed in a central location outside each sleeping area or in the immediate vicinity of the bedrooms, at the maximum of 20 feet.
--Experimental Design
 
--Results
+-Experimental Design: For this experimentation, Preserve Home Pro does not have access to a house specifically. But going over other manufacturer datasheets of their sensors that are installed in homes, the team ensures that it would be able to implement this feature seamlessly. 
 
--Interpretation
+-Results: The results will be other manufacturer datasheets showing the installation process of their sensors that abide by NFPA regulations.
+
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/7c41e556-74b8-44a9-abcc-0559341d26b4)
+Figure 4. Manufacturer information regarding to where the sensor should be installed.
+
+-Interpretation: Based on the other manufacturer's installation process, the team believes it would not be a problem to follow this process that will meet our constraint.
 
 #### Constraint 5 - The Gas module shall be placed as close as possible to potential gas leak spots.
--Experimental Design
 
--Results
+-Experimental Design: For this experimentation, Preserve Home Pro does not have access to a house specifically. But going over other manufacturer suggestions of their sensors that are installed in homes, the team ensures that it would be able to implement this feature seamlessly. 
 
--Interpretation
+-Results: Since the team does not have access to a household this can not be tested.
+
+-Interpretation: Although, the team could not physically test this experimentation, there should not be an issue with placing these sensor near gas used appliances that would have a high chance of a gas leak.
 
 #### Constraint 6 - The Gas module shall be orientated to where the target gas vapours tend to rise or fall.
--Experimental Design
 
--Results
+-Experimental Design: For this experimentation, Preserve Home Pro does not have access to a house specifically. But going over other suggestions of similar use of sensors that are installed in homes, the team ensures that it would be able to implement this feature seamlessly.
 
--Interpretation
+-Results: Since the team does not have access to a household this can not be tested by the team. But with information regarding the placement of other sensors this can be implemented.
+
+-Interpretation: This can easily be done by looking at other people's implementation or installation of their sensor's.
 
 #### Constraint 7 - The Gas module shall not be placed near entrances/disturbances or fresh air vents where concentrations can be diluted.
--Experimental Design
 
--Results
+-Experimental Design: For this experimentation, Preserve Home Pro does not have access to a house specifically. But going over other suggestions of similar use of sensors that are installed in homes, the team ensures that it would be able to implement this feature seamlessly.
 
--Interpretation
+-Results: Since the team does not have access to a household this can not be tested by the team. But with information regarding the placement of other sensors this can be implemented.
+
+-Interpretation: This can easily be done by looking at other people's implementation or installation of their sensor's.
 
 #### Constraint 8 - The Gas module shall not be placed in bathrooms, garages, kitchens, furnace rooms, extremely dusty or dirty areas.
--Experimental Design
 
--Results
+-Experimental Design: For this experimentation, Preserve Home Pro does not have access to a house specifically. But going over other suggestions of similar use of sensors that are installed in homes, the team ensures that it would be able to implement this feature seamlessly.
 
--Interpretation
+-Results: Since the team does not have access to a household this can not be tested by the team. But with information regarding the placement of other sensors this can be implemented.
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/0004803d-92df-47d4-b1b5-da91b61290a4)
+Figure 5. This is snip of the NFPA recommendations of where to and not to place a CO sensor.
 
-#### Constraint 9 - The Gas module shall not be placed in areas of the house enviroment where it is colder than -10°C or hotter than 50°C.
--Experimental Design
+-Interpretation: Although the team does not physically have access to implement this feature, there would be no reason this could not be achieved by the team.
 
--Results
+#### Constraint 9/10 - The Gas module shall not be placed in areas of the house enviroment where it is colder than -10°C or hotter than 50°C and where humidity is more than 95%.
 
--Interpretation
+-Experimental Design: For this experimentation, Preserve Home Pro does not have access to a house specifically. But going over the sensor datasheets this a requirement for the correct usage of them, the team ensures that it would be able to implement this feature seamlessly with proper home construction.
 
-#### Constraint 10 - The Gas module shall not be placed in areas of the house enviroment where the humidity is more than 95%.
--Experimental Design
+-Results: Since the team does not have access to a household this can not be tested by the team. But regarding to a proper home construction, these conditions should would not reached to harm the sensors.
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/e1730d43-05ca-4983-9150-6df635dfe060)
+Figure 6. This is the work enviroment that the sensors would need in order to work properly.
 
--Results
-
--Interpretation
+-Interpretation: Although the team does not physically have access to implement this feature, there would be no reason this could not be achieved by the team.
 
 #### Constraint 11 - The Gas module shall be protected from unwanted variation of sensor readings due to noise.
--Experimental Design
 
--Results
+-Experimental Design: A RC filter was constructed for our gas sensor's that would need to be implemented in order to mitigate noise on sensor readings in order to provide proper data readings. The Filter works good and filters enough noise out so there can not be a increment in even one ppm. 
 
--Interpretation
+-Results: With a LTspice simulation, there are the noise simulations that would be in effect of our sensor that shows the implied noise environment.
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/57ffeafd-37cb-4d78-ba44-9a27c2e58d8a)
+Figure 6. LTspice noise simulation for RC Filter
+
+-Interpretation: Since the filter was implemented into our sensor's this allows proper data readings that shows accurate ppm measurements.
 
 
 ### Fire
