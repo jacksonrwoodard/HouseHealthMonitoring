@@ -138,11 +138,11 @@ Click to go to [Power](#power) experimentation. <br/>
 
 
 #### Constraint 2 - At least one sensor shall be placed within 200ft of the head unit.
--Experimental Design: During installation into a house, at least one sensor module needs to be within 200 ft. of the head unit in order for the Zigbee mesh to be able to connect.
+-Experimental Design: To test this the team took a sensor module into the hallway and walked 100 ft. down the hall and checking if the head unit is still receiving updates from the module.
 
--Results: The head unit and sensor module are able to connect with each other within 200 ft. 
+-Results: The head unit and sensor module were able to continue communication through cynderblock walls and 100 ft. of range. 
 
--Interpretation: The Zigbee network is functioning as expected.
+-Interpretation: The head unit is able to communicate in a building through cynderblock walls and 100ft. of range effectively. 
 
 #### Constraint 3 - Sensors shall be within 32ft from each other for every sensor outside of 200ft of the head unit.
 -Experimental Design: Each module should be within 32ft so the Zigbee mesh can connect different modules together for communication with the head unit. 
