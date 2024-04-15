@@ -89,9 +89,11 @@ Click to go to [Power](#power) experimentation. <br/>
 
 
 #### Constraint 2 - The head unit shall be able to display and log active and historical data from sensors.
--Experimental Design: After connecting the fire temperature sensor to the head unit, we checked the head unit for storage of previous data.
+-Experimental Design: After connecting the fire temperature sensor to the head unit, we checked the head unit for storage of previous data over the period of 3 and a half hours. 
 
--Results: The temperature sensor's data was successfully stored and can be viewed via graphs.
+-Results: The temperature sensor's data was successfully stored and shown over the 3 and a half hour period tested.
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/5b5a0ef3-81a6-46dd-944d-3eb9c67872fb)
+
 
 -Interpretation: The head unit is able to store data from sensors for long term logging. 
 
