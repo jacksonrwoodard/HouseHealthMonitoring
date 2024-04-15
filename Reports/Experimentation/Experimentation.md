@@ -84,6 +84,8 @@ Click to go to [Power](#power) experimentation. <br/>
 -Experimental Design: To test this constraint, the team connected multiple sensor modules to the head unit and checked if the head unit was able to correctly label each module and output the sensor's data.
 
 -Results: The head unit was able to connect and display independent data from each module.
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/2ac1e506-a574-4bbe-8688-069f56f3eb19)
+
 
 -Interpretation: The head unit is able to determine what sensor is sending data to it and differentiate it from other sensors. The sensor location had to be input into Home Assistant after the sensors were connected.
 
