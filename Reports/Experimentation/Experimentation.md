@@ -250,7 +250,7 @@ Figure 2. SRAQ-GO16 sensitivity curve
 -Experimental Design: On the Home Assistant UI, the user can click on the sensor and watch how fast it updates. The sensor is meant to send data every second to the head unit and looking Home Assistant UI, it is possible to prove this. The history can be looked at for previous data times.
 
 -Results: The team expected this to work properly because it was edited easily in the code. Shown below is a picture of what the Home Assistant UI looks like when it shows that the sensor is updating, as well as a chart showing the history of the gas sensors proving that it sends the data every second consistly.
-| Trail # | Expected Result | Actual Result |
+| Trial # | Expected Result | Actual Result |
 | - | - | - |
 | 1 | 1 second | 1 second |
 | 2 | 1 second | 1 second |
@@ -334,7 +334,7 @@ Figure 6. LTspice noise simulation for RC Filter
 -Experimental Design: To test this constraint, the team used the working temperature sensor and out a lighter next to it and recorded the data.
 
 -Results: The team expected the results to display a minimum of 176&deg;F, and it did. Shown below is a chart showing the five trials showing what was expected to see vs. what the actual sensor outputted.
-| Trail # | Expected Result | Actual Result |
+| Trial # | Expected Result | Actual Result |
 | ------- | --------------- | ------------- |
 | 1 | 176&deg;F | 212.2&deg;F |
 | 2 | 176&deg;F | 240.6&deg;F |
@@ -350,7 +350,7 @@ Figure 6. LTspice noise simulation for RC Filter
 -Experimental Design: On the Home Assistant UI, the user can click on the sensor and watch how fast it updates. The sensor is meant to send data every second to the head unit and looking Home Assistant UI, it is possible to prove this.
 
 -Results: The team expected this to work properly because it is all something to is edited easily in the code. Shown below is a picture of what the Home Assistant UI looks like when it shows that the sensor is updating, as well as a chart showing the five trials proving that it sends the data every second consistly.
-| Trail # | Expected Result | Actual Result |
+| Trial # | Expected Result | Actual Result |
 | - | - | - |
 | 1 | 1 second | 1 second |
 | 2 | 1 second | 1 second |
@@ -366,7 +366,7 @@ Figure 6. LTspice noise simulation for RC Filter
 -Experimental Design: This constraint ties into the two contraints above. The sensor is sending data to the headunit every second, so it will send data to the temperature when 176&deg;F has been reached. For testing purposes, the team ran the same test that was done for testing if the sensor can detect 176&deg;F. So, the flame of a lighter is put next to the temperature sensor to make the temperature raise to 176&deg;F, and then the data is sent to the headunit.
 
 -Results: The expected results for this is that it will work with no issues. The results are the same as the first constraint and are shown below in the chart. Also, in the picture you can see that the temperature above 176&deg;F, is displayed on the head unit.
-| Trail # | Expected Result | Actual Result |
+| Trial # | Expected Result | Actual Result |
 | ------- | --------------- | ------------- |
 | 1 | 176&deg;F | 212.4&deg;F |
 | 2 | 176&deg;F | 252.5&deg;F |
@@ -418,22 +418,36 @@ Figure 6. LTspice noise simulation for RC Filter
 
 ### Power
 #### Constraint 1 - System shall be primarily powered from the house's 120 Volt power supply.
--Experimental Design
+-Experimental Design: This constraint was tested by hooking a 16.6 V transfomer to a wall outlet and running the power through the Uninterruptable Power Supply's (UPS) circuit. The team then measured the output voltages from the UPS to ensure that the power out was the expected value over a period of 2 hours. 
 
--Results
+-Results: Over the period of 2 hours, the voltage was at worst 0.418 % lower than the expected 5 V output.
+| Time | Expected Result | Actual Result |
+| ------- | --------------- | ------------- |
+| 3:30 PM | 5 V | 4.9791 V |
+| 3:45 PM | 5 V | 4.9792 V |
+| 4:00 PM | 5 V | 4.9792 V |
+| 4:15 PM | 5 V | 4.9793 V |
+| 4:30 PM | 5 V | 4.9792 V |
+| 4:45 PM | 5 V | 4.9795 V |
+| 5:00 PM | 5 V | 4.9793 V |
+| 5:15 PM | 5 V | 4.9793 V |
+| 5:30 PM | 5 V | 4.9792 V |
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/76240721-1527-40d8-99a1-26a59bc7b624)
 
--Interpretation
+
+-Interpretation: The voltage output of the UPS stays within the expected operating voltages of the sensor modules using 120 V wall power.
 
 #### Constraint 2 - Shall have a backup power system that will allow the system to function in case of primary power outage for up to two continuous weeks.
--Experimental Design
+-Experimental Design: The team tested this constraint by using the UPS without wall power to power the mold module for an hour and monitored the voltage of the battery every 10 minutes.
 
 -Results
 
 -Interpretation
 
 #### Constraint 3 - Shall fully function without regularly changing sensors or head unit batteries.
--Experimental Design
+-Experimental Design: This constraint was tested by monitoring the continual functionality of the mold module over a 5 hour period.
 
--Results
+-Results: The power mold module's humidity sensor was able to function on the UPS' power over the 5 hour period.
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/036293b5-a059-4e6a-aa06-66f77e949f42)
 
--Interpretation
+-Interpretation: The UPS was able to maintain the mold module's power for the 5 hour period. There were some drops in power due to the team shifting the mold module between power supplies to ensure accurate readings. 
