@@ -162,7 +162,9 @@ Click to go to [Power](#power) experimentation. <br/>
 #### Constraint 4 - Sensor communication shall send the sensor name, number, data type, and raw data to the head unit.
 -Experimental Design: To test this constraint, the team connected multiple sensor modules to the head unit and checked if the head unit was able to correctly label each module and output the sensor's data.
 
--Results: The head unit was able to connect and display independent data from each module.
+-Results: The head unit was able to connect and display independent data from each module. Below shows all sensors connected to the head unit. 
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/eaf93e98-8745-4588-ba06-3c4b716b8ac3)
+
 
 -Interpretation: The head unit is able to determine what sensor is sending data to it and differentiate it from other sensors. The sensor location had to be input into Home Assistant after the sensors were connected.
 
@@ -174,11 +176,13 @@ Click to go to [Power](#power) experimentation. <br/>
 -Interpretation: The system is able to correctly communicate using Zigbee communication. 
 
 #### Constraint 6 - The head unit shall, at minimum, receive data every 24 hours, when the data from the sensor reaches a critical level, or when the user requests the data.
--Experimental Design: The team tested this constraint by increasing the send and receive times to every 2 seconds.
+-Experimental Design: The team tested this constraint by increasing the send and receive frequency to every 2 seconds from the fire module.
 
--Results: The head unit was able to receive and store information from the fire, gas, mold, and flood modules every 2 to 5 seconds.
+-Results: The head unit was able to receive and store information from the fire module every 2 to 5 seconds.
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/4b56b762-d802-4c1a-8e9d-ad47710c6caf)
 
--Interpretation: All modules are able to communicate much faster than the minimum 24 hours declared by this constraint.
+
+-Interpretation: The modules should be able to communicate much faster than the minimum 24 hours declared by this constraint.
 
 
 ### Flood
