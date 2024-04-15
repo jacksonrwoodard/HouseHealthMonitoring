@@ -440,6 +440,7 @@ Figure 6. LTspice noise simulation for RC Filter
 | 5:00 PM | 5 V | 4.9793 V |
 | 5:15 PM | 5 V | 4.9793 V |
 | 5:30 PM | 5 V | 4.9792 V |
+
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/76240721-1527-40d8-99a1-26a59bc7b624)
 
 
