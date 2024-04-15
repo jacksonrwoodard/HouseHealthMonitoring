@@ -449,7 +449,18 @@ Figure 6. LTspice noise simulation for RC Filter
 #### Constraint 2 - Shall have a backup power system that will allow the system to function in case of primary power outage for up to two continuous weeks.
 -Experimental Design: The team tested this constraint by using the UPS without wall power to power the mold module for an hour and monitored the voltage of the battery every 10 minutes.
 
--Results
+-Results: 
+| Time  | Battery Voltage |
+| ------- | ------------- |
+| 5:00 PM | 13.3396 V |
+| 5:10 PM | 13.3283 V |
+| 5:20 PM | 13.3164 V |
+| 5:30 PM | 13.3065 V |
+| 5:40 PM | 13.2969 V |
+| 5:50 PM | 13.288 V |
+| 6:00 PM | 13.2798 V |
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/3dbf45f4-a0b5-4c17-a993-2a3a55b58921)
+
 
 -Interpretation
 
