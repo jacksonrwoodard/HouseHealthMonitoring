@@ -121,11 +121,11 @@ Click to go to [Power](#power) experimentation. <br/>
 
 
 #### Constraint 5 - The head unit shall be able to receive data and follow OSHA standards for ammonia, propane, and carbon oxides.
--Experimental Design
+-Experimental Design: For this experiment, the sensors would sense the gases and the data would be sent to the ESP32-H2 ADC and from there Preserve Home Pro coded the microcontrollers to make sure the gas levels stayed under those levels specified in the constraint previously for the eight hour window.
 
--Results
+-Results: Due to the necesity of dangerous gases in order to fully test this functionality, Preserve Home Pro did not test this feature.
 
--Interpretation
+-Interpretation: Based on the sensor datasheets, Preserve Home Pro would be able to code the sensor's in order to work together and be able to maintain that data information so that constraint can be met. 
 
 
 #### Constraint 6 - The head unit shall be able to interpret, from the received data, that mold could form if the humidity levels exceed 50% and temperatures range between 55&#176; and 85&#176; Fahrenheit for a minimum of two days.
@@ -241,7 +241,7 @@ Figure 2. SRAQ-GO16 sensitivity curve
 
 -Experimental Design: For this experiment, the sensor's would sense the gases and the data would be sent to the ESP32-H2 ADC and from there Preserve Home Pro coded the microcontrollers to make sure the gas levels stayed under those levels specified in the constraint previously for the eight hour window.
 
--Results: As previously mentioned, since they are dangerous gases involved, Preserve Home Pro did not test this feature.
+-Results: As previously mentioned, since there are dangerous gases involved, Preserve Home Pro did not test this feature.
 
 -Interpretation: Based on the sensor datasheets, Preserve Home Pro would be able to code the sensor's in order to work together and be able to maintain that data information so that constraint can be met. 
 
