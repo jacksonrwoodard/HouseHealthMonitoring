@@ -81,23 +81,23 @@ Click to go to [Power](#power) experimentation. <br/>
 
 ### Head Unit
 #### Constraint 1 - The head unit shall know what sensor is sending data to it, the sensors location, and be able to differentiate from other sensors.
--Experimental Design
+-Experimental Design: To test this constraint, the team connected multiple sensor modules to the head unit and checked if the head unit was able to correctly label each module and output the sensor's data.
 
--Results
+-Results: The head unit was able to connect and display independent data from each module.
 
--Interpretation
+-Interpretation: The head unit is able to determine what sensor is sending data to it and differentiate it from other sensors. The sensor location had to be input into Home Assistant after the sensors were connected.
 
 
 #### Constraint 2 - The head unit shall be able to display and log active and historical data from sensors.
--Experimental Design
+-Experimental Design: After connecting the fire temperature sensor to the head unit, we checked the head unit for storage of previous data.
 
--Results
+-Results: The temperature sensor's data was successfully stored and can be viewed via graphs.
 
--Interpretation
+-Interpretation: The head unit is able to store data from sensors for long term logging. 
 
 
 #### Constraint 3 - The head unit shall be able to detect if the fire module temperature is at 176&#176; Fahrenheit or higher and display a warning.
--Experimental Design
+-Experimental Design: 
 
 -Results
 
@@ -130,47 +130,47 @@ Click to go to [Power](#power) experimentation. <br/>
 
 ### Communication
 #### Constraint 1 - System shall not require an internet connection to work and communicate with the head unit and sensors.
--Experimental Design
+-Experimental Design: The sensors and head unit communicate via Zigbee Communication.
 
--Results
+-Results: The head unit and sensors successfully paired and transmit data using the Zigbee Communication Standard IEEE 802.15.4.
 
--Interpretation
+-Interpretation: The head unit and sensors are able to communicate and work without an internet connection.
 
 
 #### Constraint 2 - At least one sensor shall be placed within 200ft of the head unit.
--Experimental Design
+-Experimental Design: During installation into a house, at least one sensor module needs to be within 200 ft. of the head unit in order for the Zigbee mesh to be able to connect.
 
--Results
+-Results: The head unit and sensor module are able to connect with each other within 200 ft. 
 
--Interpretation
+-Interpretation: The Zigbee network is functioning as expected.
 
 #### Constraint 3 - Sensors shall be within 32ft from each other for every sensor outside of 200ft of the head unit.
--Experimental Design
+-Experimental Design: Each module should be within 32ft so the Zigbee mesh can connect different modules together for communication with the head unit. 
 
--Results
+-Results: When the sensor modules are within the 32 ft range of each other, they are able to establish the Zigbee mesh needed for communication of sensor modules to the head unit. 
 
--Interpretation
+-Interpretation: The Zigbee network is functioning as expected. 
 
 #### Constraint 4 - Sensor communication shall send the sensor name, number, data type, and raw data to the head unit.
--Experimental Design
+-Experimental Design: To test this constraint, the team connected multiple sensor modules to the head unit and checked if the head unit was able to correctly label each module and output the sensor's data.
 
--Results
+-Results: The head unit was able to connect and display independent data from each module.
 
--Interpretation
+-Interpretation: The head unit is able to determine what sensor is sending data to it and differentiate it from other sensors. The sensor location had to be input into Home Assistant after the sensors were connected.
 
 #### Constraint 5 - ESP32 shall be able to send a minimum of 128 bits (2 packets) at a transmission rate of at most 250 Kbps on a 2.4 GHz frequency.
--Experimental Design
+-Experimental Design: This constraint is a Zigbee requirement for communication of sensors in a Zigbee Mesh Network. 
 
--Results
+-Results: All sensor modules and the head unit use Zigbee certified transmitters and receivers.
 
--Interpretation
+-Interpretation: The system is able to correctly communicate using Zigbee communication. 
 
 #### Constraint 6 - The head unit shall, at minimum, receive data every 24 hours, when the data from the sensor reaches a critical level, or when the user requests the data.
--Experimental Design
+-Experimental Design: The team tested this constraint by increasing the send and receive times to every 2 seconds.
 
--Results
+-Results: The head unit was able to receive and store information from the fire, gas, mold, and flood modules every 2 to 5 seconds.
 
--Interpretation
+-Interpretation: All modules are able to communicate much faster than the minimum 24 hours declared by this constraint.
 
 
 ### Flood
