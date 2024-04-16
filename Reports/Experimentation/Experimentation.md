@@ -207,25 +207,38 @@ Click to go to [Power](#power) experimentation. <br/>
 -Interpretation
 
 #### Constraint 3 - Sensor shall send data to headunit in seconds if water is detected.
--Experimental Design
+-Experimental Design: To adhere to this constraint, the sensor was coded to send data every two seconds.
 
--Results
+-Results:<img width="1127" alt="Screenshot 2024-04-16 at 12 15 03 PM" src="https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143025461/ab7a69d4-0743-40cf-ba07-35ea9c23bcbd">
 
--Interpretation
+
+-Interpretation: In its current state the sensor checks for changes every two seconds. As shown from the chart there is updates every two seconds as water levels change followed by a periods of no change when the sensor is dry.
 
 #### Constraint 4 - Sensor shall be placed in areas flooding is most likely to occur.
--Experimental Design
+-Experimental Design: For this experimentation, Preserve Home Pro does not have access to a house specifically. As stated in previous signoffs, floodwater can enter a house through doors, windows, cracks in the foundation, sewer systems, and flood vents. 
 
--Results
+-Results: https://github.com/jacksonrwoodard/HouseHealthMonitoring/blob/main/Documentation/Signoffs/natecampbell-flood-signoff.md
 
--Interpretation
+-Interpretation: Multiple flood sensors could be placed at various heights on doors, windows, cracks in the foundation, sewer systems, and flood vents to more accurately detect if a flood occured. 
 
 #### Constraint 5 - Sensor shall not be placed in areas where condensation can't easily form.
--Experimental Design
+-Experimental Design: For this experimentation, Preserve Home Pro does not have access to a house specifically. As stated in previous signoffs, areas of high condensation in a home like a bathroom could result in false positives. This was tested by steaming water over the sensor. 
 
--Results
+![IMG_0059](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143025461/b4c7118d-77a0-46e4-a284-86abc785a09f)
 
--Interpretation
+
+-Results:
+| Time(s) | Result Displayed(in) |
+| ------- | --------------- |
+| 5 | .2 |
+| 10 | .5 |
+| 15 | .75 |
+| 20 | 1 | 
+| 25 | 1.25 | 
+| 30 | 1.5 | 
+ 
+
+-Interpretation: As expected, the condesation on the sensor resulted in false positives. The sensor would be placed in normally dry places to ensure more accurate results.
 
 
 ### Gas
