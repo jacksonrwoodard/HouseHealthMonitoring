@@ -119,12 +119,12 @@ Click to go to [Power](#power) experimentation. <br/>
 -Interpretation: The head unit was able to read and display readings of 176&deg;F and higher with a warning for potential fire.
 
 #### Constraint 4 - The head unit shall be able to receive data from the water module to display a warning if water is present and the total water depth.
--Experimental Design
+-Experimental Design: To test this constraint the team placed the water sensor in a cup of water to see if the values read on home assistant changed with a warning if water is present.
 
--Results
+-Results:<img width="1127" alt="Screenshot 2024-04-16 at 12 15 03 PM" src="https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143025461/ab7a69d4-0743-40cf-ba07-35ea9c23bcbd">
 
--Interpretation
 
+-Interpretation: The head unit was able to detect if water was present, show its depth, and give a warning that water was present.
 
 #### Constraint 5 - The head unit shall be able to receive data and follow OSHA standards for ammonia, propane, and carbon oxides.
 -Experimental Design: For this experiment, the sensors would sense the gases and the data would be sent to the ESP32-H2 ADC and from there Preserve Home Pro coded the microcontrollers to make sure the gas levels stayed under those levels specified in the constraint previously for the eight hour window.
