@@ -389,11 +389,26 @@ Figure 6. LTspice noise simulation for RC Filter
 -Interpretation: As shown above in the chart, you can see that the sensor sends the data over the head unit when it reaches 176&deg;F. These results can also be proved by looking at the first two constraints becuase they both have to do with the temperature being 176&deg;F or higher and sending the data to the headunit.
 
 #### Constraint 4 - Shall not be a distraction to the homeowner.
--Experimental Design
+-Experimental Design: The team did research on how to professionally measure a distraction, and we found on the NHTSA website that taking a poll is an effective way to test if something is a distraction. The team asked 10 people if this device would be a distractiion to them if it was in their house are the results are shown below.
 
--Results
+-Results: The expected results were that the device would not be a distraction because it was so small and hardly visable unless someone was directly looking for it. Below is the results of the poll.
+| Person # | Expected Result | Actual Result |
+| - | - | - |
+| 1 | No | No |
+| 2 | No | No |
+| 3 | No | No |
+| 4 | No | No |
+| 5 | No | No |
+| 6 | No | Yes |
+| 7 | No | No |
+| 8 | No | No |
+| 9 | No | No |
+| 10 | No | No |
 
--Interpretation
+
+-Interpretation: Based on the results shown above, it is clear to say that out of 10 people surveyed, the device is not a distraction. The one person that said that it was a distraction, said the reason why it is a distraction is because it is visiable and would be noticable on the ceiling on their home.
+
+-Source: https://www-nrd.nhtsa.dot.gov/departments/Human%20Factors/driver-distraction/Topics03.htm
 
 
 ### Mold
