@@ -432,11 +432,28 @@ Figure 8. LTspice noise simulation for RC Filter
 
 ### Mold
 #### Constraint 1 - Shall be able to detect temperature ranges between 55&deg; F - 85&deg; F and humidity levels exceeding 50% RH.
--Experimental Design
+-Experimental Design: For this experiment, the temperature and humidity sensor was tested in various environments. First, the sensor was placed in a lunch box, with an ice pack, to prove that temperature will read down to 55&deg;F. Then, the sensor was taken out of the lunch box and a flame from a lighter was ignited to prove that temperature will read up to 85&deg;F. Next, the humidity reading was tested by running a steamer underneath the sensor to prove that the sensor will read relative humidity levels exceeding 50% RH.
 
--Results
+-Results: The results calculated were as expected and prove that the system will detect temperature values between 55&deg;F – 85&deg;F and humidity levels exceeding 50% RH.
 
--Interpretation
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/104484972/823975ed-fa66-41b1-a8f1-c6b87684f833)
+
+Figure 1. Temperature reading showing 55&deg;F - 85&deg;F<br>
+
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/104484972/2f3500b2-f190-4583-a601-13244622a7c5)
+
+Figure 2. Exact reading of 55&deg;F<br>
+
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/104484972/d5c22478-881f-469b-9a75-c6a84598ce1d)
+
+Figure 3. Relative Humidity test<br>
+
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/104484972/1e328134-48f6-44cd-82bf-1513137c99b6)
+
+Figure 4. Temperature readings from Humidity test<br>
+
+
+-Interpretation: Figure 1 does a great job of showing the range of temperature values the sensor can detect. The degress in Fahrenheit is shown in respect to time as the sensor is placed in different conditions. Figure 2 proves that the sensor can detect temperature values as low as 55&deg;F. The screenshot captures the exact moment the sensor measured 55&deg;F. Figure 3 shows the test results from the sensor being placed near a steamer. The graph shows 5 trials of this and how the humidity rises and lowers to the desired relative humidity level. Figure 4 shows the test results of the temperature values as the sensor is placed near a steamer. The 5 trials show that the temperature will increase to the desired level when the steamer gets hot.<br>
 
 #### Constraint 2 - Shall be able to communicate through I2C protocol and send data once every hour to its local ESP32-H2 transmitter, then enter sleep mode until the next hour.
 -Experimental Design
