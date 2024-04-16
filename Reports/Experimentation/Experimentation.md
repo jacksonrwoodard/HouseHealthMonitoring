@@ -288,9 +288,9 @@ Figure 3. Gas sensor history in home assistant user interface.
 
 #### Constraint 4 - The Gas module shall be installed in a central location outside each sleeping area or in the immediate vicinity of the bedrooms, at the maximum of 20 feet.
 
--Experimental Design: For this experimentation, Preserve Home Pro does not have access to a house specifically. But going over other manufacturer datasheets of their sensors that are installed in homes, the team ensures that it would be able to implement this feature seamlessly. 
+-Experimental Design: For this experimentation, Preserve Home Pro does not have access to a house specifically. But going over other manufacturer datasheets of their sensors that are installed in homes, the team ensures that it would be able to implement this feature seamlessly. This would be informed to the home owner.
 
--Results: The results will be other manufacturer datasheets showing the installation process of their sensors that abide by NFPA regulations.
+-Results: The results will be other manufacturer datasheets showing the installation process of their sensors that abide by NFPA regulations and to inform the user.
 
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/7c41e556-74b8-44a9-abcc-0559341d26b4)
 Figure 4. Manufacturer information regarding to where the sensor should be installed.
@@ -299,47 +299,49 @@ Figure 4. Manufacturer information regarding to where the sensor should be insta
 
 #### Constraint 5 - The Gas module shall be placed as close as possible to potential gas leak spots.
 
--Experimental Design: For this experimentation, Preserve Home Pro does not have access to a house specifically. But going over other manufacturer suggestions of their sensors that are installed in homes, the team ensures that it would be able to implement this feature seamlessly. 
+-Experimental Design: For this experimentation, Preserve Home Pro does not have access to a house specifically. Also, due to the use of dangerous gases Preserve Home Pro could not test this. But going over other manufacturer suggestions of their sensors that are installed in homes, the team ensures that it would be able to implement this feature seamlessly. 
 
--Results: Since the team does not have access to a household this can not be tested.
+-Results: Since the team would be dealing with dangerous gases, the team did not test this experiment.
 
 -Interpretation: Although, the team could not physically test this experimentation, there should not be an issue with placing these sensor near gas used appliances that would have a high chance of a gas leak.
 
 #### Constraint 6 - The Gas module shall be orientated to where the target gas vapours tend to rise or fall.
 
--Experimental Design: For this experimentation, Preserve Home Pro does not have access to a house specifically. But going over other suggestions of similar use of sensors that are installed in homes, the team ensures that it would be able to implement this feature seamlessly.
+-Experimental Design: For this experimentation, Preserve Home Pro does not have access to a house specifically. Also, due to the use of dangerous gases this would not be safe for us to test. But going over other suggestions of similar use of sensors that are installed in homes, the team ensures that it would be able to implement this feature seamlessly.
 
--Results: Since the team does not have access to a household this can not be tested by the team. But with information regarding the placement of other sensors this can be implemented.
+-Results: Since the team would be dealing with those dangerous gases this could not be tested. But with other manufacturer information regarding the placement of other sensors this can be implemented.
 
 -Interpretation: This can easily be done by looking at other people's implementation or installation of their sensor's.
 
 #### Constraint 7 - The Gas module shall not be placed near entrances/disturbances or fresh air vents where concentrations can be diluted.
 
--Experimental Design: For this experimentation, Preserve Home Pro does not have access to a house specifically. But going over other suggestions of similar use of sensors that are installed in homes, the team ensures that it would be able to implement this feature seamlessly.
+-Experimental Design: For this experimentation, Preserve Home Pro placed the sesnors next to an air vent for testing purposes. 
 
--Results: Since the team does not have access to a household this can not be tested by the team. But with information regarding the placement of other sensors this can be implemented.
+-Results: The team noticed a change in ppm when the sensor was introduced to fresh air that would push away the targeted gases that would cause insufficient and inaccurate ppm measurements.
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/de82e3dd-6289-4e0a-8421-cf7ef7df8f6e)
+Figure 5. Gas sensors next to fresh air vent for disturbance testing
 
--Interpretation: This can easily be done by looking at other people's implementation or installation of their sensor's.
+-Interpretation: The homeowners would be advised to not place the sensors next to air disturbances that would affect the data measurements.
 
 #### Constraint 8 - The Gas module shall not be placed in bathrooms, garages, kitchens, furnace rooms, extremely dusty or dirty areas.
 
--Experimental Design: For this experimentation, Preserve Home Pro does not have access to a house specifically. But going over other suggestions of similar use of sensors that are installed in homes, the team ensures that it would be able to implement this feature seamlessly.
+-Experimental Design: For this experimentation, Preserve Home Pro swept up dust and dirt and then introduced those elements to the sensors to see if there would be a disturbance in measurements taken.
 
--Results: Since the team does not have access to a household this can not be tested by the team. But with information regarding the placement of other sensors this can be implemented.
-![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/0004803d-92df-47d4-b1b5-da91b61290a4)
-Figure 5. This is snip of the NFPA recommendations of where to and not to place a CO sensor.
+-Results: The team noticed when the elements was introduced to the sensors that it messed data measurements and provided serious inaccurate measurements.
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/63688f76-be46-4691-bda2-7f5b45456b6f)
+Figure 6. Dirt and dust that was going to swept into the sensors for constraint purposes.
 
--Interpretation: Although the team does not physically have access to implement this feature, there would be no reason this could not be achieved by the team.
+-Interpretation: The homeowners would be advised to not place the sensor in these areas due to the fact it would cause inaccurate measurements.
 
 #### Constraint 9/10 - The Gas module shall not be placed in areas of the house enviroment where it is colder than -10°C or hotter than 50°C and where humidity is more than 95%.
 
--Experimental Design: For this experimentation, Preserve Home Pro does not have access to a house specifically. But going over the sensor datasheets this a requirement for the correct usage of them, the team ensures that it would be able to implement this feature seamlessly with proper home construction.
+-Experimental Design: For this experimentation, Preserve Home Pro tested this by just having the sensors connected in the range where it would be a viable working environment.
 
--Results: Since the team does not have access to a household this can not be tested by the team. But regarding to a proper home construction, these conditions should would not reached to harm the sensors.
+-Results: Though the team could not test the bounds of those conditions where they are lower or greater than the specified range the sensors worked as intended for the right working environment range.
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/e1730d43-05ca-4983-9150-6df635dfe060)
-Figure 6. This is the work enviroment that the sensors would need in order to work properly.
+Figure 7. This is the work enviroment that the sensors would need in order to work properly.
 
--Interpretation: Although the team does not physically have access to implement this feature, there would be no reason this could not be achieved by the team.
+-Interpretation: Although the team does not physically test this with those ranges mentioned in the results section, the team suspects that with proper home construction there would not be an issue keeping that environment for the sensors.
 
 #### Constraint 11 - The Gas module shall be protected from unwanted variation of sensor readings due to noise.
 
@@ -347,10 +349,9 @@ Figure 6. This is the work enviroment that the sensors would need in order to wo
 
 -Results: With a LTspice simulation, there are the noise simulations that would be in effect of our sensor that shows the implied noise environment.
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/57ffeafd-37cb-4d78-ba44-9a27c2e58d8a)
-Figure 6. LTspice noise simulation for RC Filter
+Figure 8. LTspice noise simulation for RC Filter
 
 -Interpretation: Since the filter was implemented into our sensor's this allows proper data readings that shows accurate ppm measurements.
-
 
 ### Fire
 #### Constraint 1 - Shall be able to detect the minimum temperature of 176&deg; Fahrenheit.
