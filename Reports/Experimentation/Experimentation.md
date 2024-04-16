@@ -136,11 +136,13 @@ Click to go to [Power](#power) experimentation. <br/>
 
 
 #### Constraint 6 - The head unit shall be able to interpret, from the received data, that mold could form if the humidity levels exceed 50% and temperatures range between 55&#176; and 85&#176; Fahrenheit for a minimum of two days.
--Experimental Design
+-Experimental Design: For this experiment, the team used a steam gun to raise the temperature and humidity next to the mold.
 
--Results
+-Results: The head unit read the raises in temperature and humidity and output a warning that mold is possible.
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/3063a7ac-740e-4bd8-9ee2-454d328c010c)
 
--Interpretation
+
+-Interpretation: The head unit is able to determine if the values from the mold module are conducive for the growth of mold. 
 
 
 ### Communication
