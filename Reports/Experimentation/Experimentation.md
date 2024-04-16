@@ -477,7 +477,23 @@ Figure 6. LTspice noise simulation for RC Filter
 -Interpretation: The voltage output of the UPS stays within the expected operating voltages of the sensor modules using 120 V wall power.
 
 #### Constraint 2 - Shall have a backup power system that will allow the system to function in case of primary power outage for up to two continuous weeks.
--Experimental Design: The experiment and results for Constraint 1 fulfill this constraint too. 
+-Experimental Design: The experiment and results for Constraint 1 fulfill this constraint too.
+
+-Results: The battery drew 0.0598 V of power over the 1 hour with the mold module's temperature and humidity sensors running every 2 seconds.
+| Time | Battery Voltage |
+| ------- | --------- |
+| 5:00 PM | 13.3396 V |
+| 5:10 PM | 13.3283 V |
+| 5:20 PM | 13.3164 V |
+| 5:30 PM | 13.3065 V |
+| 5:40 PM | 13.2969 V |
+| 5:50 PM | 13.288 V |
+| 6:00 PM | 13.2798 V |
+
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/d331e1b3-3e1a-4edf-a4a3-19861ffa4ac2)
+
+-Interpretation: With the mold module reporting every 2 seconds, the UPS' battery can supply up to 22 hours of power. With the sensor reporting only once per hour, the expected battery life of two weeks will be met.
+
 
 #### Constraint 3 - Shall fully function without regularly changing sensors or head unit batteries.
 -Experimental Design: This constraint was tested by monitoring the continual functionality of the mold module over a 5 hour period.
