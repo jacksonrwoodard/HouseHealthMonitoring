@@ -490,7 +490,8 @@ Figure 6. LTspice noise simulation for RC Filter
 | 5:50 PM | 13.288 V |
 | 6:00 PM | 13.2798 V |
 
-![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/d331e1b3-3e1a-4edf-a4a3-19861ffa4ac2)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/0bd113c0-7c95-4760-9d1d-90de856e0697)
+
 
 -Interpretation: With the mold module reporting every 2 seconds, he UPS' battery can supply up to 22 hours of power. With the sensor reporting only once per hour, the expected battery life of two weeks will be met.
 
