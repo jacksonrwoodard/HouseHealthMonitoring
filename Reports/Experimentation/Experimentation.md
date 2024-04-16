@@ -115,6 +115,8 @@ Click to go to [Power](#power) experimentation. <br/>
 | 5 | 176&deg;F | 257.5&deg;F |
 
 ![FireSensor176Plus](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/770fc938-6d27-4a5d-9564-22a9b3c843a6)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/c86a7d57-0a31-43b4-93dd-9d20d58bd81c)
+
 
 -Interpretation: The head unit was able to read and display readings of 176&deg;F and higher with a warning for potential fire.
 
