@@ -122,6 +122,7 @@ Click to go to [Power](#power) experimentation. <br/>
 -Experimental Design: To test this constraint the team placed the water sensor in a cup of water to see if the values read on home assistant changed with a warning if water is present.
 
 -Results:<img width="1127" alt="Screenshot 2024-04-16 at 12 15 03 PM" src="https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143025461/ab7a69d4-0743-40cf-ba07-35ea9c23bcbd">
+![WaterWarning](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/99e51fb7-157c-4a99-8d85-bb30a0c9ace4)
 
 
 -Interpretation: The head unit was able to detect if water was present, show its depth, and give a warning that water was present.
