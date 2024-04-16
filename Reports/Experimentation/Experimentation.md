@@ -341,7 +341,7 @@ Figure 6. LTspice noise simulation for RC Filter
 
 ### Fire
 #### Constraint 1 - Shall be able to detect the minimum temperature of 176&deg; Fahrenheit.
--Experimental Design: To test this constraint, the team used the working temperature sensor and out a lighter next to it and recorded the data.
+-Experimental Design: To test this constraint, the team used the working temperature sensor and the flame of a lighter next to it and recorded the data.
 
 -Results: The team expected the results to display a minimum of 176&deg;F, and it did. Shown below is a chart showing the five trials showing what was expected to see vs. what the actual sensor outputted.
 | Trial # | Expected Result | Actual Result |
