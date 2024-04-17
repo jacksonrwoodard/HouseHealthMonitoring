@@ -574,6 +574,7 @@ https://cdn-shop.adafruit.com/product-files/5064/5064_Sensirion_Humidity_Sensors
 -Experimental Design: To test this constraint, the team ran the mold module reporting every two seconds and measured the voltage of the battery every ten minutes over the course of an hour 3 times.
 
 -Results: The battery drew 0.0598 V during the first trial, 0.0637 V during the second trial, and 0.06175 V during the third trial while the mold module was reporting every 2 seconds.
+
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/27e0dbcc-cdba-4b48-b085-39ab5e4feb90)
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/f02d7f15-a2c8-4aaf-ae5c-93527cd89f6f)
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/3fe14ef8-1d5a-4131-84ab-bc94bae7d178)
