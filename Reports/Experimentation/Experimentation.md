@@ -197,19 +197,15 @@ Click to go to [Power](#power) experimentation. <br/>
 
 
 ### Flood
-#### Constraint 1 - Sensor shall be able to detect if at least one inch of water is present in a room.
--Experimental Design
+#### Constraint 1 and 2 - Sensor shall be able to detect if at least one inch of water is present in a room and Sensors shall be able to detect water levels at various depths.
+-Experimental Design: To test these contrtaints, the sensor was measured at marked at different points and put into water. 
+![IMG_0071](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143025461/11550488-0c36-4eae-81e0-ade09d2bcd29)
+![IMG_0072](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143025461/a2cb8d4e-ad85-43e8-bdf1-c5aa51d462ed)
 
--Results
 
--Interpretation
+-Results: 
 
-#### Constraint 2 - Sensors shall be able to detect water levels at various depths.
--Experimental Design
-
--Results
-
--Interpretation
+-Interpretation:Originally the sensor was marked every quarter inch. This did not give the expected results as the readings were very inconsitent. The markings and code were changed to every half inch to provide more accurate readings of a half inch, one inch, and 1.5 inch.
 
 #### Constraint 3 - Sensor shall send data to headunit in seconds if water is detected.
 -Experimental Design: To adhere to this constraint, the sensor was coded to send data every two seconds.
