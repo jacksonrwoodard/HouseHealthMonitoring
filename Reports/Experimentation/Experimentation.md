@@ -103,20 +103,14 @@ Click to go to [Power](#power) experimentation. <br/>
 
 
 #### Constraint 3 - The head unit shall be able to detect if the fire module temperature is at 176&#176; Fahrenheit or higher and display a warning.
--Experimental Design: To test this constraint, the team used the working temperature sensor and out a lighter next to it and recorded the data.
+-Experimental Design: To test this constraint, the team used the fire temperature sensor and an ignited lighter next to it and recorded the data 5 times. This test shows whether or not the head unit is able to record the temperatures recorded by the sensor and give a warning if the temperature is at or above 176&deg;F.
 
--Results: The team expected the results to display a temperature of 176&deg;F. Shown below is a chart showing that had the head unit read out the fire module's reading and display a warning.
-| Trail # | Expected Result | Actual Result |
-| ------- | --------------- | ------------- |
-| 1 | 176&deg;F | 212.2&deg;F |
-| 2 | 176&deg;F | 240.6&deg;F |
-| 3 | 176&deg;F | 216.3&deg;F |
-| 4 | 176&deg;F | 187.9&deg;F |
-| 5 | 176&deg;F | 257.5&deg;F |
+-Results: The team expected the results to display a warning if a temperature of 176&deg;F or higher is reached. Shown below is the head unit's logging of the temperatures when a lighter is present.
 
 ![FireSensor176Plus](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/770fc938-6d27-4a5d-9564-22a9b3c843a6)
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/c86a7d57-0a31-43b4-93dd-9d20d58bd81c)
-
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/1c6bad16-9970-44c6-8a34-311e8319ce5f)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/48f8fc2a-1d03-4137-8043-49f4b7aa249e)
 
 -Interpretation: The head unit was able to read and display readings of 176&deg;F and higher with a warning for potential fire.
 
