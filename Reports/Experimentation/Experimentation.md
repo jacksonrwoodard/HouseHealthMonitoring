@@ -81,11 +81,53 @@ Click to go to [Power](#power) experimentation. <br/>
 
 ### Head Unit
 #### Constraint 1 - The head unit shall know what sensor is sending data to it, the sensors location, and be able to differentiate from other sensors.
--Experimental Design: To test this constraint, the team connected multiple sensor modules to the head unit and checked if the head unit was able to correctly label each module and output the sensor's data.
+-Experimental Design: To test this constraint, the team each sensor to the head unit in different orders in order to assure the sensors were connecting and outputting the expected information.
 
--Results: The head unit was able to connect and display independent data from each module.
-![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/2ac1e506-a574-4bbe-8688-069f56f3eb19)
+-Results: In the set of 5 trials, the head unit was able to successfully connect to each sensor connected without losing connection to previously connected sensors. Below are pictures of the first series of connections with a table showing the results from the overall trials.
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/14df1e61-af69-41c0-bfb2-769c22c5c1d1)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/42819db5-2d59-4744-a063-ff098fc8c9b5)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/b761e1df-f9d8-4d3e-89c9-fd7bec91b468)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/69105406-5f95-4ca5-ad64-93bb5625f5c2)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/ca1c62af-7934-4898-b4a0-504f5f715793)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/7c60aa3d-57aa-44e0-9885-e02d7672744a)
 
+| Sensor Name | Sensor Connection to Head Unit | Number of Sensors Connected |
+| :--: | :--: | :--: |
+| **Order 1** | | |
+| Fire Temperature | Yes | 1 |
+| Mold Temperature | Yes | 2 |
+| Mold Humidity | Yes | 3 |
+| Flood | Yes | 4 |
+| Gas Ammonia | Yes | 5 |
+| Gas LPG & CO | Yes | 6 |
+| **Order 2** | | |
+| Gas LPG & CO | Yes | 1 |
+| Gas Ammonia | Yes | 2 |
+| Flood | Yes | 3 |
+| Mold Humidity | Yes | 4 |
+| Mold Temperature | Yes | 5 |
+| Fire Temperature | Yes | 6 |
+| **Order 3** | | |
+| Flood | Yes | 1 |
+| Fire Temperature | Yes | 2 |
+| Mold Temperature | Yes | 3 |
+| Mold Humidity | Yes | 4 |
+| Gas Ammonia | Yes | 5 |
+| Gas LPG & CO | Yes | 6 |
+| **Order 4** | | |
+| Mold Temperature | Yes | 1 |
+| Mold Humidity | Yes | 2 |
+| Gas LPG & CO | Yes | 3 |
+| Gas Ammonia | Yes | 4 |
+| Fire Temperature | Yes | 5 |
+| Flood | Yes | 6 |
+| **Order 5** | | |
+| Fire Temperature | Yes | 1 |
+| Flood | Yes | 2 |
+| Gas LPG & CO | Yes | 3 |
+| Gas Ammonia | Yes | 4 |
+| Mold Temperature | Yes | 5 |
+| Mold Humidity | Yes | 6 |
 
 -Interpretation: The head unit is able to determine what sensor is sending data to it and differentiate it from other sensors. The sensor location had to be input into Home Assistant after the sensors were connected.
 
