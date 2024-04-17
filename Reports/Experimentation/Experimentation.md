@@ -93,13 +93,22 @@ Click to go to [Power](#power) experimentation. <br/>
 #### Constraint 2 - The head unit shall be able to display and log active and historical data from sensors.
 -Experimental Design: After connecting the fire temperature sensor to the head unit, we checked the head unit for storage of previous data over the period of 3 and a half hours. 
 
--Results: The temperature sensor's data was successfully stored and shown over the 3 and a half hour period tested.
-![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/97e04e1b-6e5a-4bf9-995f-3e0c2d21957b)
+-Results: The head unit was able to receive, store, and displat the information from the fire module over the tested 24 hour period.
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/be557d75-6423-4023-8399-ea7b5e531487)
 
+The head unit was able to receive, store, and display information from the mold module over in the 8 hour period tested.
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/6160b027-3dab-4bd1-92df-c5a039619006)
 
+The head unit was able to receive, store, and display the information from the flood module over the tested 8 hour period.
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/273ac1a9-5880-4668-9a7b-a1bb49a53e01)
 
+The head unit was able to receive, store, and display information from the gas module during the 11 hour period tested. 
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/063fe0d6-4234-4e68-a1ab-feb2c135e64c)
 
--Interpretation: The head unit is able to store data from sensors for long term logging. 
+The Head unit was successfully showing the active information being stored on the head unit.
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/9f2bc0da-3718-4e96-a646-21a5f45b8750)
+
+-Interpretation: The head unit is able to store and display data for active and historical readings.
 
 
 #### Constraint 3 - The head unit shall be able to detect if the fire module temperature is at 176&#176; Fahrenheit or higher and display a warning.
