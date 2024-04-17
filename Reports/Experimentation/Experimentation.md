@@ -108,7 +108,6 @@ Click to go to [Power](#power) experimentation. <br/>
 -Results: The team expected the results to display a warning if a temperature of 176&deg;F or higher is reached. Shown below is the head unit's logging of the temperatures when a lighter is present.
 
 ![FireSensor176Plus](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/770fc938-6d27-4a5d-9564-22a9b3c843a6)
-![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/c86a7d57-0a31-43b4-93dd-9d20d58bd81c)
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/1c6bad16-9970-44c6-8a34-311e8319ce5f)
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/48f8fc2a-1d03-4137-8043-49f4b7aa249e)
 
