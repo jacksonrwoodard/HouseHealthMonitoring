@@ -231,12 +231,9 @@ Click to go to [Power](#power) experimentation. <br/>
 -Results:
 | Time(s) | Result Displayed(in) |
 | ------- | --------------- |
-| 5 | .2 |
-| 10 | .5 |
-| 15 | .75 |
-| 20 | 1 | 
-| 25 | 1.25 | 
-| 30 | 1.5 | 
+| 5 | .5 |
+| 22 | 1 | 
+| 31 | 1.5 | 
  
 
 -Interpretation: As expected, the condesation on the sensor resulted in false positives. The sensor would be placed in normally dry places to ensure more accurate results.
