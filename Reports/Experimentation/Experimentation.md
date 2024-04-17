@@ -192,7 +192,7 @@ Click to go to [Power](#power) experimentation. <br/>
 
 ### Flood
 #### Constraint 1 and 2 - Sensor shall be able to detect if at least one inch of water is present in a room and Sensors shall be able to detect water levels at various depths.
--Experimental Design: To test these contrtaints, the sensor was measured at marked at different points and put into water. 
+-Experimental Design: To test these contrtaints, the sensor was measured with a ruler and marked at .5, 1, and 1.5 inches and put into a container of water that had a depth of 1.5 inches. 
 ![IMG_0071](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143025461/11550488-0c36-4eae-81e0-ade09d2bcd29)
 ![IMG_0072](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143025461/a2cb8d4e-ad85-43e8-bdf1-c5aa51d462ed)
 
@@ -200,7 +200,7 @@ Click to go to [Power](#power) experimentation. <br/>
 -Results: <img width="1089" alt="Screenshot 2024-04-17 at 12 50 48 PM" src="https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143025461/71238f0a-0b4a-4670-85ac-e022e9c6d795">
 
 
--Interpretation: The results Originally the sensor was marked every quarter inch. This did not give the expected results as the readings were very inconsitent. The markings and code were changed to every half inch to provide more accurate readings of a half inch, one inch, and 1.5 inch.
+-Interpretation: Originally the sensor was marked every quarter inch. This did not give the expected results as the readings were very inconsitent. The markings and code were changed to every half inch to provide more accurate readings of a half inch, one inch, and 1.5 inch. As shown in the results the water sensor can mearsure different depths roughly with 0, .5, 1, and 1.5 inches.
 
 #### Constraint 3 - Sensor shall send data to headunit in seconds if water is detected.
 -Experimental Design: To adhere to this constraint, the sensor was coded to send data every two seconds.
@@ -218,17 +218,14 @@ Click to go to [Power](#power) experimentation. <br/>
 -Interpretation: Multiple flood sensors could be placed at various heights on doors, windows, cracks in the foundation, sewer systems, and flood vents to more accurately detect if a flood occured. 
 
 #### Constraint 5 - Sensor shall not be placed in areas where condensation can't easily form.
--Experimental Design: For this experimentation, Preserve Home Pro does not have access to a house specifically. As stated in previous signoffs, areas of high condensation in a home like a bathroom could result in false positives. This was tested by steaming water over the sensor. 
+-Experimental Design: For this experimentation, Preserve Home Pro does not have access to a house specifically. As stated in previous signoffs, areas of high condensation in a home like a bathroom could result in false positives. This was tested by steaming water over the sensor with a shirt steamer. 
 
 ![IMG_0059](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143025461/b4c7118d-77a0-46e4-a284-86abc785a09f)
 
 
 -Results:
-| Time(s) | Result Displayed(in) |
-| ------- | --------------- |
-| 5 | .5 |
-| 22 | 1 | 
-| 31 | 1.5 | 
+<img width="316" alt="Screenshot 2024-04-17 at 2 05 13 PM" src="https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143025461/358e2ffb-f7d4-4c14-aa64-895994729d9d">
+
  
 
 -Interpretation: As expected, the condesation on the sensor resulted in false positives. The sensor would be placed in normally dry places to ensure more accurate results.
