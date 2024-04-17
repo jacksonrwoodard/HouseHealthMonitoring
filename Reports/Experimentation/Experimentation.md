@@ -348,17 +348,11 @@ Figure 8. LTspice noise simulation for RC Filter
 
 ### Fire
 #### Constraint 1 - Shall be able to detect the minimum temperature of 176&deg; Fahrenheit.
--Experimental Design: To test this constraint, the team used the working temperature sensor and the flame of a lighter next to it and recorded the data.
+-Experimental Design: To test this constraint, the team used the working  MLX90614 temperature sensor and placed the flame of a lighter in the sensors line of sight and recorded the data.
 
--Results: The team expected the results to display a minimum of 176&deg;F, and it did. Shown below is a chart showing the five trials showing what was expected to see vs. what the actual sensor outputted.
-| Trial # | Expected Result | Actual Result |
-| ------- | --------------- | ------------- |
-| 1 | 176&deg;F | 212.2&deg;F |
-| 2 | 176&deg;F | 240.6&deg;F |
-| 3 | 176&deg;F | 216.3&deg;F |
-| 4 | 176&deg;F | 187.9&deg;F |
-| 5 | 176&deg;F | 257.5&deg;F |
+-Results: The team expected the results to display a minimum of 176&deg;F, and it did. Shown below is a graph that shows the temperature sensors outputs when the flame was put in the sensors line of sight. As you can see on the graph there were five test to ensure that the sensor can reach a minimum of 176&deg;F. The line on the graph represents the temperature levels. The x axis represents time and the y axis represents temperature in degrees Fahrenheit. The second figure shows what the output looks like on the Home Assistant UI.
 
+![FireSensorGraph](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/421f7241-e705-46c8-9275-e0fcfac7a5c2)
 ![FireSensor176Plus](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/770fc938-6d27-4a5d-9564-22a9b3c843a6)
 
 -Interpretation: Based of the data provided above, it is safe to say that the temperature sensor can easily display 176&deg;F with no issues.
@@ -458,7 +452,7 @@ Figure 4. Temperature readings from Humidity test<br>
 | 4 | 52 min |
 | 5 | 1 hour |
 
--Interpretation: In the figure above, it is proven that the temperature and humidity sensor will enter sleep mode while a constant value is maintained. The graph shows a constant reading from both the temperature and humidity, and it will stay that way until a new value is detected. In the provided graph, the data is not updated for over 40 minutes. This is because the sensor has not detected a change in either value and it has entered sleep mode. The table above shows more trials of how long the sensor can stay in sleep mode before it is woken up with a new value detected. For each trial, the sensor is set in a stabilized environment to help maintain steady temperature and humidity.
+-Interpretation: In the graph above, it is proven that the temperature and humidity sensor will enter sleep mode while a constant value is maintained. The graph shows a constant reading from both the temperature and humidity, and it will stay that way until a new value is detected. In the provided graph, the data is not updated for over 40 minutes. This is because the sensor has not detected a change in either value and it has entered sleep mode. The table above shows more trials of how long the sensor can stay in sleep mode before it is woken up with a new value detected. For each trial, the sensor is set in a stabilized environment to help maintain steady temperature and humidity.
 
 #### Constraint 3 - Shall be protected and not exposed to harsh environmental conditions to prevent any damage to the sensor.
 -Experimental Design: The SHT30 temperature and humidity sensor is a wired enclosed shell. The sensor is manufactured this way to protect the sensor from being exposed to harsh environments and prevent any damage. To experiment that the sensor will not take any damage when placed in a harsh environment, a flame was held up the sensor. While the encolser took a slgith hit and started melting, the sensor itself was not harmed and was able to record all the active data while exposed to this flame.
