@@ -571,24 +571,15 @@ https://cdn-shop.adafruit.com/product-files/5064/5064_Sensirion_Humidity_Sensors
 -Interpretation: The voltage output of the UPS stays within the expected operating voltages of the sensor modules using 120 V wall power.
 
 #### Constraint 2 - Shall have a backup power system that will allow the system to function in case of primary power outage for up to two continuous weeks.
--Experimental Design: To test this constraint, the team ran the mold module reporting every two seconds and measured the voltage of the battery every ten minutes.
+-Experimental Design: To test this constraint, the team ran the mold module reporting every two seconds and measured the voltage of the battery every ten minutes over the course of an hour 3 times.
 
--Results: The battery drew 0.0598 V of power over the 1 hour with the mold module's temperature and humidity sensors running every 2 seconds.
-| Time | Battery Voltage |
-| ------- | --------- |
-| 5:00 PM | 13.3396 V |
-| 5:10 PM | 13.3283 V |
-| 5:20 PM | 13.3164 V |
-| 5:30 PM | 13.3065 V |
-| 5:40 PM | 13.2969 V |
-| 5:50 PM | 13.288 V |
-| 6:00 PM | 13.2798 V |
-
-![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/a2aff79e-a473-4aa5-b196-1cb99a75ec10)
+-Results: The battery drew 0.0598 V during the first trial, 0.0637 V during the second trial, and 0.06175 V during the third trial while the mold module was reporting every 2 seconds.
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/27e0dbcc-cdba-4b48-b085-39ab5e4feb90)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/f02d7f15-a2c8-4aaf-ae5c-93527cd89f6f)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/3fe14ef8-1d5a-4131-84ab-bc94bae7d178)
 
 
-
--Interpretation: With the mold module reporting every 2 seconds, he UPS' battery can supply up to 22 hours of power. With the sensor reporting only once per hour, the expected battery life of two weeks will be met.
+-Interpretation: With the mold module reporting every 2 seconds drawing up to 45 mA with a normal draw of 30.5 mA, the UPS' battery can supply up to an average 22 hours of power. With the sensor reporting only once per hour, the battery will last up to 12 days. 
 
 
 #### Constraint 3 - Shall fully function without regularly changing sensors or head unit batteries.
