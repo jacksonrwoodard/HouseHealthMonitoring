@@ -489,6 +489,14 @@ https://www.adafruit.com/product/5064?gad_source=1&amp;gclid=Cj0KCQjwqP2pBhDMARI
 
 ![matching temp](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/104484972/9c35776b-8cb4-4ad3-98b9-477fbf8e2a19)
 
+| Trial | SHT30 temp | MLX90614 temp |
+| - | - | - |
+| 1 | 70.9&deg;F | 70.9&deg;F |
+| 2 | 71.2&deg;F | 71.6&deg;F |
+| 3 | 71.6&deg;F | 71.8&deg;F |
+| 4 | 71.4&deg;F | 71.4&deg;F |
+| 5 | 71.5&deg;F | 71.3&deg;F |
+
 -Interpretation: The graphs provide evidence that the sensor will detect at precisions wihtin the constrained specs. The humidity detects within + or - 2% relative humidity of the actual value when between 10% RH and 90% RH, and the temperature detects within + or - 0.5&deg;F of the actual value when between -10&deg;F and 110&deg;F. Also, a screenshot of the detected temperature value from the SHT30 sensor and MLX90614 sensor is given to provide proof that the sensor is detecting at very close precision. The link to the SHT30 datasheet is provided here.
 https://cdn-shop.adafruit.com/product-files/5064/5064_Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital.pdf
 
