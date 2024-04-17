@@ -456,25 +456,48 @@ Figure 4. Temperature readings from Humidity test<br>
 -Interpretation: Figure 1 does a great job of showing the range of temperature values the sensor can detect. The degress in Fahrenheit is shown in respect to time as the sensor is placed in different conditions. Figure 2 proves that the sensor can detect temperature values as low as 55&deg;F. The screenshot captures the exact moment the sensor measured 55&deg;F. Figure 3 shows the test results from the sensor being placed near a steamer. The graph shows 5 trials of this and how the humidity rises and lowers to the desired relative humidity level. Figure 4 shows the test results of the temperature values as the sensor is placed near a steamer. The 5 trials show that the temperature will increase to the desired level when the steamer gets hot.<br>
 
 #### Constraint 2 - Shall be able to communicate through I2C protocol and send data once every hour to its local ESP32-H2 transmitter, then enter sleep mode until the next hour.
--Experimental Design
+-Experimental Design: In the designed code, the team has the temperature and humidity sensor updating every 2 seconds as long as there is an update in one of the values. However, if the sensor does not pick up on new readings, the sensor will enter sleep mode and will not send new data to the head unit until a new reading has been detected. This will help preserve power for the head unit to operate at an ideal performance. The sensor has a wired connection to the ESP32-H2 microcontroller, following I2C protocol, as there is a SDA and SCL wire connected from the sensor to the microcontroller.
 
--Results
+-Results:
 
--Interpretation
+![Sleep_mode](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/104484972/c37e5cc7-42b8-4917-b62a-4d57041c16aa)
+
+| Trial | Time between update |
+| - | - |
+| 1 | 40 min |
+| 2 | 56 min |
+| 3 | 1 hour |
+| 4 | 52 min |
+| 5 | 1 hour |
+
+-Interpretation: In the figure above, it is proven that the temperature and humidity sensor will enter sleep mode while a constant value is maintained. The graph shows a constant reading from both the temperature and humidity, and it will stay that way until a new value is detected. In the provided graph, the data is not updated for over 40 minutes. This is because the sensor has not detected a change in either value and it has entered sleep mode. The table above shows more trials of how long the sensor can stay in sleep mode before it is woken up with a new value detected. For each trial, the sensor is set in a stabilized environment to help maintain steady temperature and humidity.
 
 #### Constraint 3 - Shall be protected and not exposed to harsh environmental conditions to prevent any damage to the sensor.
--Experimental Design
+-Experimental Design: The SHT30 temperature and humidity sensor is a wired enclosed shell. The sensor is manufactured this way to protect the sensor from being exposed to harsh environments and prevent any damage. To experiment that the sensor will not take any damage when placed in a harsh environment, a flame was held up the sensor. While the encolser took a slgith hit and started melting, the sensor itself was not harmed and was able to record all the active data while exposed to this flame.
 
--Results
+-Results:
 
--Interpretation
+![IMG_1108](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/104484972/1ea65f7b-9c70-4734-92da-f369a023b9d6)
+
+![TEMP_GRAPH2](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/104484972/824a545c-ad09-48fe-82bc-f85bd8df8a1c)
+
+
+-Interpretation: The picture above is the SHT30 temperature and humidity sensor in its enclosed shell. This allows the sensor to not be openly exposed to the harsh environments. You can see the slight burn of the plastic from the experiment, but the sensor remained unharmed. The graph shows the sensor actively reading the fluctuating values as the flame is applied to the sensor. The readings are skewed but the sensor was never harmed while being exposed to the flame. You can see the spike in temperature due to the flame present. According to the manufacturer, the SHT30 sensor was designed in comparison to the weather-proof mesh sensor. It is compared to this sensor because it was designed to withstand environments that most sensors would not be able to survive in. The link below is a reference to the manufacturer's website, stating that the SHT30 is widely compared to the weather-proof mesh sensor.
+https://www.adafruit.com/product/5064?gad_source=1&amp;gclid=Cj0KCQjwqP2pBhDMARIsAJQ0CzqlgH_Vrp7xm4fY1QcRbdX0pUI5kT-38Ae2RRNolKE7GWGYOe8_RYYaAsEoEALw_wcB
 
 #### Constraint 4 - Shall give precise temperature and humidity readings within 0.5&deg; F and 2% RH of the actual values, rounding to the nearest whole number to properly evaluate and determine if mold like conditions are present.
--Experimental Design
+-Experimental Design: Testing of the sensor's precision has already been conducted by the manufacturer. Therefore, the team has taken the datasheet's words and graphs has proof that the sensor will detect at very precise measurements within our specs.
 
--Results
+-Results:
 
--Interpretation
+![humidity_accuracy](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/104484972/eea91364-3311-4ed3-98b2-fbb3c27e0abd)
+
+![temperature_accuracy](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/104484972/274f6fd2-ae54-4f1f-bbfc-02a442d105ba)
+
+![matching temp](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/104484972/9c35776b-8cb4-4ad3-98b9-477fbf8e2a19)
+
+-Interpretation: The graphs provide evidence that the sensor will detect at precisions wihtin the constrained specs. The humidity detects within + or - 2% relative humidity of the actual value when between 10% RH and 90% RH, and the temperature detects within + or - 0.5&deg;F of the actual value when between -10&deg;F and 110&deg;F. Also, a screenshot of the detected temperature value from the SHT30 sensor and MLX90614 sensor is given to provide proof that the sensor is detecting at very close precision. The link to the SHT30 datasheet is provided here.
+https://cdn-shop.adafruit.com/product-files/5064/5064_Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital.pdf
 
 
 ### Power
