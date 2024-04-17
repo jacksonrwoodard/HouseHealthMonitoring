@@ -181,13 +181,22 @@ Click to go to [Power](#power) experimentation. <br/>
 -Interpretation: The system is able to correctly communicate using Zigbee communication. 
 
 #### Constraint 6 - The head unit shall, at minimum, receive data every 24 hours, when the data from the sensor reaches a critical level, or when the user requests the data.
--Experimental Design: The team tested this constraint by increasing the send and receive frequency to every 2 seconds from the fire module.
+-Experimental Design: The team tested this constraint by monitoring the sensor readings over periods of time ranging from 8 to 24 hours to make sure each sensor updates at least once in the period tested. 
 
--Results: The head unit was able to receive and store information from the fire module every 2 to 5 seconds.
-![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/6547e898-c534-4e48-880e-9f17483877c9)
+-Results: The head unit was able to receive and store information from the fire more than once within the minimum 24 hour period
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/be557d75-6423-4023-8399-ea7b5e531487)
+
+The head unit was able to receive and store information from the mold module more than once in the 8 hour period.
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/6160b027-3dab-4bd1-92df-c5a039619006)
+
+The head unit was able to receive ans store information from the flood module more than once in the tested 8 hour period.
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/273ac1a9-5880-4668-9a7b-a1bb49a53e01)
+
+The head unit was able to receive and store information from the gas module at least one time in the 11 hour period. 
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/063fe0d6-4234-4e68-a1ab-feb2c135e64c)
 
 
--Interpretation: The tested module is able to communicate every 2 to 5 seconds
+-Interpretation: The modules are able to communicate more often than the minimum specification of once every 24 hours.
 
 
 ### Flood
