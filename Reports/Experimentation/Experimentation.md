@@ -203,9 +203,10 @@ Click to go to [Power](#power) experimentation. <br/>
 ![IMG_0072](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143025461/a2cb8d4e-ad85-43e8-bdf1-c5aa51d462ed)
 
 
--Results: 
+-Results: <img width="1089" alt="Screenshot 2024-04-17 at 12 50 48 PM" src="https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143025461/71238f0a-0b4a-4670-85ac-e022e9c6d795">
 
--Interpretation:Originally the sensor was marked every quarter inch. This did not give the expected results as the readings were very inconsitent. The markings and code were changed to every half inch to provide more accurate readings of a half inch, one inch, and 1.5 inch.
+
+-Interpretation: The results Originally the sensor was marked every quarter inch. This did not give the expected results as the readings were very inconsitent. The markings and code were changed to every half inch to provide more accurate readings of a half inch, one inch, and 1.5 inch.
 
 #### Constraint 3 - Sensor shall send data to headunit in seconds if water is detected.
 -Experimental Design: To adhere to this constraint, the sensor was coded to send data every two seconds.
