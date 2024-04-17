@@ -114,10 +114,11 @@ Click to go to [Power](#power) experimentation. <br/>
 -Interpretation: The head unit was able to read and display readings of 176&deg;F and higher with a warning for potential fire.
 
 #### Constraint 4 - The head unit shall be able to receive data from the water module to display a warning if water is present and the total water depth.
--Experimental Design: To test this constraint the team placed the water sensor in a cup of water to see if the values read on home assistant changed with a warning if water is present.
+-Experimental Design: To test this constraint the team placed the water sensor in a cup of water to see if the head unit recorded the depth of the water with a warning that water is present. This experiment was repeated seven times.
 
 -Results:<img width="1127" alt="Screenshot 2024-04-16 at 12 15 03 PM" src="https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143025461/ab7a69d4-0743-40cf-ba07-35ea9c23bcbd">
-![WaterWarning](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/99e51fb7-157c-4a99-8d85-bb30a0c9ace4)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/389ce137-f493-4c38-9243-771fe374d8a8)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/9149d1a2-404a-4087-9cec-376a757accc2)
 
 
 -Interpretation: The head unit was able to detect if water was present, show its depth, and give a warning that water was present.
