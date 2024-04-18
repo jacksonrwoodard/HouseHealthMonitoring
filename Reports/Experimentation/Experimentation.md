@@ -405,19 +405,18 @@ Figure 8. LTspice noise simulation for RC Filter
 
 ### Fire
 #### Constraint 1 - Shall be able to detect the minimum temperature of 176&deg; Fahrenheit.
--Experimental Design: To test this constraint, the team used the working  MLX90614 temperature sensor and placed the flame of a lighter in the sensors line of sight and recorded the data.
+-Experimental Design: To test this constraint, the team used the MLX90614 temperature sensor and compared the temperature values to the PID Temperature Controller and recorded the data in a graph. The team is getting the temperature value of 176&deg;F on the PID Temperature Controller by putting the flame of a lighter on it and getting the tempature value up to 176&deg;F and then measuring the value with the MLX90614.
 
--Results: The team expected the results to display a minimum of 176&deg;F, and it did. Shown below is a graph that shows the temperature sensors outputs when the flame was put in the sensors line of sight. As you can see on the graph there were five test to ensure that the sensor can reach a minimum of 176&deg;F. The line on the graph represents the temperature levels. The x axis represents time and the y axis represents temperature in degrees Fahrenheit. The second figure shows what the output looks like on the Home Assistant UI.
+-Results: The team expected the results to display a minimum of 176&deg;F, and it did. As you can see in the graph the temperature values are accurate when the temperature is lower but when it raises to 176&deg;F, there is a large amount of error.
 
-![FireSensorGraph](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/421f7241-e705-46c8-9275-e0fcfac7a5c2)
-![FireSensor176Plus](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/770fc938-6d27-4a5d-9564-22a9b3c843a6)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/e86141c0-3f38-4aab-bee5-ecfc0be1386f)
 
--Interpretation: Based of the data provided above, it is safe to say that the temperature sensor can easily display 176&deg;F with no issues.
+-Interpretation: Based on the graph above, you can see that the MLX90614 cannot accurately read 176&deg;F. When the temperature values are lower, the values are similar, but when the temperature raises they are inaccurate. This could be because of placement errors, the way the light is reflecting off of the PID Temperature Controller, or because the MLX90614 has a broken flim over it. This is the way it came in the box. According to the data sheet, the MLX90614 should only have a +-7.2&deg;F error when at the range of 176&deg;, and this is not the case.
 
 #### Constraint 2 - Shall send sensor data to the ESP32 every second.
 -Experimental Design: On the Home Assistant UI, the user can click on the sensor and watch how fast it updates. The sensor is meant to send data every second to the head unit and looking Home Assistant UI, it is possible to prove this.
 
--Results: The team expected this to work properly because it is all something to is edited easily in the code. Shown below is a picture of what the Home Assistant UI looks like when it shows that the sensor is updating, as well as a chart showing the five trials proving that it sends the data every second consistly.
+-Results: The team expected this to work properly because it is something that is edited easily in the code. Shown below is a picture of what the Home Assistant UI looks like when it shows that the sensor is updating, a chart showing the five trials, and a graph of how often the data is sent proving that it sends the data every second consistly.
 | Trial # | Expected Result | Actual Result |
 | - | - | - |
 | 1 | 1 second | 1 second |
@@ -426,25 +425,21 @@ Figure 8. LTspice noise simulation for RC Filter
 | 4 | 1 second | 1 second |
 | 5 | 1 second | 1 second |
 
+![FireSensorGraph](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/58f22206-3f49-448e-a030-1c51d61aa819)
+
 ![FireSensorUpdating](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/a5da7ddc-2e81-49a3-8e74-082f62505235)
 
--Interpretation: Based on the picture and chart shown above, it is easy to see that the sensor can send the data every second consistly.
+-Interpretation: Based on the graph and chart shown above, it is easy to see that the sensor can send the data every second consistly. If you look at the x axis on the graph you can see that Home Assistant is recieving the data every second as expected.
 
 #### Constraint 3 -  Shall send temperature data to the head unit if 176&deg; Fahrenheit has been reached.
--Experimental Design: This constraint ties into the two contraints above. The sensor is sending data to the headunit every second, so it will send data to the temperature when 176&deg;F has been reached. For testing purposes, the team ran the same test that was done for testing if the sensor can detect 176&deg;F. So, the flame of a lighter is put next to the temperature sensor to make the temperature raise to 176&deg;F, and then the data is sent to the headunit.
+-Experimental Design: This constraint ties into the two contraints above. The sensor is sending data to the headunit every second, so it will send data to the temperature when 176&deg;F has been reached. For testing purposes, the team ran the same test that was done for testing if the sensor can detect 176&deg;F.
 
--Results: The expected results for this is that it will work with no issues. The results are the same as the first constraint and are shown below in the chart. Also, in the picture you can see that the temperature above 176&deg;F, is displayed on the head unit.
-| Trial # | Expected Result | Actual Result |
-| ------- | --------------- | ------------- |
-| 1 | 176&deg;F | 212.4&deg;F |
-| 2 | 176&deg;F | 252.5&deg;F |
-| 3 | 176&deg;F | 201.2&deg;F |
-| 4 | 176&deg;F | 192.5&deg;F |
-| 5 | 176&deg;F | 232.4&deg;F |
+-Results: The expected results for this is that it will work with no issues. In the graph you can see that the temperature does reach above 176&deg;F and saved in Home Assistant. In the other figure you can see what the output is on the Home Assistant UI.
 
+![FireSensorGraph](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/58f22206-3f49-448e-a030-1c51d61aa819)
 ![FireSensor176Plus](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/770fc938-6d27-4a5d-9564-22a9b3c843a6)
 
--Interpretation: As shown above in the chart, you can see that the sensor sends the data over the head unit when it reaches 176&deg;F. These results can also be proved by looking at the first two constraints becuase they both have to do with the temperature being 176&deg;F or higher and sending the data to the headunit.
+-Interpretation: As shown above in the graph, you can see that the sensor sends the data over the head unit when it reaches 176&deg;F and is displayed to the user to see. So this works correctly.
 
 #### Constraint 4 - Shall not be a distraction to the homeowner.
 -Experimental Design: The team did research on how to professionally measure a distraction, and we found on the NHTSA website that taking a poll is an effective way to test if something is a distraction. The team asked 10 people if this device would be a distractiion to them if it was in their house are the results are shown below.
