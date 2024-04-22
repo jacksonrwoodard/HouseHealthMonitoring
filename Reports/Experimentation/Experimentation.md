@@ -631,4 +631,4 @@ https://cdn-shop.adafruit.com/product-files/5064/5064_Sensirion_Humidity_Sensors
 -Results: The power mold module's humidity sensor was able to function on the UPS' power over a 3 day period. The battery used in the UPS is a LFP which is rated for at least 4000 cycles of charging and discharging with an estimated life of 10 years of service.
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/ffe78fec-c2aa-4b12-9e46-11349d786924)
 
--Interpretation: The UPS was able to maintain the mold module's power for the tested 6 day period. There were some drops in power due to the team shifting the mold module between power supplies to ensure accurate readings. This experiment shows that the UPS system can sustain the mold module for at least the tested period. 
+-Interpretation: The UPS was able to maintain the mold module's power for the tested 6 day period. There were some drops in power due to the team restting the mold module to ensure accurate readings. This experiment shows that the UPS system can sustain the mold module for at least the tested period. 
