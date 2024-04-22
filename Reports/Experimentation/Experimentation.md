@@ -215,13 +215,56 @@ The Head unit was successfully showing the active information being stored on th
 -Interpretation: The Zigbee network is functioning as expected. 
 
 #### Constraint 4 - Sensor communication shall send the sensor name, number, data type, and raw data to the head unit.
--Experimental Design: To test this constraint, the team connected multiple sensor modules to the head unit and checked if the head unit was able to correctly label each module and output the sensor's data.
+-Experimental Design: To test this constraint, the team each sensor to the head unit in different orders in order to assure the sensors were connecting to the head unit, identified by their names, showing what type of data it was sharing, and outputting values.
 
--Results: The head unit was able to connect and display independent data from each module. Below shows all sensors connected to the head unit. 
-![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/eaf93e98-8745-4588-ba06-3c4b716b8ac3)
+-Results: In the set of 5 trials, the head unit was able to successfully connect to each sensor connected without losing connection to previously connected sensors. Below are pictures of the first series of connections with a table showing the results from the overall trials. 
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/14df1e61-af69-41c0-bfb2-769c22c5c1d1)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/42819db5-2d59-4744-a063-ff098fc8c9b5)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/b761e1df-f9d8-4d3e-89c9-fd7bec91b468)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/69105406-5f95-4ca5-ad64-93bb5625f5c2)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/7c60aa3d-57aa-44e0-9885-e02d7672744a)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/ca1c62af-7934-4898-b4a0-504f5f715793)
 
+| Sensor Name | Sensor Connection to Head Unit | Number of Sensors Connected |
+| :--: | :--: | :--: |
+| **Order 1** | | |
+| Fire Temperature | Yes | 1 |
+| Mold Temperature | Yes | 2 |
+| Mold Humidity | Yes | 3 |
+| Flood | Yes | 4 |
+| Gas Ammonia | Yes | 5 |
+| Gas LPG & CO | Yes | 6 |
+| **Order 2** | | |
+| Gas LPG & CO | Yes | 1 |
+| Gas Ammonia | Yes | 2 |
+| Flood | Yes | 3 |
+| Mold Humidity | Yes | 4 |
+| Mold Temperature | Yes | 5 |
+| Fire Temperature | Yes | 6 |
+| **Order 3** | | |
+| Flood | Yes | 1 |
+| Fire Temperature | Yes | 2 |
+| Mold Temperature | Yes | 3 |
+| Mold Humidity | Yes | 4 |
+| Gas Ammonia | Yes | 5 |
+| Gas LPG & CO | Yes | 6 |
+| **Order 4** | | |
+| Mold Temperature | Yes | 1 |
+| Mold Humidity | Yes | 2 |
+| Gas LPG & CO | Yes | 3 |
+| Gas Ammonia | Yes | 4 |
+| Fire Temperature | Yes | 5 |
+| Flood | Yes | 6 |
+| **Order 5** | | |
+| Fire Temperature | Yes | 1 |
+| Flood | Yes | 2 |
+| Gas LPG & CO | Yes | 3 |
+| Gas Ammonia | Yes | 4 |
+| Mold Temperature | Yes | 5 |
+| Mold Humidity | Yes | 6 |
 
 -Interpretation: The head unit is able to determine what sensor is sending data to it and differentiate it from other sensors. The sensor location had to be input into Home Assistant after the sensors were connected.
+
 
 #### Constraint 5 - ESP32 shall be able to send a minimum of 128 bits (2 packets) at a transmission rate of at most 250 Kbps on a 2.4 GHz frequency.
 -Experimental Design: This constraint is a Zigbee requirement for communication of sensors in a Zigbee Mesh Network. 
