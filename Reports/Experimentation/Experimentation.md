@@ -88,8 +88,8 @@ Click to go to [Power](#power) experimentation. <br/>
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/42819db5-2d59-4744-a063-ff098fc8c9b5)
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/b761e1df-f9d8-4d3e-89c9-fd7bec91b468)
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/69105406-5f95-4ca5-ad64-93bb5625f5c2)
-![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/ca1c62af-7934-4898-b4a0-504f5f715793)
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/7c60aa3d-57aa-44e0-9885-e02d7672744a)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/ca1c62af-7934-4898-b4a0-504f5f715793)
 
 | Sensor Name | Sensor Connection to Head Unit | Number of Sensors Connected |
 | :--: | :--: | :--: |
@@ -145,10 +145,10 @@ The head unit was able to receive, store, and display the information from the f
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/273ac1a9-5880-4668-9a7b-a1bb49a53e01)
 
 The head unit was able to receive, store, and display information from the gas module during the 11 hour period tested. 
-![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/9f2bc0da-3718-4e96-a646-21a5f45b8750)
-
-The Head unit was successfully showing the active information being stored on the head unit.
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/063fe0d6-4234-4e68-a1ab-feb2c135e64c)
+The Head unit was successfully showing the active information being stored on the head unit.
+
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/9f2bc0da-3718-4e96-a646-21a5f45b8750)
 -Interpretation: The head unit is able to store and display data for active and historical readings.
 
 
