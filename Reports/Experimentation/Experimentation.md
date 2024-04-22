@@ -146,8 +146,8 @@ The head unit was able to receive, store, and display the information from the f
 
 The head unit was able to receive, store, and display information from the gas module during the 11 hour period tested. 
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/063fe0d6-4234-4e68-a1ab-feb2c135e64c)
-The Head unit was successfully showing the active information being stored on the head unit.
 
+This is the view that the head unit has for live reading of the sensor modules.
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/9f2bc0da-3718-4e96-a646-21a5f45b8750)
 -Interpretation: The head unit is able to store and display data for active and historical readings.
 
