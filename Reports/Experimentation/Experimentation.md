@@ -581,7 +581,7 @@ https://cdn-shop.adafruit.com/product-files/5064/5064_Sensirion_Humidity_Sensors
 #### Constraint 3 - Shall fully function without regularly changing sensors or head unit batteries.
 -Experimental Design: This constraint was tested by monitoring the continual functionality of the mold module over a 5 hour period.
 
--Results: The power mold module's humidity sensor was able to function on the UPS' power over the 5 hour period. The battery used in the UPS is a LFP which is rated for 4000 cycles of charging and discharging with an estimated life of 10 years of service.
-![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/036293b5-a059-4e6a-aa06-66f77e949f42)
+-Results: The power mold module's humidity sensor was able to function on the UPS' power over a 3 day period. The battery used in the UPS is a LFP which is rated for at least 4000 cycles of charging and discharging with an estimated life of 10 years of service.
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/ffe78fec-c2aa-4b12-9e46-11349d786924)
 
--Interpretation: The UPS was able to maintain the mold module's power for the 5 hour period. There were some drops in power due to the team shifting the mold module between power supplies to ensure accurate readings. This experiment shows that the UPS system is reliable for the expected amount of time.  
+-Interpretation: The UPS was able to maintain the mold module's power for the tested 6 day period. There were some drops in power due to the team shifting the mold module between power supplies to ensure accurate readings. This experiment shows that the UPS system can sustain the mold module for at least the tested period. 
