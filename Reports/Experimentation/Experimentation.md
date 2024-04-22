@@ -201,11 +201,16 @@ The Head unit was successfully showing the active information being stored on th
 
 
 #### Constraint 2 - At least one sensor shall be placed within 200ft of the head unit.
--Experimental Design: To test this the team took a sensor module into the hallway and walked 100 ft. down the hall and checking if the head unit is still receiving updates from the module.
+-Experimental Design: To test this the team took a sensor module into the hallway and walked 100 ft. down the hall and checking if the head unit is still receiving updates from the mold module.
 
--Results: The head unit and sensor module were able to continue communication through cynderblock walls and 100 ft. of range. 
+-Results: The head unit and mold module were able to continue communication every 2 to 5 seconds at 50 ft. line of sight, 50 ft. through two cinder block walls, and 100 ft. through 2 cinder block walls over three sets of trial. 
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/b6d927dd-7383-4dad-b734-b320b8558408)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/75dc3fc1-dd38-4413-8a61-2eca5a696507)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/83570752-6f4c-4ea4-83c5-94d8dd5abcbc)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/129080386/63c08573-699b-461c-9309-1676b75e0613)
 
--Interpretation: The head unit is able to communicate in a building through cynderblock walls and 100ft. of range effectively. 
+
+-Interpretation: The head unit is able to communicate with a sensor module through cinder block walls within the tested 100 ft. range. 
 
 #### Constraint 3 - Sensors shall be within 32ft from each other for every sensor outside of 200ft of the head unit.
 -Experimental Design: Each module should be within 32ft so the Zigbee mesh can connect different modules together for communication with the head unit. 
