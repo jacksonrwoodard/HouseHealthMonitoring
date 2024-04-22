@@ -331,6 +331,7 @@ The head unit was able to receive and store information from the gas module at l
 
 
 -Results:
+
 <img width="316" alt="Screenshot 2024-04-17 at 2 05 13 PM" src="https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143025461/358e2ffb-f7d4-4c14-aa64-895994729d9d">
 
  
@@ -348,11 +349,13 @@ The head unit was able to receive and store information from the gas module at l
 For the SRAQ-GO14, the sensor's job was to be able to detect the presence of propane (LPG) and carbon monoxide (CO). The datasheet has a graph that shows the relationships between the different gases that are applied to the sensor.
 
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/d42b2aa7-2f19-4db5-bf25-cc4c39664bfb)
+
 Figure 1. SRAQ-GO14 sensitivity curve
 
 For the SRAQ-GO16, the sensor's job was to be able to detect the presence of ammonia (NH4). The datasheet has a graph that shows the relationships between the different gases that are applied to the sensor.
 
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/771da9c3-a208-4f04-9230-441933070bb4)
+
 Figure 2. SRAQ-GO16 sensitivity curve
 
 -Interpretation: Based on these datasheets, when the sensor's are properly calibrated and connected properly there would be no doubt that they could be able to detect the specified gases.
@@ -379,6 +382,7 @@ Figure 2. SRAQ-GO16 sensitivity curve
 | 5 | 1 second | 1 second |
 
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/64398029-9d7d-418c-a2b3-7a3dca8b6101)
+
 Figure 3. Gas sensor history in home assistant user interface.
 
 -Interpretation: Based on the history graph shown above, it is easy to see that the sensor can send the data every second.
@@ -390,6 +394,7 @@ Figure 3. Gas sensor history in home assistant user interface.
 -Results: The results will be other manufacturer datasheets showing the installation process of their sensors that abide by NFPA regulations and to inform the user.
 
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/7c41e556-74b8-44a9-abcc-0559341d26b4)
+
 Figure 4. Manufacturer information regarding to where the sensor should be installed.
 
 -Interpretation: Based on the other manufacturer's installation process, the team believes it would not be a problem to follow this process that will meet our constraint.
@@ -415,7 +420,9 @@ Figure 4. Manufacturer information regarding to where the sensor should be insta
 -Experimental Design: For this experimentation, Preserve Home Pro placed the sesnors next to an air vent for testing purposes. 
 
 -Results: The team noticed a change in ppm when the sensor was introduced to fresh air that would push away the targeted gases that would cause insufficient and inaccurate ppm measurements.
+
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/de82e3dd-6289-4e0a-8421-cf7ef7df8f6e)
+
 Figure 5. Gas sensors next to fresh air vent for disturbance testing
 
 -Interpretation: The homeowners would be advised to not place the sensors next to air disturbances that would affect the data measurements.
@@ -425,7 +432,9 @@ Figure 5. Gas sensors next to fresh air vent for disturbance testing
 -Experimental Design: For this experimentation, Preserve Home Pro swept up dust and dirt and then introduced those elements to the sensors to see if there would be a disturbance in measurements taken.
 
 -Results: The team noticed when the elements was introduced to the sensors that it messed data measurements and provided serious inaccurate measurements.
+
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/63688f76-be46-4691-bda2-7f5b45456b6f)
+
 Figure 6. Dirt and dust that was going to swept into the sensors for constraint purposes.
 
 -Interpretation: The homeowners would be advised to not place the sensor in these areas due to the fact it would cause inaccurate measurements.
@@ -435,7 +444,9 @@ Figure 6. Dirt and dust that was going to swept into the sensors for constraint 
 -Experimental Design: For this experimentation, Preserve Home Pro tested this by just having the sensors connected in the range where it would be a viable working environment.
 
 -Results: Though the team could not test the bounds of those conditions where they are lower or greater than the specified range the sensors worked as intended for the right working environment range.
+
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/e1730d43-05ca-4983-9150-6df635dfe060)
+
 Figure 7. This is the work enviroment that the sensors would need in order to work properly.
 
 -Interpretation: Although the team does not physically test this with those ranges mentioned in the results section, the team suspects that with proper home construction there would not be an issue keeping that environment for the sensors.
@@ -445,7 +456,9 @@ Figure 7. This is the work enviroment that the sensors would need in order to wo
 -Experimental Design: A RC filter was constructed for our gas sensor's that would need to be implemented in order to mitigate noise on sensor readings in order to provide proper data readings. The Filter works good and filters enough noise out so there can not be a increment in even one ppm. 
 
 -Results: With a LTspice simulation, there are the noise simulations that would be in effect of our sensor that shows the implied noise environment.
+
 ![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143034071/57ffeafd-37cb-4d78-ba44-9a27c2e58d8a)
+
 Figure 8. LTspice noise simulation for RC Filter
 
 -Interpretation: Since the filter was implemented into our sensor's this allows proper data readings that shows accurate ppm measurements.
