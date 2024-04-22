@@ -307,7 +307,7 @@ The head unit was able to receive and store information from the gas module at l
 -Results: <img width="1089" alt="Screenshot 2024-04-17 at 12 50 48 PM" src="https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/143025461/71238f0a-0b4a-4670-85ac-e022e9c6d795">
 
 
--Interpretation: Originally the sensor was marked every quarter inch. This did not give the expected results as the readings were very inconsitent. The markings and code were changed to every half inch to provide more accurate readings of a half inch, one inch, and 1.5 inch. As shown in the results the water sensor can mearsure different depths roughly with 0, .5, 1, and 1.5 inches.
+-Interpretation: Originally the sensor was marked every quarter inch. This did not give the expected results as the readings were very inconsitent. The markings and code were changed to every half inch to provide more accurate readings of a half inch, one inch, and 1.5 inch. As shown in the results the water sensor can measure different depths roughly with 0, .5, 1, and 1.5 inches. For future improvements, a more accurate sensor will be chosen. 
 
 #### Constraint 3 - Sensor shall send data to headunit in seconds if water is detected.
 -Experimental Design: To adhere to this constraint, the sensor was coded to send data every two seconds.
