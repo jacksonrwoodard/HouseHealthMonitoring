@@ -547,7 +547,7 @@ Figure 3. Relative Humidity test<br>
 Figure 4. Temperature readings from Humidity test<br>
 
 
--Interpretation: Figure 1 does a great job of showing the range of temperature values the sensor can detect. The degress in Fahrenheit is shown in respect to time as the sensor is placed in different conditions. The graph shows the temperature reading of approximately 55&deg;F and gradually increasing to a value greater than 85&deg;F due to the flame. Figure 2 proves that the sensor can detect temperature values as low as 55&deg;F. The screenshot captures the exact moment the sensor measured 55&deg;F. Figure 3 shows the test results from the sensor being placed near a steamer. The graph shows 5 trials of this and how the humidity rises and lowers to the desired relative humidity level. Figure 4 shows the test results of the temperature values as the sensor is placed near a steamer. The 5 trials show that the temperature will increase to the desired level when the steamer gets hot.<br>
+-Interpretation: Figure 1 does a great job of showing the range of temperature values the sensor can detect. The degress in Fahrenheit is shown in respect to time as the sensor is placed in different conditions. The graph shows the temperature reading of approximately 55&deg;F and gradually increasing to a value greater than 85&deg;F due to the flame. Figure 2 proves that the sensor can detect temperature values as low as 55&deg;F. The screenshot captures the exact moment the sensor measured 55&deg;F. Figure 3 shows the test results from the sensor being placed near a steamer. The graph shows 5 trials of this and how the humidity rises and lowers to the desired relative humidity level. The data proves that the sensor can read humidity levels exceeding 50% RH. Figure 4 shows the test results of the temperature values as the sensor is placed near a steamer. The 5 trials show that the temperature will increase to the desired level when the steamer gets hot. According to many sources, a clothes steamer can reach up to 200&deg;F or greater. The temperature does not quite read up to that temperature becuase it was held approximately 6 inches above the steamer to avoid any burning of the plastic casing around the sensor. Constraint 4 will dive further into the precision of the sensor and compare it to outside temperature and humidity.<br>
 
 #### Constraint 2 - Shall be able to communicate through I2C protocol and send data once every hour to its local ESP32-H2 transmitter, then enter sleep mode until the next hour.
 -Experimental Design: In the designed code, the team has the temperature and humidity sensor updating every 2 seconds as long as there is an update in one of the values. However, if the sensor does not pick up on new readings, the sensor will enter sleep mode and will not send new data to the head unit until a new reading has been detected. This will help preserve power for the head unit to operate at an ideal performance. The sensor has a wired connection to the ESP32-H2 microcontroller, following I2C protocol, as there is a SDA and SCL wire connected from the sensor to the microcontroller.
@@ -580,7 +580,7 @@ Figure 4. Temperature readings from Humidity test<br>
 https://www.adafruit.com/product/5064?gad_source=1&amp;gclid=Cj0KCQjwqP2pBhDMARIsAJQ0CzqlgH_Vrp7xm4fY1QcRbdX0pUI5kT-38Ae2RRNolKE7GWGYOe8_RYYaAsEoEALw_wcB
 
 #### Constraint 4 - Shall give precise temperature and humidity readings within 0.5&deg; F and 2% RH of the actual values, rounding to the nearest whole number to properly evaluate and determine if mold like conditions are present.
--Experimental Design: Testing of the sensor's precision has already been conducted by the manufacturer. Therefore, the team has taken the datasheet's words and graphs has proof that the sensor will detect at very precise measurements within our specs. To further test this constraint, The SHT30 and MLX90614 temperature sensors were measured and compared at specific time stamps. The recorded values are both sensors measuring room temperature.
+-Experimental Design: Testing of the sensor's precision has already been conducted by the manufacturer, so the team has taken the datasheet's words and graphs as proof that the sensor will detect at very precise measurements within our specs. To further test this constraint, The SHT30 and MLX90614 temperature sensors were measured and compared at specific time stamps. The recorded values are both sensors measuring room temperature. To further build on this experiment, the SHT30 sensor was placed outside for an hour straight to record values and was compared to the actual temperature and humidity levels provided by the official weather forecast.
 
 -Results:
 
@@ -598,9 +598,15 @@ https://www.adafruit.com/product/5064?gad_source=1&amp;gclid=Cj0KCQjwqP2pBhDMARI
 | 4 | 4:15 pm | 71.4&deg;F | 71.4&deg;F |
 | 5 | 4:20 pm | 71.5&deg;F | 71.3&deg;F |
 
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/104484972/295b4681-3c90-4771-958c-e423796c9140)
+
+
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/104484972/e2bb04c6-d7c9-4291-96cb-42ce55e44cfa)
+
+
 -Interpretation: The graphs provide evidence that the sensor will detect at precisions wihtin the constrained specs. The humidity detects within + or - 2% relative humidity of the actual value when between 10% RH and 90% RH, and the temperature detects within + or - 0.5&deg;F of the actual value when between -10&deg;F and 110&deg;F. Also, a screenshot of the detected temperature value from the SHT30 sensor and MLX90614 sensor is given to provide proof that the sensor is detecting at very close precision. The link to the SHT30 datasheet is provided here.
 https://cdn-shop.adafruit.com/product-files/5064/5064_Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital.pdf
-
+For the last two graphs, they present the temperature and humidity values recorded by the sensor during a 1 hour time span, as well as the actual temperature and humidity values provided by the official weather forecast. The sensor and outside values are compared every 5 minutes and recorded in the graph. These graphs build on the facts that the SHT30 sensor is very accurate and within specs.
 
 ### Power
 #### Constraint 1 - System shall be primarily powered from the house's 120 Volt power supply.
