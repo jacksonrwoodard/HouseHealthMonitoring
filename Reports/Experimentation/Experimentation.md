@@ -465,15 +465,15 @@ Figure 8. LTspice noise simulation for RC Filter
 
 ### Fire
 #### Constraint 1 - Shall be able to detect the minimum temperature of 176&deg; Fahrenheit.
--Experimental Design: To test this constraint, the team used the MLX90614 temperature sensor and compared the temperature values to the PID Temperature Controller and recorded the data in a graph. The team is getting the temperature value of 176&deg;F on the PID Temperature Controller by heating up the copper on the PID temperature sensor and touching the copper to the MLX90614 and then measuring the value. When measuring the temperature value we got the temperature above 176&deg;F and measured the value when the temperature dropped to 176&deg;F with the MLX90614 temperature sensor as shown below. 
+-Experimental Design: To test this constraint, the team used the MLX90614 temperature sensor and a FLUKE Ti480 Pro Thermal Imager to measure temperature values. The team used a soldering iron as the heating element and increased the temperature up to 176&deg;F and when the thermal imager measured 176&deg;F, we measured the value outputed on the MLX90614. As you can see in the pictures shown below, this is the setup used to measure the temperatures.
 
-![IMG_1882](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/90331996-7ccd-4e9c-b644-a385558c4f62)
+![IMG_1903](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/dec1beb9-9b0c-40d2-bbc4-20ba75d4f21a)
 
--Results: The team expected the results to display a minimum of 176&deg;F, and it did. As you can see in the graph the temperature values are accurate when the temperature is lower but when it raises to 176&deg;F, there is a large amount of error.
+-Results: The team expected the results to display a minimum of 176&deg;F, and it did. As you can see in the graph below the results are within the +/- 7&deg;F specfication on the MLX90614 datasheet. 
 
-![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/e86141c0-3f38-4aab-bee5-ecfc0be1386f)
+![image](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/cdc1b05e-e00d-45ad-b11a-769c14560772)
 
--Interpretation: Based on the graph above, you can see that the MLX90614 cannot accurately read 176&deg;F. When the temperature values are lower, the values are similar, but when the temperature raises they are inaccurate. This could be because of placement errors, the way the light is reflecting off of the PID Temperature Controller, or because the MLX90614 has a broken flim over it. This is the way it came in the box. According to the data sheet, the MLX90614 should only have a +-7.2&deg;F error when at the range of 176&deg;, and this is not the case.
+-Interpretation: Based on the graph above, you can see that the MLX90614 can accurately read 176&deg;F with the +/- 7.2&deg;F room for error as stated on the datasheet.
 
 #### Constraint 2 - Shall send sensor data to the ESP32 every second.
 -Experimental Design: On the Home Assistant UI, the user can click on the sensor and watch how fast it updates. The sensor is meant to send data every second to the head unit and looking Home Assistant UI, it is possible to prove this.
