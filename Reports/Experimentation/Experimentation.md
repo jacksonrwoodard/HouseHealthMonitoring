@@ -465,7 +465,9 @@ Figure 8. LTspice noise simulation for RC Filter
 
 ### Fire
 #### Constraint 1 - Shall be able to detect the minimum temperature of 176&deg; Fahrenheit.
--Experimental Design: To test this constraint, the team used the MLX90614 temperature sensor and compared the temperature values to the PID Temperature Controller and recorded the data in a graph. The team is getting the temperature value of 176&deg;F on the PID Temperature Controller by putting the flame of a lighter on it and getting the tempature value up to 176&deg;F and then measuring the value with the MLX90614.
+-Experimental Design: To test this constraint, the team used the MLX90614 temperature sensor and compared the temperature values to the PID Temperature Controller and recorded the data in a graph. The team is getting the temperature value of 176&deg;F on the PID Temperature Controller by heating up the copper on the PID temperature sensor and touching the copper to the MLX90614 and then measuring the value. When measuring the temperature value we got the temperature above 176&deg;F and measured the value when the temperature dropped to 176&deg;F with the MLX90614 temperature sensor as shown below. 
+
+![IMG_1882](https://github.com/jacksonrwoodard/HouseHealthMonitoring/assets/142913669/90331996-7ccd-4e9c-b644-a385558c4f62)
 
 -Results: The team expected the results to display a minimum of 176&deg;F, and it did. As you can see in the graph the temperature values are accurate when the temperature is lower but when it raises to 176&deg;F, there is a large amount of error.
 
