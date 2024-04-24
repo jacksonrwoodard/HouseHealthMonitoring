@@ -37,7 +37,7 @@
 
 
 ## Luke Carson
--From start to finish the project was a series of obstacles. At times it was overwhelming and frustrating. Once, the group or even yourself got over a obstacle you felt a sign relief but you had to be looking ahead and staying on task in order to meet your deadlines. Overall, this course does teach you skills that will translate into your future job like documentation, communication, teamwork, and accountability. 
+- From start to finish the project was a series of obstacles. At times it was overwhelming and frustrating. Once, the group or even yourself got over a obstacle you felt a sign relief but you had to be looking ahead and staying on task in order to meet your deadlines. Overall, this course does teach you skills that will translate into your future job like documentation, communication, teamwork, and accountability. 
 
 - Definitely the coding of our sensors was the biggest anticipation of the group. In your head you feel like you have it all planned out and this is going to work like this and sadly that was not the case for our communication module. Instead of using arduino IDE, we had to implement ESP-IDF which I think any of us had previous experience with unlike arduino IDE. So, we had to learn on the fly and watch alot of youtube and research alot more than intended.
 
