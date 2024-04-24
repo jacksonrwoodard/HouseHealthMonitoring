@@ -8,7 +8,7 @@ Listen below are all of the completed documents for the House Health Monitoring 
 2. [Conceptual Design & Planning](https://github.com/jacksonrwoodard/HouseHealthMonitoring/blob/main/Reports/Conceptual%20Design%20%26%20Planning/Conceptual%20Design%20Final.pdf)
 3. [Experimenttaion](https://github.com/jacksonrwoodard/HouseHealthMonitoring/blob/main/Reports/Experimentation/Experimentation.md)
 4. [Poster](https://github.com/jacksonrwoodard/HouseHealthMonitoring/blob/main/Reports/Poster/PreserveHomeProPoster.pdf)
+5. [Lessons Learned & Acquired Skills](https://github.com/jacksonrwoodard/HouseHealthMonitoring/blob/main/Reports/Lessons%20Learned%20%26%20Acquired%20Skills/Lessons%20Learned%20and%20Acquired%20Skills.md)
    
 ## In-progess Documents
-5. Final Report (N/A)
-6. Lessons Learned & Acquired Skills
+6. Final Report (Did not have to do)
