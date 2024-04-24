@@ -66,9 +66,8 @@ This is a third-party buildable schematic to show connections and communications
 ## Bill of Materials (BOM)
 | DEVICE | Quantity | Price Per Unit | Total Price | Overall Total |
 | ------ | -------- | -------------- | ----------- | ----- |
-| ESP32-H2-DEVKITM-1-N4 | 5 | $10.00 | $50.00 | |
-| XB24CAWIT-001 | 1 | $29.33 | $29.33 | |
-| USB C to USB C Cable [1ft 2-Pack] | 3 | $6.99 | $20.97 | $100.30 |
+| ESP32-H2-DEVKITM-1-N4 | 3 | $10.00 | $30.00 | |
+| SONOFF Zigbee 3.0 USB Dongle Plus | 1 | $21.99 | $21.99 | $51.99 |
 
 ## References
 [1] Espressif Systems, “ESP32-H2 - Espressif Systems,” Adafruit, https://www.espressif.com/sites/default/files/documentation/esp32-h2_datasheet_en.pdf (accessed Oct. 24, 2023). 
