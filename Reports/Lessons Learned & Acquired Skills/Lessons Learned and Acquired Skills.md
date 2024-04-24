@@ -21,7 +21,17 @@
 - I learned more in capstone then I learned in any class I took in college. The amount of research and trial and error in this class tought me how to properly do research, how to code alot more effectively, and how to work better and effectively with a team.
 
 ## Nate Campbell
+- _ honestly didn't know what to expect going into capstone. However, after months of persistent coding and teamwork, we achieved success, which was incredibly satisfying. Our group's communication was excellent, with frequent meetings helping us stay on track and complete our project efficiently.
 
+Initially, I anticipated using Arduino IDE throughout the project, but I was mistaken. We had to learn ESP-IDF coding in VSCode, which was a significant learning curve. Additionally, coding the sensors without libraries was challenging but ultimately rewarding.
+
+Although we dedicated 4-5 hours every day to the project outside of class, I wish we could have completed it sooner for a better grade. Balancing capstone two with full-time studies was incredibly time-consuming. If I could change something, I would invest even more time in the project.
+
+This class significantly improved my public speaking skills due to frequent presentations. I also gained a better understanding of eliciting customer needs, especially when information was lacking.
+
+I would advise future students to allocate their entire semester to capstone as it requires a considerable time commitment for success. Taking it step by step is crucial to avoid feeling overwhelmed.
+
+-Capstone was a true finale to college. The extensive research, documentation, and implenmentation 
 
 ## Cole Cooper
 
