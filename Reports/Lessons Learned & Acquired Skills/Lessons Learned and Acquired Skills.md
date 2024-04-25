@@ -21,17 +21,17 @@
 - I learned more in capstone then I learned in any class I took in college. The amount of research and trial and error in this class tought me how to properly do research, how to code alot more effectively, and how to work better and effectively with a team.
 
 ## Nate Campbell
-- honestly didn't know what to expect going into capstone. However, after months of persistent coding and teamwork, we achieved success, which was incredibly satisfying. Our group's communication was excellent, with frequent meetings helping us stay on track and complete our project efficiently.
+- I honestly didn't know what to expect going into capstone. However, after months of persistent coding and teamwork, we achieved success, which was incredibly satisfying. Our group's communication and persistence was excellent, with frequent meetings helping us stay on track and complete our project efficiently. What didnt go as well would be the sheer amount of time we spent each day working on the project.
 
-- Initially, I anticipated using Arduino IDE throughout the project, but I was mistaken. We had to learn ESP-IDF coding in VSCode, which was a significant learning curve. Additionally, coding the sensors without libraries was challenging but ultimately rewarding.
+- Some unanticipated problems would be just trying to integrate zigbee communication. I personally thought the process would be a little more straightforward.
+  
+- If i could change anything I would have put more effort into the communication subsystem upfront and make sure it was ready to go before the other subsystems.
 
-- Although we dedicated 4-5 hours every day to the project outside of class, I wish we could have completed it sooner for a better grade. Balancing capstone two with full-time studies was incredibly time-consuming. If I could change something, I would invest even more time in the project.
+- Documenting everything and having a reason for why everything is done the way we did. Being able to take a third party perspective on the entire project.
+  
+- To not get lost in the grades and not lose sight of the end goal.
 
-- This class significantly improved my public speaking skills due to frequent presentations. I also gained a better understanding of eliciting customer needs, especially when information was lacking.
-
-- I would advise future students to allocate their entire semester to capstone as it requires a considerable time commitment for success. Taking it step by step is crucial to avoid feeling overwhelmed.
-
-- Capstone was a true finale to college. The extensive research, documentation, and implenmentation 
+- How to build a proper project from beginning to end. It required extensive research and critical thinking. It also allowed me to really see ways of thinking from different perspectives.
 
 ## Cole Cooper
 
