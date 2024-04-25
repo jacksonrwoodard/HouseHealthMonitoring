@@ -34,7 +34,17 @@
 - How to build a proper project from beginning to end. It required extensive research and critical thinking. It also allowed me to really see ways of thinking from different perspectives.
 
 ## Cole Cooper
+-The biggest technical failure the team had was the XBee S2C not functioning as intended. We found out after already having the unit and setting it up that it would not communicate with the ESP32 H2, Raspberry Pi 4B, and a spare Arduino Mega 2560. The team ended up buying the Sonoff USB 3.0 Zigbee coordinator dongle that worked exactly as expected when connected to the head unit. The sensors’ communication to the ESP32s went very smoothly using the Arduino IDE with the ESP IDF but the Zigbee communication would not work until the Arduino libraries were converted over to the Visual Studio Code IDE with the ESP IDF. Organization wise, the team worked well together with a lot of communication between members over the successes and holdups experienced. 
 
+-The largest unanticipated problem was figuring out how to code the ESP32 H2s to communicate via Zigbee protocols. We expected this to be difficult but not to take up about two months of the project’s time. Eventually the team did overcome these obstacles, but it took a lot of trial and error to achieve this success. 
+
+-If I were to do something differently it would be to use different microcontrollers for the sensor modules. The ESP32 H2s used are fantastic hardware, but they are still quite new and do not have a lot of example codes which makes it much more difficult to design custom solutions using the microcontroller. Other ESP devices are easier to work with since they do have more example codes to work with.
+
+-The primary best practice I identified is researching if codes exist for the hardware that is planning on being used. Researching forums, github repositories, and manufacturer documents to ensure that the intended application is possible and achievable within the six month time period demanded by this course.
+
+-Make sure to check all of the grading rubrics before starting and while making your “Project Proposal” and “Conceptual Design & Planning” documents. The Project Proposal is what you are doing, like declaring your standards and constraints. Be aware of how you can solve what you are doing, but do not actually go into depth with how to solve your issues until you get to the Conceptual Design & Planning phase. This class is very similar to the stricter side of engineering work experience that I have worked with in the past, a lot of points may seem overly strict or unnecessary, but if you can figure out how to work within the rules given this class gets a lot more straightforward. 
+
+-Team building, communication, patience, coding, experimenting, and proving that a system will work beyond what a manufacturer claims are a few of the experiences that this class has given me. I have a decent amount of experience with the stuff mentioned from previous engineering and non-engineering work experiences, but even so I feel the challenges and overcoming of those challenges has been a good experience.
 
 ## Luke Carson
 - From start to finish the project was a series of obstacles. At times it was overwhelming and frustrating. Once, the group or even yourself got over a obstacle you felt a sign relief but you had to be looking ahead and staying on task in order to meet your deadlines. Overall, this course does teach you skills that will translate into your future job like documentation, communication, teamwork, and accountability. 
