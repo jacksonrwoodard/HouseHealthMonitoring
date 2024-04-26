@@ -1,1 +1,1 @@
-Communication Sign Off Images
+Communication Sign Pictures
