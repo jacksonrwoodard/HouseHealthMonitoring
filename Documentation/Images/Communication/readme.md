@@ -1,1 +1,1 @@
-Communication Sign Pictures
+Communication Module Pictures
