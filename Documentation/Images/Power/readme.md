@@ -1,1 +1,1 @@
-Pictures of Power Module
+Power Module Pictures 
