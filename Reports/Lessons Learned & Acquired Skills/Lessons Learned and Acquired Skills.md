@@ -60,4 +60,14 @@
 - Literally taking everything I learned in undergrad and being able to tie everything in together with one big project. Also, I felt like this class helped with my public speaking skills as well. 
 
 ## Dylan Robbins
+- Going into Capstone, I was expecting the course to be just like any other course except strictly focused on the process of design and being hands on with things. I was right about most of it, but I had no idea that it was going to consume so much of my time. I learned that being proactive and having great communication with your team are two of the most important things for success throughout this course. Our team had a lot of success with our project, but the implementation of the communication set us back quite a bit. We spent maybe a month or longer trying to code for our modules to be able to communicate with each other. I believe that without the relationship and communication we all had the project might not have gotten finished.
 
+- Touching back on my first point, coding for wireless communication was the biggest unanticipated problem we encountered. At first, we were on track to have everything finished up well before the deadline, but after days upon days trying to figure out the communication code, we were not getting anywhere. We ended up having to swap coordinator devices and digging deep into a lot of example codes to get the issue resolved. We learned a lot of new things on our own through research and trial and error.
+
+- If I were to do something differently, I would have tried my best to understand the full implementation of the system and pieces needed from the start. Not knowing exactly what was expected of us with the communication module was rough when we finally got to it. I think it would have been nice to do a little more research and understand how to implement the communication before we bought a device and wasted a bunch of time on it.
+
+- I would say that some of the best practices would be to stay proactive and have great communication with your team. Making sure everyone stays involved in research so they know what is going on will benefit everyone in the long run.
+
+- Stay proactive and start immediately. Do not think that a due date being a month out is plenty of time to get things done. This course is very intensive so expect to spend a lot of time with your group and in the lab if you want to make a good grade.
+
+- I believe that my research, problem solving, and analysis skills greatly improved over the course of capstone. To be honest, not many classes will prepare you for the work in this course. I had to spend countless hours trying to figure things out on my own and doing my own research to learn new things. In the end, it pays off because it has prepared me a little more for what to expect in the real world.
